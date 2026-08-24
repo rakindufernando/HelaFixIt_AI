@@ -1,0 +1,148 @@
+﻿# Python virtual environments
+Backend/venv/
+venv/
+.venv/
+env/
+ENV/
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+
+Backend/.env
+Backend/.env.*
+!Backend/.env.example
+
+# Python cache files
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Python testing and tooling cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Python build files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# Runtime uploaded files
+Backend/uploads/**
+!Backend/uploads/**/
+!Backend/uploads/**/.gitkeep
+
+# Live database export
+Database/helafixit_ai.sql
+
+# Local database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Database backup files
+*.bak
+*.backup
+*.dump
+
+# Logs
+*.log
+logs/
+Backend/logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Windows files
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux temporary files
+.directory
+.Trash-*
+
+# Node dependencies if frontend tooling is added
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend build output if generated later
+Frontend/dist/
+Frontend/build/
+
+# Python local instance data
+instance/
+
+# Jupyter temporary files if used for AI work
+.ipynb_checkpoints/
+
+# Local test output
+test-results/
+coverage/
+
+# Compressed local backups
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+
+# Local backup copies
+*.bak
+*.old
+*.orig
+
+# PowerShell and shell temporary files
+*.ps1~
+*.sh~
+
+# Do not ignore AI project evidence
+!AI-model/Data/
+!AI-model/Data/**
+!AI-model/Models/
+!AI-model/Models/**
+!AI-model/Training/
+!AI-model/Training/**
+!AI-model/Rules/
+!AI-model/Rules/**
+!AI-model/Evaluation/
+!AI-model/Evaluation/**
+
+# Do not ignore required project SQL files
+!Database/01_create_database.sql
+!Database/02_schema.sql
+!Database/03_triggers.sql
+!Database/04_views.sql
+!Database/05_stored_procedures.sql
+!Database/06_seed_reference_data.sql
+!Database/07_seed_locations_users_and_indexes.sql
+!Database/08_validation_queries_XAMPP.sql
+!Database/helafixit_ai_complete_setup.sql
+
+# Keep repository documentation
+!README.md
+!Backend/.env.example

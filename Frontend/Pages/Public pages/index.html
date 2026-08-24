@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelaFixIt AI | Apartment Maintenance System</title>
+
+    <link rel="stylesheet" href="../../CSS/base.css">
+    <link rel="stylesheet" href="../../CSS/layout.css">
+    <link rel="stylesheet" href="../../CSS/components.css">
+    <link rel="stylesheet" href="../../CSS/responsive.css">
+<link href="../../CSS/system-responsive.css?v=20260823-final-ui" rel="stylesheet"/>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container">
+            <a href="index.html" class="brand">
+                <img src="../../Assets/Images/helafixit-logo.png" alt="HelaFixIt AI Logo" class="brand-logo">
+                <span class="brand-name">HelaFixIt AI</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#users" class="nav-link">Users</a></li>
+                <li><a href="#workflow" class="nav-link">Workflow</a></li>
+                <li><a href="login.html" class="btn btn-small">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero-section" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content-area">
+                <div class="hero-content reveal">
+                    <p class="eyebrow">Apartment maintenance support system</p>
+
+                    <h1>
+                        Manage apartment maintenance requests faster and easier.
+                    </h1>
+
+                    <p class="hero-text">
+                        HelaFixIt AI helps residents report faults, helps admins organize maintenance tickets, and helps technicians update repair progress through one simple web system.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="login.html" class="btn">Login to System</a>
+                        <a href="#about" class="btn btn-ghost">Learn More</a>
+                    </div>
+
+                    <div class="hero-mini-stats">
+                        <div>
+                            <strong>Report</strong>
+                            <span>Resident issues</span>
+                        </div>
+
+                        <div>
+                            <strong>Assign</strong>
+                            <span>Repair tasks</span>
+                        </div>
+
+                        <div>
+                            <strong>Track</strong>
+                            <span>Job progress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-side-card reveal">
+                    <span>Maintenance made simple</span>
+                    <h3>Submit, assign, and track every repair request from one secure place.</h3>
+                    <p>
+                        HelaFixIt AI helps apartment teams handle resident complaints, technician work, and repair progress without losing important maintenance details.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
+
+                <div class="image-stack reveal">
+                    <div class="image-card image-card-large">
+                        <img src="../../Assets/Images/overview-building.jpg" alt="Apartment building">
+                    </div>
+
+                    <div class="image-card image-card-small">
+                        <img src="../../Assets/Images/overview-technician.jpg" alt="Maintenance technician">
+                    </div>
+                </div>
+
+                <div class="about-content reveal">
+                    <p class="eyebrow">About the system</p>
+
+                    <h2>
+                        A clear way to connect residents with maintenance teams.
+                    </h2>
+
+                    <p>
+                        Apartment maintenance requests can be missed when they are handled through phone calls, messages, or paper records. This system keeps requests in one place so the building team can respond in an organized way.
+                    </p>
+
+                    <p>
+                        Residents can submit issues, apartment admins can manage the ticket queue, technicians can update work progress, and system admins can manage users and settings.
+                    </p>
+
+                    <div class="about-points">
+                        <div>
+                            <span>01</span>
+                            <p>Residents submit requests using a simple form.</p>
+                        </div>
+
+                        <div>
+                            <span>02</span>
+                            <p>Admins organize tickets and assign repair work.</p>
+                        </div>
+
+                        <div>
+                            <span>03</span>
+                            <p>Technicians update progress until completion.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section features-section" id="features">
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Main features</p>
+                    <h2>Core functions for apartment maintenance handling</h2>
+                    <p>
+                        The landing page shows only public information. Private tickets, dashboards, and system records are available after login.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">01</div>
+                        <h3>Online request form</h3>
+                        <p>
+                            Residents can submit faults with issue details, building block, floor, area, and description.
+                        </p>
+                    </article>
+
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">02</div>
+                        <h3>Ticket tracking</h3>
+                        <p>
+                            Users can view request status such as submitted, reviewed, assigned, in progress, and completed.
+                        </p>
+                    </article>
+
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">03</div>
+                        <h3>Admin ticket queue</h3>
+                        <p>
+                            Apartment admins can view active requests and organize work based on status and urgency.
+                        </p>
+                    </article>
+
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">04</div>
+                        <h3>Technician assignment</h3>
+                        <p>
+                            Repair jobs can be assigned to suitable technicians according to the type of maintenance issue.
+                        </p>
+                    </article>
+
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">05</div>
+                        <h3>Repair progress updates</h3>
+                        <p>
+                            Technicians can update work progress, add repair notes, and close completed jobs.
+                        </p>
+                    </article>
+
+                    <article class="feature-card reveal">
+                        <div class="feature-icon">06</div>
+                        <h3>Reports and summaries</h3>
+                        <p>
+                            Management users can view summaries about ticket counts, common issue types, and workload.
+                        </p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section users-section" id="users">
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <p class="eyebrow">User roles</p>
+                    <h2>Separate dashboards for each system user</h2>
+                    <p>
+                        Each role has its own pages so the system remains clear, secure, and appropriate for its responsibilities.
+                    </p>
+                </div>
+
+                <div class="user-role-grid">
+                    <article class="role-panel reveal">
+                        <div class="role-image">
+                            <img src="../../Assets/Images/resident.jpg" alt="Resident apartment">
+                        </div>
+
+                        <div class="role-content">
+                            <div class="role-icon">R</div>
+                            <h3>Resident</h3>
+                            <p>Submit maintenance requests and check progress updates.</p>
+                        </div>
+                    </article>
+
+                    <article class="role-panel reveal">
+                        <div class="role-image">
+                            <img src="../../Assets/Images/admin.jpg" alt="Apartment admin workspace">
+                        </div>
+
+                        <div class="role-content">
+                            <div class="role-icon">A</div>
+                            <h3>Apartment Admin</h3>
+                            <p>Review tickets, assign technicians, and monitor maintenance work.</p>
+                        </div>
+                    </article>
+
+                    <article class="role-panel reveal">
+                        <div class="role-image">
+                            <img src="../../Assets/Images/technician.jpg" alt="Technician working">
+                        </div>
+
+                        <div class="role-content">
+                            <div class="role-icon">T</div>
+                            <h3>Technician</h3>
+                            <p>View assigned jobs, update repair status, and add completion notes.</p>
+                        </div>
+                    </article>
+
+                    <article class="role-panel reveal">
+                        <div class="role-image">
+                            <img src="../../Assets/Images/system-admin.jpg" alt="System admin dashboard">
+                        </div>
+
+                        <div class="role-content">
+                            <div class="role-icon">S</div>
+                            <h3>System Admin</h3>
+                            <p>Manage users, roles, issue categories, and system settings.</p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section workflow-section" id="workflow">
+            <div class="container workflow-grid">
+
+                <div class="workflow-content reveal">
+                    <p class="eyebrow">Workflow</p>
+
+                    <h2>
+                        From resident request to completed repair.
+                    </h2>
+
+                    <p>
+                        The system keeps the maintenance process easy to follow. Every request has a clear status and next action.
+                    </p>
+
+                    <a href="login.html" class="btn">Start With Login</a>
+                </div>
+
+                <div class="workflow-list">
+                    <div class="workflow-item reveal">
+                        <span>1</span>
+                        <div>
+                            <h3>Resident submits request</h3>
+                            <p>The resident enters the issue, location, and description.</p>
+                        </div>
+                    </div>
+
+                    <div class="workflow-item reveal">
+                        <span>2</span>
+                        <div>
+                            <h3>Admin reviews ticket</h3>
+                            <p>The apartment admin checks the request and prepares the next action.</p>
+                        </div>
+                    </div>
+
+                    <div class="workflow-item reveal">
+                        <span>3</span>
+                        <div>
+                            <h3>Technician receives job</h3>
+                            <p>The suitable technician receives the repair task.</p>
+                        </div>
+                    </div>
+
+                    <div class="workflow-item reveal">
+                        <span>4</span>
+                        <div>
+                            <h3>Status is updated</h3>
+                            <p>The technician updates progress and closes the ticket after repair.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="footer-login-section">
+            <div class="container">
+                <div class="footer-login-card reveal">
+                    <div class="login-card-left">
+                        <div class="login-icon-box">
+                            <img src="../../Assets/Images/helafixit-logo.png" alt="HelaFixIt AI Logo">
+                        </div>
+
+                        <div class="login-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="login-card-content">
+                        <h2>Login to continue</h2>
+                        <p>
+                            Access your maintenance dashboard and continue with the available system functions.
+                        </p>
+
+                        <a href="login.html" class="login-main-btn">Go to Login</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-box">
+
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="../../Assets/Images/helafixit-logo.png" alt="HelaFixIt AI Logo" class="footer-logo-img">
+                        <strong>HelaFixIt AI</strong>
+                    </a>
+
+                    <p>
+                        A web based apartment maintenance system for reporting issues, assigning repair work, and tracking service progress.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#">f</a>
+                        <a href="#">x</a>
+                        <a href="#">in</a>
+                        <a href="#">ig</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="#about">About</a>
+                    <a href="#features">Features</a>
+                    <a href="#users">Users</a>
+                    <a href="#workflow">Workflow</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <a href="login.html">Help Desk</a>
+                    <a href="login.html">Submit Ticket</a>
+                    <a href="login.html">Track Request</a>
+                    <a href="login.html">Contact Admin</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Useful Links</h3>
+                    <a href="login.html">Resident Login</a>
+                    <a href="login.html">Admin Login</a>
+                    <a href="login.html">Technician Login</a>
+                    <a href="login.html">System Admin</a>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3>Contact Us</h3>
+
+                    <div class="footer-contact-panel">
+                        <a href="tel:+94712009223" class="footer-contact-item">
+                            <span class="footer-contact-icon">☎</span>
+                            <div>
+                                <small>Phone</small>
+                                <strong>+94 71 200 9223</strong>
+                            </div>
+                        </a>
+
+                        <a href="mailto:info@helafixit.lk" class="footer-contact-item">
+                            <span class="footer-contact-icon">✉</span>
+                            <div>
+                                <small>Email</small>
+                                <strong>info@helafixit.lk</strong>
+                            </div>
+                        </a>
+
+                        <div class="footer-contact-item">
+                            <span class="footer-contact-icon">⌖</span>
+                            <div>
+                                <small>Location</small>
+                                <strong>Colombo, Sri Lanka</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 HelaFixIt AI. All rights reserved.</p>
+
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Site Map</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="../../JS/main.js?v=20260823-notify-privacy"></script>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | HelaFixIt AI</title>
+    <link rel="stylesheet" href="../../CSS/base.css"><link rel="stylesheet" href="../../CSS/app.css?v=20260823-notify-privacy">
+<link href="../../CSS/system-responsive.css?v=20260823-final-ui" rel="stylesheet"/>
+</head>
+<body data-maintenance-exempt="true">
+<div class="auth-page">
+    <section class="auth-visual">
+        <a class="auth-brand" href="index.html"><img src="../../Assets/Images/helafixit-logo.png" alt="HelaFixIt AI logo"><span>HelaFixIt AI</span></a>
+        <div class="auth-copy"><span class="eyebrow-dark">Apartment maintenance support</span><h1>Welcome back to your maintenance workspace.</h1><p>Sign in securely using your registered account and correct system role. Authentication is handled by the Flask backend and HelaFixIt AI database.</p><div class="auth-features"><div class="auth-feature"><strong>Report</strong><span>Submit maintenance issues</span></div><div class="auth-feature"><strong>Analyse</strong><span>AI supported ticket decisions</span></div><div class="auth-feature"><strong>Track</strong><span>Follow repair progress</span></div></div></div>
+        <small>Secure role based access for HelaFixIt AI</small>
+    </section>
+    <main class="auth-form-side"><div class="auth-card"><h2>Login to HelaFixIt AI</h2><p>Enter your account details and select your system role.</p>
+<form id="loginForm" class="form-grid"><div class="field"><label>Email address <span class="required">*</span></label><input id="loginEmail" type="email" autocomplete="username" maxlength="190" data-validate="email" required></div><div class="field"><label>Password <span class="required">*</span></label><input id="loginPassword" type="password" maxlength="64" autocomplete="current-password" required></div><div class="field"><label>User role <span class="required">*</span></label><select id="loginRole" required><option value="resident">Resident</option><option value="admin">Apartment Admin</option><option value="technician">Technician</option><option value="systemAdmin">System Admin</option></select></div><div class="auth-extra"><label class="check-row"><input type="checkbox" checked><span>Remember this device</span></label><a href="forgot-password.html">Forgot password?</a></div><button class="btn-app" type="submit">Login to system</button></form>
+<p style="text-align:center;margin-top:14px">New resident? <a style="color:var(--primary-dark);font-weight:900" href="register.html">Request resident account</a></p></div></main>
+</div>
+<div class="toast-container"></div>
+<script src="../../JS/main.js?v=20260823-notify-privacy"></script><script src="../../JS/validation.js"></script><script src="../../JS/api.js?v=20260823-notify-privacy"></script><script src="../../JS/auth.js?v=20260823-notify-privacy"></script>
+</body></html>

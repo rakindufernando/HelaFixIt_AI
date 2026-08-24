@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Maintenance | HelaFixIt AI</title>
+    <link rel="stylesheet" href="../../CSS/base.css">
+    <link rel="stylesheet" href="../../CSS/app.css?v=20260823-maintenance">
+    <link rel="stylesheet" href="../../CSS/maintenance.css?v=20260823-maintenance">
+</head>
+<body class="maintenance-page" data-maintenance-exempt="true">
+    <main class="maintenance-shell">
+        <section class="maintenance-card" aria-labelledby="maintenanceTitle">
+            <div class="maintenance-brand">
+                <img src="../../Assets/Images/helafixit-logo.png" alt="HelaFixIt AI logo">
+                <div>
+                    <strong data-system-name>HelaFixIt AI</strong>
+                    <span data-apartment-name>Apartment Maintenance</span>
+                </div>
+            </div>
+
+            <div class="maintenance-icon" aria-hidden="true">⚙</div>
+            <span class="maintenance-status">Scheduled maintenance</span>
+            <h1 id="maintenanceTitle">The system is currently under maintenance.</h1>
+            <p>HelaFixIt AI is temporarily unavailable while system maintenance is being completed. Please try again after a short time.</p>
+
+            <div class="maintenance-info">
+                <strong>What this means</strong>
+                <span>Resident, Apartment Admin, and Technician functions are temporarily paused. Existing records remain stored in the database.</span>
+            </div>
+
+            <div class="maintenance-actions">
+                <button class="btn-app" id="checkMaintenanceStatus" type="button">Check system status</button>
+                <a class="btn-app btn-secondary" href="login.html">System Admin login</a>
+            </div>
+            <p class="maintenance-note" id="maintenanceCheckMessage">System Administrators can still sign in to complete maintenance work and turn maintenance mode off.</p>
+        </section>
+    </main>
+
+    <div class="toast-container"></div>
+    <script src="../../JS/main.js?v=20260823-maintenance"></script>
+    <script src="../../JS/api.js?v=20260823-maintenance"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const button = document.getElementById('checkMaintenanceStatus');
+        const message = document.getElementById('maintenanceCheckMessage');
+        if (!button) return;
+        button.addEventListener('click', async function () {
+            button.disabled = true;
+            button.textContent = 'Checking...';
+            try {
+                const response = await apiRequest('/auth/public-settings');
+                if (!(response.data || {}).maintenanceMode) {
+                    message.textContent = 'Maintenance has been completed. Returning to HelaFixIt AI.';
+                    setTimeout(function () { window.location.href = 'index.html'; }, 500);
+                    return;
+                }
+                message.textContent = 'Maintenance mode is still active. Please try again later.';
+            } catch (error) {
+                message.textContent = 'The system status could not be checked at this time.';
+            } finally {
+                button.disabled = false;
+                button.textContent = 'Check system status';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

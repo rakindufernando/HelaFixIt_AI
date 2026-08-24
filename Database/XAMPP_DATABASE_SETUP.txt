@@ -1,0 +1,10 @@
+HelaFixIt AI database setup using XAMPP and phpMyAdmin
+
+1. Start MySQL in XAMPP.
+2. Open phpMyAdmin.
+3. Open the Import tab from the phpMyAdmin home page.
+4. Import helafixit_ai_complete_setup.sql.
+5. After the setup completes, select helafixit_ai.
+6. Import 08_validation_queries_XAMPP.sql to verify the database.
+
+The complete setup file creates the final project database directly.

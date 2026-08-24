@@ -1,0 +1,37 @@
+/* reports.css
+   Report cards, chart placeholders, and analytics layouts.
+   Implementation note
+   Report pages help show evaluation and management output.
+*/
+
+.report-filter {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.chart-box {
+  min-height: 320px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.chart-placeholder {
+  min-height: 230px;
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  text-align: center;
+}
+
+.report-summary {
+  display: grid;
+  gap: 12px;
+}

@@ -1,0 +1,56 @@
+
+.maintenance-page {
+    min-height: 100vh;
+    margin: 0;
+    background:
+        radial-gradient(circle at 12% 14%, rgba(0, 194, 255, .16), transparent 34%),
+        radial-gradient(circle at 88% 82%, rgba(0, 119, 255, .14), transparent 30%),
+        linear-gradient(145deg, #eff9ff 0%, #f8fcff 50%, #eaf6ff 100%);
+    color: #0c1b33;
+}
+.maintenance-shell { min-height: 100vh; display: grid; place-items: center; padding: 28px; }
+.maintenance-card {
+    width: min(760px, 100%);
+    background: rgba(255,255,255,.96);
+    border: 1px solid rgba(0, 147, 232, .16);
+    border-radius: 28px;
+    padding: clamp(28px, 5vw, 52px);
+    box-shadow: 0 28px 80px rgba(15, 74, 120, .16);
+    text-align: center;
+}
+.maintenance-brand { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 30px; }
+.maintenance-brand img { width: 54px; height: 54px; object-fit: contain; }
+.maintenance-brand div { display: grid; text-align: left; }
+.maintenance-brand strong { font-size: 1.2rem; color: #0a2f54; }
+.maintenance-brand span { font-size: .86rem; color: #698098; }
+.maintenance-icon {
+    width: 92px; height: 92px; border-radius: 26px; margin: 0 auto 20px;
+    display: grid; place-items: center; font-size: 44px; color: #fff;
+    background: linear-gradient(135deg, #0b7cff, #00c8ea);
+    box-shadow: 0 18px 40px rgba(0, 146, 224, .24);
+    animation: maintenanceFloat 3s ease-in-out infinite;
+}
+.maintenance-status {
+    display: inline-flex; padding: 8px 14px; border-radius: 999px;
+    background: #eaf7ff; color: #0870b5; font-weight: 800; font-size: .78rem;
+    letter-spacing: .03em; text-transform: uppercase;
+}
+.maintenance-card h1 { margin: 18px auto 12px; max-width: 620px; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.08; }
+.maintenance-card > p { max-width: 620px; margin: 0 auto; color: #61758d; line-height: 1.75; }
+.maintenance-info {
+    margin: 28px auto 0; max-width: 620px; padding: 18px 20px; border-radius: 18px;
+    background: #f1f9ff; border: 1px solid #d8edfb; display: grid; gap: 6px; text-align: left;
+}
+.maintenance-info strong { color: #135c89; }
+.maintenance-info span { color: #59728a; line-height: 1.55; }
+.maintenance-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.maintenance-actions .btn-app { min-width: 180px; justify-content: center; text-decoration: none; }
+.maintenance-note { margin-top: 18px !important; font-size: .88rem; }
+@keyframes maintenanceFloat { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-6px) rotate(5deg); } }
+@media (max-width: 600px) {
+    .maintenance-shell { padding: 16px; }
+    .maintenance-card { border-radius: 22px; padding: 26px 18px; }
+    .maintenance-actions { display: grid; grid-template-columns: 1fr; }
+    .maintenance-actions .btn-app { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .maintenance-icon { animation: none; } }

@@ -1,0 +1,197 @@
+/* HelaFixIt AI final responsive fixes for all pages */
+html, body { width:100%; max-width:100%; overflow-x:hidden; -webkit-text-size-adjust:100%; }
+body.modal-open, body.sidebar-open { overflow:hidden !important; }
+img,svg,video,canvas,iframe { max-width:100%; height:auto; }
+button,input,select,textarea { max-width:100%; }
+.app-shell,.app-main,.page-content,.page-heading,.card,.card-header,.card-body,.card-footer,.toolbar,.filter-group,.form-grid,.grid-2,.grid-3,.grid-main-side,.stats-grid,.ai-result-grid,.quick-actions,.topbar,.topbar-left,.topbar-actions { min-width:0 !important; }
+.app-main { overflow-x:clip; }
+.page-content { width:100%; }
+.page-heading > *, .card-header > *, .topbar-left > *, .topbar-actions > * { min-width:0; }
+.page-heading h1,.page-heading p,.card-header h2,.card-header h3,.card-header p,.table-primary,.table-secondary,.notice,.detail-item strong,.notification-item h4,.notification-item p { overflow-wrap:anywhere; }
+.card-header { flex-wrap:wrap; }
+.heading-actions,.form-actions,.ticket-actions,.table-actions,.card-header > div:last-child:not(:first-child) { max-width:100%; }
+.field,.field input,.field select,.field textarea,.search-box,.search-box input,.filter-select { min-width:0 !important; }
+.field input,.field select,.field textarea,.search-box input,.filter-select { width:100%; box-sizing:border-box; }
+textarea { resize:vertical; }
+.table-wrap { width:100%; max-width:100%; overflow-x:auto !important; overflow-y:hidden; -webkit-overflow-scrolling:touch; overscroll-behavior-inline:contain; }
+.data-table { width:100%; min-width:720px; }
+.data-table td:last-child { white-space:nowrap; }
+.modal { max-width:calc(100vw - 24px); max-height:calc(100dvh - 24px); }
+.modal-body { overscroll-behavior:contain; -webkit-overflow-scrolling:touch; }
+
+/* User Management uses a stable right drawer instead of a large centred modal. */
+body.user-management-page .page-content { animation:none !important; transform:none !important; }
+body.user-management-page #userModal { position:fixed !important; inset:0 !important; z-index:9000 !important; width:100vw !important; height:100dvh !important; max-width:none !important; max-height:none !important; margin:0 !important; padding:0 !important; overflow:hidden !important; background:rgba(7,20,38,.58) !important; backdrop-filter:blur(4px); }
+body.user-management-page #userModal.show { display:block !important; }
+body.user-management-page #userModal .user-management-modal { position:absolute !important; inset:0 0 0 auto !important; width:min(760px,100vw) !important; height:100dvh !important; min-height:0 !important; max-width:100vw !important; max-height:100dvh !important; margin:0 !important; border-radius:22px 0 0 22px !important; background:#fff !important; display:flex !important; flex-direction:column !important; overflow:hidden !important; transform:none !important; animation:none !important; box-shadow:-24px 0 70px rgba(5,22,40,.28) !important; }
+body.user-management-page #userModal .modal-header { position:relative !important; top:auto !important; z-index:2 !important; flex:0 0 auto !important; padding:16px 18px !important; background:#fff !important; border-bottom:1px solid #e7f0f7 !important; }
+body.user-management-page #userModal .modal-body { flex:1 1 auto !important; min-height:0 !important; padding:0 !important; overflow:hidden !important; }
+body.user-management-page #userModal #userEditForm { width:100% !important; height:100% !important; min-height:0 !important; display:flex !important; flex-direction:column !important; overflow:hidden !important; }
+body.user-management-page #userModal .user-management-form-content { flex:1 1 auto !important; min-height:0 !important; padding:18px !important; overflow-x:hidden !important; overflow-y:auto !important; -webkit-overflow-scrolling:touch; overscroll-behavior:contain; }
+body.user-management-page #userModal .form-grid { display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:14px !important; align-items:start !important; }
+body.user-management-page #userModal .user-management-form-actions { position:static !important; inset:auto !important; flex:0 0 auto !important; margin:0 !important; padding:12px 18px !important; display:flex !important; justify-content:flex-end !important; gap:10px !important; background:#fff !important; border-top:1px solid #e7f0f7 !important; box-shadow:0 -8px 24px rgba(7,20,38,.06) !important; }
+body.user-management-page #userModal .user-form-section,body.user-management-page #userModal #residentUserFields,body.user-management-page #userModal #adminUserFields,body.user-management-page #userModal #technicianUserFields { width:100%; }
+body.user-management-page .default-password-box { max-width:100%; flex-wrap:wrap; }
+body.user-management-page #passwordResetModal { position:fixed !important; inset:0 !important; z-index:9100 !important; width:100vw !important; height:100dvh !important; max-width:none !important; max-height:none !important; padding:16px !important; overflow:auto !important; place-items:center !important; }
+body.user-management-page #passwordResetModal.show { display:grid !important; }
+body.user-management-page #passwordResetModal > .modal { width:min(560px,100%) !important; max-height:calc(100dvh - 32px) !important; margin:0 !important; }
+
+@media (max-width:1180px) {
+  .sidebar { width:238px; }
+  .app-main { width:calc(100% - 238px); margin-left:238px; }
+  .page-content { padding:20px; }
+  .grid-main-side { grid-template-columns:minmax(0,1.35fr) minmax(230px,.8fr); }
+}
+
+@media (max-width:1024px) {
+  .sidebar { width:min(286px,86vw) !important; transform:translateX(-105%) !important; box-shadow:24px 0 60px rgba(4,23,43,.28); }
+  body.sidebar-open .sidebar { transform:translateX(0) !important; }
+  .app-main { width:100% !important; margin-left:0 !important; }
+  .sidebar-toggle { display:grid !important; place-items:center; flex:0 0 auto; }
+  .topbar { padding-inline:16px; }
+  .page-content { padding:18px 16px 28px; }
+  .grid-main-side { grid-template-columns:1fr !important; }
+  .stats-grid,.grid-3,.ai-result-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  body.user-management-page #userModal .user-management-modal { width:min(700px,92vw) !important; }
+}
+
+@media (max-width:768px) {
+  .topbar { min-height:62px; padding:9px 12px; gap:8px; }
+  .topbar-title { max-width:48vw; font-size:14px; }
+  .topbar-actions { gap:6px; }
+  .page-content { padding:16px 12px 24px; }
+  .page-heading { flex-direction:column; align-items:stretch; gap:10px; margin-bottom:14px; }
+  .heading-actions,.toolbar,.filter-group { width:100%; }
+  .card { border-radius:14px; }
+  .card-header,.card-body,.card-footer { padding-left:13px; padding-right:13px; }
+  .card-header { align-items:flex-start; }
+  .search-box { flex:1 1 100%; max-width:none; }
+  .filter-select { flex:1 1 180px; }
+  .form-grid,.grid-2,body.user-management-page #userModal .form-grid { grid-template-columns:1fr !important; }
+  .field.full { grid-column:auto !important; }
+  .data-table { min-width:660px; }
+  .modal-backdrop:not(#userModal):not(#passwordResetModal) { align-items:flex-start !important; padding:8px !important; overflow-y:auto !important; }
+  .modal-backdrop:not(#userModal):not(#passwordResetModal) > .modal { width:100% !important; max-width:100% !important; max-height:calc(100dvh - 16px) !important; margin:0 auto !important; border-radius:16px !important; }
+  body.user-management-page #userModal .user-management-modal { width:min(620px,96vw) !important; }
+}
+
+@media (max-width:560px) {
+  .sidebar { width:min(280px,88vw) !important; }
+  .sidebar-brand { min-height:72px; padding:13px 14px; }
+  .sidebar-user { margin:10px; }
+  .topbar-title { max-width:45vw; font-size:13px; }
+  .topbar-actions .user-chip span { display:none !important; }
+  .user-chip { padding-right:5px; }
+  .icon-button,.sidebar-toggle { width:38px; height:38px; }
+  .page-content { padding:14px 10px 22px; }
+  .page-heading h1 { font-size:24px; }
+  .page-heading p { font-size:12px; }
+  .stats-grid,.grid-3,.ai-result-grid,.quick-actions { grid-template-columns:1fr !important; }
+  .stat-card { min-height:100px; }
+  .heading-actions,.form-actions,.ticket-actions { display:grid !important; grid-template-columns:1fr !important; width:100% !important; }
+  .heading-actions .btn-app,.form-actions .btn-app,.ticket-actions .btn-app,.card-header > .btn-app { width:100% !important; }
+  .card-header > div:last-child:not(:first-child) { width:100%; }
+  .card-header > div:last-child:not(:first-child) .btn-app,.card-header > div:last-child:not(:first-child) .filter-select { flex:1 1 100%; }
+  .toolbar,.filter-group,.input-row { display:grid !important; grid-template-columns:1fr !important; width:100% !important; }
+  .input-row > * { min-width:0 !important; width:100% !important; }
+  .data-table { min-width:620px; }
+  .detail-list,.kpi-row { grid-template-columns:1fr !important; }
+  .kpi-row strong { text-align:left; }
+  .settings-row { flex-direction:column; align-items:flex-start; gap:9px; }
+  .toast-container { top:70px; right:8px; left:8px; width:auto; }
+  body.user-management-page #userModal .user-management-modal { inset:0 !important; width:100vw !important; height:100dvh !important; max-width:none !important; max-height:none !important; border-radius:0 !important; }
+  body.user-management-page #userModal .modal-header { padding:12px 13px !important; }
+  body.user-management-page #userModal .user-management-form-content { padding:13px !important; }
+  body.user-management-page #userModal .user-management-form-actions { display:grid !important; grid-template-columns:1fr 1fr !important; padding:10px 13px !important; }
+  body.user-management-page #userModal .user-management-form-actions .btn-app { width:100% !important; }
+  body.user-management-page .default-password-box { align-items:stretch; flex-direction:column; }
+  body.user-management-page .default-password-box .btn-app { width:100%; }
+  body.user-management-page #passwordResetModal { padding:8px !important; place-items:end center !important; }
+  body.user-management-page #passwordResetModal > .modal { width:100% !important; max-height:calc(100dvh - 16px) !important; border-radius:18px 18px 10px 10px !important; }
+  .auth-page { min-height:100dvh; grid-template-columns:1fr !important; }
+  .auth-visual { min-height:auto !important; padding:22px 18px !important; }
+  .auth-copy { margin-top:18px; }
+  .auth-copy h1 { font-size:30px !important; }
+  .auth-copy p { font-size:12px; }
+  .auth-features { display:none !important; }
+  .auth-form-side { padding:18px 10px 26px !important; }
+  .auth-card { padding:20px 14px !important; border-radius:18px !important; }
+  .auth-extra { align-items:flex-start; flex-direction:column; }
+}
+
+@media (max-width:380px) {
+  .page-content { padding-inline:8px; }
+  .topbar { padding-inline:8px; }
+  .topbar-title { max-width:40vw; }
+  .card-header,.card-body,.card-footer { padding-left:10px; padding-right:10px; }
+  .btn-app { padding-inline:10px; }
+  body.user-management-page #userModal .user-management-form-actions { grid-template-columns:1fr !important; }
+}
+
+@media (max-height:680px) and (min-width:561px) {
+  body.user-management-page #userModal .user-management-modal { width:min(720px,88vw) !important; }
+  body.user-management-page #userModal .modal-header { padding-top:10px !important; padding-bottom:10px !important; }
+  body.user-management-page #userModal .user-management-form-content { padding-top:12px !important; padding-bottom:12px !important; }
+}
+
+/* Landing page mobile safety */
+@media (max-width:640px) {
+  .site-header { top:8px; }
+  .navbar { max-width:100%; }
+  .nav-menu { max-height:calc(100dvh - 100px); overflow-y:auto; }
+  .hero-section { min-height:auto; }
+  .hero-content-area,.about-grid,.workflow-grid,.feature-grid,.user-role-grid,.footer-top { min-width:0; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+}
+
+/* Audit log page */
+.audit-summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.audit-summary-item{border:1px solid var(--border-color,#dbe7f1);background:var(--soft-bg,#f7fbff);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.audit-summary-item span{font-size:.78rem;color:var(--text-muted,#6b7f93);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.audit-summary-item strong{font-size:1.35rem;color:var(--text-dark,#10233c)}
+.audit-filter-panel{border:1px solid var(--border-color,#dbe7f1);border-radius:14px;padding:14px;margin-bottom:16px;background:#fff}
+.audit-search-box{width:100%;max-width:none;margin-bottom:12px}
+.audit-search-box input{width:100%}
+.audit-filter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.audit-filter-grid label{display:flex;flex-direction:column;gap:6px;min-width:0;font-size:.8rem;font-weight:700;color:var(--text-dark,#10233c)}
+.audit-filter-grid .filter-select{width:100%;min-width:0}
+.audit-filter-actions{display:flex;justify-content:flex-end;margin-top:12px}
+.audit-table{min-width:1040px}
+.audit-table td{vertical-align:top}
+.audit-action-name{font-weight:800;color:var(--text-dark,#10233c);display:block;word-break:break-word}
+.audit-action-code{font-size:.72rem;color:var(--text-muted,#6b7f93);display:block;margin-top:3px}
+.audit-user-email,.audit-meta{font-size:.75rem;color:var(--text-muted,#6b7f93);display:block;margin-top:3px;word-break:break-word}
+.audit-detail-text{max-width:360px;white-space:normal;overflow-wrap:anywhere}
+.audit-change-details{margin-top:7px}
+.audit-change-details summary{cursor:pointer;color:var(--primary,#087cf0);font-weight:700;font-size:.78rem}
+.audit-change-grid{display:grid;grid-template-columns:1fr;gap:6px;margin-top:7px}
+.audit-change-box{background:#f6f9fc;border:1px solid #e2ebf3;border-radius:8px;padding:7px 9px;font-size:.72rem;white-space:pre-wrap;overflow-wrap:anywhere;max-width:360px}
+.audit-pagination{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+.audit-pagination button:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:900px){.audit-summary-grid{grid-template-columns:1fr 1fr}.audit-filter-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.audit-summary-grid,.audit-filter-grid{grid-template-columns:1fr}.audit-filter-panel{padding:11px}.audit-filter-actions .btn-app{width:100%}.audit-pagination{display:grid;grid-template-columns:1fr auto 1fr}.audit-pagination .btn-app{width:100%}.audit-table{min-width:900px}}
+
+/* User Management functional feedback */
+.user-management-page .user-form-status{position:sticky;top:0;z-index:8;margin:0 0 14px;padding:10px 12px;border-radius:10px;border:1px solid #b9d9f5;background:#edf7ff;color:#174a72;font-size:13px;font-weight:600}
+.user-management-page .user-form-status.error{border-color:#f3b2b2;background:#fff1f1;color:#9f2222}
+.user-management-page .user-form-status.success{border-color:#a7dfc1;background:#edfdf5;color:#16643d}
+.user-management-page .user-management-form-content{scroll-behavior:smooth}
+.user-management-page .user-action-cell{white-space:normal;display:flex;gap:6px;flex-wrap:wrap;min-width:210px}
+.user-management-page .field-error{display:block;margin-top:5px;font-size:12px;line-height:1.35}
+@media(max-width:700px){.user-management-page .user-action-cell{min-width:180px}.user-management-page .user-action-cell .btn-app{flex:1 1 auto}}
+
+/* Keep checkboxes compact inside form rows. General form input sizing must not enlarge them. */
+.check-row input[type="checkbox"],
+.check-row input[type="radio"]{
+    width:16px !important;
+    height:16px !important;
+    min-width:16px !important;
+    min-height:16px !important;
+    padding:0 !important;
+    margin:0 0 0 0 !important;
+    flex:0 0 16px !important;
+}
+.check-row{display:flex !important;align-items:center !important;gap:8px !important;min-height:32px !important;}

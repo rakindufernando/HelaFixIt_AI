@@ -1,0 +1,47 @@
+/* technician.css
+   Technician assigned jobs, emergency jobs, status update, and repair notes.
+   Implementation note
+   Technician pages complete the repair workflow after assignment.
+*/
+
+.job-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.job-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.status-steps {
+  display: grid;
+  gap: 12px;
+}
+
+.status-step {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  background: #ffffff;
+}
+
+.status-step.active {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.proof-box {
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+  color: var(--muted);
+}

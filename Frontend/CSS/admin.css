@@ -1,0 +1,50 @@
+/* admin.css
+   Admin ticket queue, AI review, assignment, duplicate tickets, and emergency review.
+   Implementation note
+   Admin pages show how AI output supports human decision making.
+*/
+
+.review-panel {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+}
+
+.ai-summary-list {
+  display: grid;
+  gap: 12px;
+}
+
+.ai-summary-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.emergency-card {
+  border-left: 6px solid var(--danger);
+}
+
+.assignment-card {
+  display: grid;
+  gap: 14px;
+}
+
+.technician-option {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.duplicate-group {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 14px;
+  padding: 14px;
+}

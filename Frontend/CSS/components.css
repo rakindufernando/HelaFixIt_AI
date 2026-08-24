@@ -1,0 +1,535 @@
+.btn {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    border-radius: 999px;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--primary), var(--cyan));
+    border: 1px solid rgba(0, 140, 255, 0.25);
+    box-shadow: 0 16px 30px rgba(0, 140, 255, 0.24);
+    font-weight: 900;
+    transition: 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 38px rgba(0, 140, 255, 0.32);
+}
+
+.btn-small {
+    min-height: 40px;
+    padding: 0 18px;
+    font-size: 14px;
+}
+
+.btn-ghost {
+    color: var(--primary-dark);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(0, 140, 255, 0.18);
+    box-shadow: none;
+    backdrop-filter: blur(16px);
+}
+
+.hero-mini-stats div,
+.hero-side-card,
+.feature-card,
+.role-panel,
+.workflow-item,
+.about-points div {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(0, 140, 255, 0.14);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(16px);
+}
+
+.hero-mini-stats div {
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.hero-mini-stats strong {
+    display: block;
+    color: var(--deep);
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.hero-mini-stats span {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hero-side-card {
+    width: 100%;
+    max-width: 360px;
+    justify-self: end;
+    padding: 26px;
+    border-radius: 30px;
+    animation: floatCard 6s ease-in-out infinite;
+}
+
+.hero-side-card span {
+    display: inline-block;
+    color: var(--primary-dark);
+    font-size: 13px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.hero-side-card h3 {
+    color: var(--deep);
+    font-size: 23px;
+    line-height: 1.18;
+    margin-bottom: 10px;
+}
+
+.hero-side-card p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.image-stack {
+    position: relative;
+    min-height: 500px;
+}
+
+.image-card {
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 34px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(0, 140, 255, 0.14);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+    transition: 0.25s ease;
+}
+
+.image-card img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 26px;
+}
+
+.image-card-large {
+    width: 78%;
+    height: 410px;
+}
+
+.image-card-small {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 48%;
+    height: 235px;
+}
+
+.about-points {
+    display: grid;
+    gap: 14px;
+    margin-top: 26px;
+}
+
+.about-points div {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    align-items: center;
+    gap: 14px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.about-points span,
+.workflow-item span,
+.role-icon,
+.feature-icon {
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--primary), var(--cyan));
+    font-weight: 900;
+    box-shadow: 0 14px 28px rgba(0, 140, 255, 0.20);
+}
+
+.about-points span {
+    width: 46px;
+    height: 46px;
+    border-radius: 15px;
+}
+
+.about-points p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    min-height: 235px;
+    padding: 26px;
+    border-radius: 28px;
+    transition: 0.25s ease;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    margin-bottom: 18px;
+}
+
+.feature-card h3 {
+    color: var(--deep);
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.user-role-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.role-panel {
+    overflow: hidden;
+    border-radius: 28px;
+    transition: 0.25s ease;
+}
+
+.role-image {
+    height: 165px;
+    overflow: hidden;
+}
+
+.role-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.role-content {
+    padding: 22px;
+}
+
+.role-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.role-panel h3 {
+    color: var(--deep);
+    margin-bottom: 8px;
+}
+
+.role-panel p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.workflow-list {
+    display: grid;
+    gap: 16px;
+}
+
+.workflow-item {
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    gap: 16px;
+    align-items: start;
+    padding: 22px;
+    border-radius: 24px;
+    transition: 0.25s ease;
+}
+
+.workflow-item span {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+}
+
+.workflow-item h3 {
+    color: var(--deep);
+    margin-bottom: 6px;
+}
+
+.workflow-item p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.footer-login-card {
+    width: min(720px, 84%);
+    margin: 0 auto;
+    transform: translateY(14px);
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 26px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #226ef8, #4d7df4);
+    color: var(--white);
+    box-shadow: 0 12px 28px rgba(0, 102, 255, 0.16);
+}
+
+.login-card-left {
+    position: relative;
+    min-height: 76px;
+    display: grid;
+    place-items: center;
+}
+
+.login-icon-box {
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    box-shadow: 0 10px 20px rgba(7, 20, 38, 0.12);
+}
+
+.login-icon-box img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+.login-lines {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: grid;
+    gap: 4px;
+}
+
+.login-lines span {
+    width: 48px;
+    height: 5px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.login-lines span:nth-child(2) {
+    width: 36px;
+}
+
+.login-lines span:nth-child(3) {
+    width: 26px;
+}
+
+.login-card-content h2 {
+    font-size: clamp(23px, 2.6vw, 30px);
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+.login-card-content p {
+    max-width: 500px;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.login-main-btn {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--primary-dark);
+    font-weight: 900;
+    font-size: 13px;
+    transition: 0.25s ease;
+}
+
+.login-main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 36px rgba(7, 20, 38, 0.18);
+}
+
+.footer-top {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    padding: 30px 0 14px;
+    display: grid;
+    grid-template-columns: 1.25fr 0.62fr 0.72fr 0.82fr 1.65fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--deep);
+    margin-bottom: 8px;
+}
+
+.footer-logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 11px;
+}
+
+.footer-logo strong {
+    font-size: 19px;
+}
+
+.footer-brand p {
+    color: var(--muted);
+    max-width: 270px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+}
+
+.social-links a {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--primary-dark);
+    background: #eaf4ff;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.footer-column h3 {
+    color: var(--deep);
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.footer-column a,
+.footer-column p {
+    display: block;
+    color: var(--text);
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.footer-column a:hover {
+    color: var(--primary-dark);
+}
+
+.footer-contact-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.footer-contact-item {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 18px;
+    background: #f3f9ff;
+    border: 1px solid rgba(0, 140, 255, 0.15);
+    transition: 0.25s ease;
+}
+
+.footer-contact-item:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+.footer-contact-item:hover {
+    transform: translateY(-3px);
+    background: #eaf4ff;
+    box-shadow: 0 12px 26px rgba(31, 111, 191, 0.11);
+}
+
+.footer-contact-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--primary), var(--cyan));
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.footer-contact-item small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.footer-contact-item strong {
+    display: block;
+    color: var(--deep);
+    font-size: 12px;
+    line-height: 1.25;
+}
+
+.footer-bottom {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    border-top: 1px solid #e5edf7;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.footer-bottom div {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.feature-card:hover,
+.role-panel:hover,
+.workflow-item:hover,
+.image-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+}
+
+.role-panel:hover .role-image img {
+    transform: scale(1.08);
+}
+
+@keyframes floatCard {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

@@ -1,0 +1,51 @@
+erDiagram
+    APARTMENT_COMPLEXES ||--o{{ BUILDINGS : contains
+    APARTMENT_COMPLEXES ||--o{{ USERS : has
+    BUILDINGS ||--o{{ FLOORS : contains
+    FLOORS ||--o{{ UNITS : contains
+    BUILDINGS ||--o{{ AREAS : contains
+    FLOORS ||--o{{ AREAS : may_have
+
+    ROLES ||--o{{ USERS : assigned_to
+    ROLES ||--o{{ ROLE_PERMISSIONS : grants
+    PERMISSIONS ||--o{{ ROLE_PERMISSIONS : mapped_to
+
+    APARTMENT_COMPLEXES ||--o{ RESIDENT_REGISTRATION_REQUESTS : receives
+    BUILDINGS ||--o{ RESIDENT_REGISTRATION_REQUESTS : requested_for
+    FLOORS ||--o{ RESIDENT_REGISTRATION_REQUESTS : requested_for
+    USERS ||--o{ RESIDENT_REGISTRATION_REQUESTS : reviews_or_creates
+
+    USERS ||--o| RESIDENT_PROFILES : extends
+    USERS ||--o| APARTMENT_ADMIN_PROFILES : extends
+    USERS ||--o| TECHNICIAN_PROFILES : extends
+
+    TECHNICIAN_PROFILES ||--o{{ TECHNICIAN_SKILLS : has
+    SKILLS ||--o{{ TECHNICIAN_SKILLS : includes
+    SKILLS ||--o{{ ISSUE_CATEGORIES : default_for
+    ISSUE_CATEGORIES ||--o{{ CATEGORY_SKILL_MAPPINGS : requires
+    SKILLS ||--o{{ CATEGORY_SKILL_MAPPINGS : maps
+
+    RESIDENT_PROFILES ||--o{{ MAINTENANCE_TICKETS : submits
+    BUILDINGS ||--o{{ MAINTENANCE_TICKETS : locates
+    FLOORS ||--o{{ MAINTENANCE_TICKETS : locates
+    UNITS ||--o{{ MAINTENANCE_TICKETS : locates
+    AREAS ||--o{{ MAINTENANCE_TICKETS : locates
+    ISSUE_CATEGORIES ||--o{{ MAINTENANCE_TICKETS : current_category
+    MAINTENANCE_ASSETS ||--o{{ MAINTENANCE_TICKETS : concerns
+
+    MAINTENANCE_TICKETS ||--o{{ TICKET_UPDATES : timeline
+    MAINTENANCE_TICKETS ||--o{{ TICKET_ATTACHMENTS : has
+    MAINTENANCE_TICKETS ||--o{{ AI_PREDICTIONS : analysed_by
+    MODEL_VERSIONS ||--o{{ AI_PREDICTIONS : produced_by
+    AI_PREDICTIONS ||--o{{ AI_CORRECTIONS : corrected_by
+    MAINTENANCE_TICKETS ||--o{{ DUPLICATE_MATCHES : source
+    MAINTENANCE_TICKETS ||--o{{ DUPLICATE_MATCHES : matched
+
+    MAINTENANCE_TICKETS ||--o{{ TICKET_ASSIGNMENTS : assigned
+    TECHNICIAN_PROFILES ||--o{{ TICKET_ASSIGNMENTS : receives
+    MAINTENANCE_TICKETS ||--o| TICKET_FEEDBACK : receives
+
+    USERS ||--o{{ NOTIFICATIONS : receives
+    MAINTENANCE_TICKETS ||--o{{ NOTIFICATIONS : generates
+    USERS ||--o{{ AUDIT_LOGS : creates
+    USERS ||--o{{ BACKUP_RECORDS : starts

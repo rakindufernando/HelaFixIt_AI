@@ -1,0 +1,39 @@
+﻿table_name,purpose,primary_key,project_notes
+apartment_complexes,Managed apartment complex,complex_id,One complex in the first version
+roles,Role reference data,role_id,"Resident, Apartment Admin, Technician, System Admin"
+permissions,Permission reference data,permission_id,Fine-grained backend authorisation codes
+role_permissions,Role to permission bridge,role_permission_id,Many-to-many role permission mapping
+buildings,Buildings or blocks,building_id,Multiple blocks inside the complex
+floors,Floor reference data,floor_id,Belongs to a building
+units,Apartment or facility units,unit_id,Belongs to a floor
+areas,Maintenance areas,area_id,"Private, common, service or outdoor area"
+users,Shared authentication and identity,user_id,Parent record for all four user roles
+password_reset_tokens,Password reset flow,reset_token_id,Stores only token hashes and expiry
+revoked_tokens,JWT logout and revocation,revoked_token_id,Stores revoked access or refresh token identifiers
+login_attempts,Authentication security evidence,login_attempt_id,Tracks successful and failed login attempts
+resident_registration_requests,Resident account approval requests,registration_request_id,Resident account is created only after Apartment Admin or System Admin approval
+resident_profiles,Resident apartment profile,resident_id,One profile for a resident user
+apartment_admin_profiles,Apartment admin profile,admin_id,Operational admin profile
+skills,Technician skill reference,skill_id,"Electrical, plumbing, lift and other skills"
+technician_profiles,Technician operational profile,technician_id,"Availability, workload and emergency eligibility"
+technician_skills,Technician to skill bridge,technician_skill_id,Many-to-many skill mapping
+issue_categories,Maintenance category reference,category_id,"Category, default priority and default skill"
+category_skill_mappings,Category to technician skill mapping,category_skill_mapping_id,Supports ranking with more than one skill
+safety_rules,Multilingual safety detection rules,safety_rule_id,"Pattern, score weight and warning text"
+model_versions,AI model traceability,model_version_id,Tracks local model bundle versions and metrics
+maintenance_assets,Optional structured asset history,asset_id,Supports repeated issue history for assets
+maintenance_tickets,Current maintenance ticket record,ticket_id,"Current category, priority, risk, status and location"
+ticket_status_transitions,Approved workflow transitions,transition_id,Used to validate ticket state changes
+ticket_updates,Ticket timeline and repair notes,update_id,Preserves progress history and notes
+ticket_attachments,Ticket and completion file metadata,attachment_id,Files stay outside the database
+ai_predictions,Historical AI output,prediction_id,"Prediction, risk, safety, duplicate and technician recommendation"
+ai_corrections,Apartment admin AI correction history,correction_id,Preserves human corrections and reasons
+duplicate_matches,Ticket similarity matches,duplicate_match_id,Self-referencing ticket relationship
+ticket_assignments,Technician assignment history,assignment_id,"Manual, emergency auto and reassignment records"
+ticket_feedback,Resident resolution feedback,feedback_id,One first-version feedback record per ticket
+notification_preferences,User notification settings,notification_preference_id,"Controls in-app, email, SMS and browser preferences"
+notification_templates,Notification message templates,notification_template_id,Reusable event templates
+notifications,Notification delivery records,notification_id,In-app and secondary channel delivery evidence
+system_settings,Configurable system values,setting_id,"Risk thresholds, duplicate threshold and feature flags"
+audit_logs,Immutable security and workflow audit history,audit_id,"Important actions, old value, new value and reason"
+backup_records,Backup execution evidence,backup_id,Tracks backup status and restore evidence

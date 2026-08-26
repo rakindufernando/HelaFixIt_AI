@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate Ticket Review | HelaFixIt AI</title>
+    <link rel="stylesheet" href="../../CSS/base.css">
+    <link rel="stylesheet" href="../../CSS/app.css?v=20260823-notify-privacy">
+<link href="../../CSS/system-responsive.css?v=20260823-admin-final" rel="stylesheet"/>
+</head>
+<body class="app-body" data-allowed-role="admin" data-login-path="../Public pages/login.html" data-unauthorized-path="../Public pages/unauthorized.html">
+<div class="app-shell">
+    <aside class="sidebar">
+        <a class="sidebar-brand" href="../Public pages/index.html">
+            <img src="../../Assets/Images/helafixit-logo.png" alt="HelaFixIt AI logo">
+            <div><strong>HelaFixIt AI</strong><span>Apartment Maintenance</span></div>
+        </a>
+        <div class="sidebar-user"><div class="avatar" data-user-initial>A</div><div><strong data-user-name>User</strong><small data-user-role>Apartment Admin</small></div></div>
+        <nav class="sidebar-nav"><div class="nav-label">Main navigation</div><a class="app-nav-link" href="admin-dashboard.html"><span class="nav-icon">D</span><span>Dashboard</span></a><a class="app-nav-link" href="ticket-queue.html"><span class="nav-icon">Q</span><span>Ticket Queue</span></a><a class="app-nav-link" href="ai-review.html"><span class="nav-icon">AI</span><span>AI Review</span></a><a class="app-nav-link" href="assign-technician.html"><span class="nav-icon">A</span><span>Assign Technician</span></a><a class="app-nav-link" href="emergency-review.html"><span class="nav-icon">!</span><span>Emergency Review</span></a><a class="app-nav-link active" href="duplicate-tickets.html"><span class="nav-icon">D</span><span>Duplicate Tickets</span></a><a class="app-nav-link" href="registration-requests.html"><span class="nav-icon">U</span><span>Registrations</span></a><a class="app-nav-link" href="technician-management.html"><span class="nav-icon">T</span><span>Technicians</span></a><a class="app-nav-link" href="reports.html"><span class="nav-icon">R</span><span>Reports</span></a><a class="app-nav-link" href="admin-notifications.html"><span class="nav-icon">N</span><span>Notifications</span></a><a class="app-nav-link" href="admin-profile.html"><span class="nav-icon">P</span><span>Profile</span></a></nav>
+        <div class="sidebar-bottom"><button class="app-nav-link" style="width:100%;border:0;background:transparent" onclick="logout()"><span class="nav-icon">X</span><span>Logout</span></button></div>
+    </aside>
+    <main class="app-main">
+        <header class="topbar">
+            <div class="topbar-left"><button class="sidebar-toggle" id="sidebarToggle" aria-label="Open menu">☰</button><span class="topbar-title">Apartment Admin Portal</span></div>
+            <div class="topbar-actions"><button class="icon-button" title="Notifications">N<span class="notification-dot"></span></button><div class="user-chip"><div class="avatar" data-user-initial>U</div><span data-user-name>User</span></div></div>
+        </header>
+        <div class="page-content">
+            <div class="page-heading"><div><div class="breadcrumb">HelaFixIt AI / Apartment Admin / Duplicate Ticket Review</div><h1>Duplicate Ticket Review</h1><p>Compare similar active maintenance complaints to reduce repeated assignments and unnecessary maintenance work.</p></div></div>
+            <div class="notice" style="margin-bottom:16px"><div><strong>Duplicate review</strong>Possible duplicate complaints are detected by the local text-similarity process. Confirm or reject pending matches before maintenance work is repeated.</div></div><div id="duplicateGroups" class="stack"></div>
+        </div>
+    </main>
+</div>
+<div class="toast-container"></div>
+    <script src="../../JS/main.js?v=20260823-notify-privacy"></script>
+    <script src="../../JS/validation.js"></script>
+    <script src="../../JS/api.js?v=20260823-notify-privacy"></script><script src="../../JS/auth.js?v=20260823-notify-privacy"></script>
+    <script src="../../JS/sidebar.js"></script>
+    <script src="../../JS/admin.js?v=20260823-admin-final"></script>
+    <script src="../../JS/reports.js?v=20260823-admin-final"></script>
+</body>
+</html>

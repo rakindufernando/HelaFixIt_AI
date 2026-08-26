@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Completion Proof | HelaFixIt AI</title>
+<link href="../../CSS/base.css" rel="stylesheet"/>
+<link href="../../CSS/app.css?v=20260823-notify-privacy" rel="stylesheet"/>
+<link href="../../CSS/system-responsive.css?v=20260823-final-ui" rel="stylesheet"/>
+</head>
+<body class="app-body" data-allowed-role="technician" data-login-path="../Public pages/login.html" data-unauthorized-path="../Public pages/unauthorized.html">
+<div class="app-shell">
+<aside class="sidebar">
+<a class="sidebar-brand" href="../Public pages/index.html">
+<img alt="HelaFixIt AI logo" src="../../Assets/Images/helafixit-logo.png"/>
+<div><strong>HelaFixIt AI</strong><span>Apartment Maintenance</span></div>
+</a>
+<div class="sidebar-user"><div class="avatar" data-user-initial="">N</div><div><strong data-user-name="">User</strong><small data-user-role="">Technician</small></div></div>
+<nav class="sidebar-nav"><div class="nav-label">Main navigation</div><a class="app-nav-link" href="technician-dashboard.html"><span class="nav-icon">D</span><span>Dashboard</span></a><a class="app-nav-link" href="assigned-jobs.html"><span class="nav-icon">J</span><span>Assigned Jobs</span></a><a class="app-nav-link" href="emergency-jobs.html"><span class="nav-icon">!</span><span>Emergency Jobs</span></a><a class="app-nav-link" href="technician-profile.html"><span class="nav-icon">P</span><span>Profile</span></a><a class="app-nav-link" href="technician-notifications.html"><span class="nav-icon">N</span><span>Notifications</span></a></nav>
+<div class="sidebar-bottom"><button class="app-nav-link" onclick="logout()" style="width:100%;border:0;background:transparent"><span class="nav-icon">X</span><span>Logout</span></button></div>
+</aside>
+<main class="app-main">
+<header class="topbar">
+<div class="topbar-left"><button aria-label="Open menu" class="sidebar-toggle" id="sidebarToggle">☰</button><span class="topbar-title">Technician Portal</span></div>
+<div class="topbar-actions"><button class="icon-button" title="Notifications">N<span class="notification-dot"></span></button><div class="user-chip"><div class="avatar" data-user-initial="">U</div><span data-user-name="">User</span></div></div>
+</header>
+<div class="page-content">
+<div class="page-heading"><div><div class="breadcrumb">HelaFixIt AI / Technician / Completion Proof</div><h1>Completion Proof</h1><p>Complete the maintenance job by adding a repair summary and optional image evidence. The result is stored in the live database.</p></div></div>
+<div class="grid-main-side" id="completionProofPage"><section class="card"><div class="card-header"><div><h2>Complete <span id="proofJobId">-</span></h2><p id="proofJobTitle">Maintenance job</p></div></div><div class="card-body"><form id="completionProofForm"><div class="field"><label>Completion summary <span class="required">*</span></label><textarea id="completionSummary" maxlength="5000" minlength="5" placeholder="Explain the completed repair and confirm the area was checked." required=""></textarea></div><div class="field" style="margin-top:12px"><label>Optional completion image</label><input accept="image/*" id="proofFile" type="file"/><small>JPG, PNG and WebP completion evidence can now be uploaded to the Flask backend.</small></div><div class="check-row" style="margin-top:12px"><input id="completionCheck" required="" type="checkbox"/><label for="completionCheck">I confirm the repair work has been completed and the area has been left in a safe condition.</label></div><div class="form-actions"><button class="btn-app btn-success" type="submit">Mark job completed</button><a class="btn-app btn-secondary" href="assigned-jobs.html">Cancel</a></div></form></div></section><aside class="notice success"><div><strong>Completion workflow</strong>Completing the job updates the database status to Resolved, reduces active workload through the database trigger, stores an audit entry and creates a resident notification.</div></aside></div>
+</div>
+</main>
+</div>
+<div class="toast-container"></div>
+<script src="../../JS/main.js?v=20260823-notify-privacy"></script>
+<script src="../../JS/validation.js?v=20260823-res-tech-audit"></script>
+<script src="../../JS/api.js?v=20260823-notify-privacy"></script><script src="../../JS/auth.js?v=20260823-notify-privacy"></script>
+<script src="../../JS/sidebar.js"></script>
+<script src="../../JS/technician.js?v=20260823-res-tech-audit"></script>
+</body>
+</html>

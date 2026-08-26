@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Technician Profile | HelaFixIt AI</title>
+<link href="../../CSS/base.css" rel="stylesheet"/>
+<link href="../../CSS/app.css?v=20260823-profile-fix" rel="stylesheet"/>
+<link href="../../CSS/system-responsive.css?v=20260823-profile-fix" rel="stylesheet"/>
+</head>
+<body class="app-body" data-allowed-role="technician" data-login-path="../Public pages/login.html" data-unauthorized-path="../Public pages/unauthorized.html">
+<div class="app-shell">
+<aside class="sidebar">
+<a class="sidebar-brand" href="../Public pages/index.html">
+<img alt="HelaFixIt AI logo" src="../../Assets/Images/helafixit-logo.png"/>
+<div><strong>HelaFixIt AI</strong><span>Apartment Maintenance</span></div>
+</a>
+<div class="sidebar-user"><div class="avatar" data-user-initial="">N</div><div><strong data-user-name="">User</strong><small data-user-role="">Technician</small></div></div>
+<nav class="sidebar-nav"><div class="nav-label">Main navigation</div><a class="app-nav-link" href="technician-dashboard.html"><span class="nav-icon">D</span><span>Dashboard</span></a><a class="app-nav-link" href="assigned-jobs.html"><span class="nav-icon">J</span><span>Assigned Jobs</span></a><a class="app-nav-link" href="emergency-jobs.html"><span class="nav-icon">!</span><span>Emergency Jobs</span></a><a class="app-nav-link active" href="technician-profile.html"><span class="nav-icon">P</span><span>Profile</span></a><a class="app-nav-link" href="technician-notifications.html"><span class="nav-icon">N</span><span>Notifications</span></a></nav>
+<div class="sidebar-bottom"><button class="app-nav-link" onclick="logout()" style="width:100%;border:0;background:transparent"><span class="nav-icon">X</span><span>Logout</span></button></div>
+</aside>
+<main class="app-main">
+<header class="topbar">
+<div class="topbar-left"><button aria-label="Open menu" class="sidebar-toggle" id="sidebarToggle">☰</button><span class="topbar-title">Technician Portal</span></div>
+<div class="topbar-actions"><button class="icon-button" title="Notifications">N<span class="notification-dot"></span></button><div class="user-chip"><div class="avatar" data-user-initial="">U</div><span data-user-name="">User</span></div></div>
+</header>
+<div class="page-content">
+<div class="page-heading"><div><div class="breadcrumb">HelaFixIt AI / Technician / Technician Profile</div><h1>Technician Profile</h1><p>Update your phone number and current availability used by the assignment workflow.</p></div></div>
+<div class="grid-main-side" id="technicianProfile"><section class="card"><div class="card-header"><h2>Technician details</h2></div><div class="card-body"><form id="techProfileForm"><div class="form-grid"><div class="field"><label>Full name</label><input data-validate="name" id="techName" maxlength="150" required=""/></div><div class="field"><label>Email</label><input disabled="" id="techEmail" type="email"/></div><div class="field"><label>Phone</label><input data-validate="mobile" id="techPhone" inputmode="tel" maxlength="20" required=""/></div><div class="field"><label>Employee code</label><input disabled="" id="techEmployeeCode"/></div><div class="field"><label>Verified skills</label><input disabled="" id="techSkill"/></div><div class="field"><label>Assigned building</label><input disabled="" id="techBuilding"/></div><div class="field"><label>Availability</label><select id="techAvailabilitySelect"><option>Available</option><option>Busy</option><option>Off Duty</option><option>On Leave</option></select></div><div class="field"><label>Active workload</label><input disabled="" id="techWorkload"/></div><div class="field"><label>Emergency eligible</label><input disabled="" id="techEmergencyEligible"/></div></div><div class="form-actions"><button class="btn-app" type="submit">Save profile</button></div></form></div></section><aside class="card"><div class="profile-summary"><div class="profile-avatar" id="techProfileInitial">T</div><h2 id="techProfileName">Technician</h2><p id="techProfileSkill">Maintenance Skill</p><span class="badge badge-available">Technician account</span></div></aside></div>
+</div>
+</main>
+</div>
+<div class="toast-container"></div>
+<script src="../../JS/main.js?v=20260823-profile-fix"></script>
+<script src="../../JS/validation.js?v=20260823-res-tech-audit"></script>
+<script src="../../JS/api.js?v=20260823-profile-fix"></script><script src="../../JS/auth.js?v=20260823-profile-fix"></script>
+<script src="../../JS/sidebar.js"></script>
+<script src="../../JS/technician.js?v=20260823-res-tech-audit"></script>
+</body>
+</html>

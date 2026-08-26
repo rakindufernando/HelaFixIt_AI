@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Technician Dashboard | HelaFixIt AI</title>
+<link href="../../CSS/base.css" rel="stylesheet"/>
+<link href="../../CSS/app.css?v=20260823-notify-privacy" rel="stylesheet"/>
+<link href="../../CSS/system-responsive.css?v=20260823-final-ui" rel="stylesheet"/>
+</head>
+<body class="app-body" data-allowed-role="technician" data-login-path="../Public pages/login.html" data-unauthorized-path="../Public pages/unauthorized.html">
+<div class="app-shell">
+<aside class="sidebar">
+<a class="sidebar-brand" href="../Public pages/index.html">
+<img alt="HelaFixIt AI logo" src="../../Assets/Images/helafixit-logo.png"/>
+<div><strong>HelaFixIt AI</strong><span>Apartment Maintenance</span></div>
+</a>
+<div class="sidebar-user"><div class="avatar" data-user-initial="">N</div><div><strong data-user-name="">User</strong><small data-user-role="">Technician</small></div></div>
+<nav class="sidebar-nav"><div class="nav-label">Main navigation</div><a class="app-nav-link active" href="technician-dashboard.html"><span class="nav-icon">D</span><span>Dashboard</span></a><a class="app-nav-link" href="assigned-jobs.html"><span class="nav-icon">J</span><span>Assigned Jobs</span></a><a class="app-nav-link" href="emergency-jobs.html"><span class="nav-icon">!</span><span>Emergency Jobs</span></a><a class="app-nav-link" href="technician-profile.html"><span class="nav-icon">P</span><span>Profile</span></a><a class="app-nav-link" href="technician-notifications.html"><span class="nav-icon">N</span><span>Notifications</span></a></nav>
+<div class="sidebar-bottom"><button class="app-nav-link" onclick="logout()" style="width:100%;border:0;background:transparent"><span class="nav-icon">X</span><span>Logout</span></button></div>
+</aside>
+<main class="app-main">
+<header class="topbar">
+<div class="topbar-left"><button aria-label="Open menu" class="sidebar-toggle" id="sidebarToggle">☰</button><span class="topbar-title">Technician Portal</span></div>
+<div class="topbar-actions"><button class="icon-button" title="Notifications">N<span class="notification-dot"></span></button><div class="user-chip"><div class="avatar" data-user-initial="">U</div><span data-user-name="">User</span></div></div>
+</header>
+<div class="page-content">
+<div class="page-heading"><div><div class="breadcrumb">HelaFixIt AI / Technician / Technician Dashboard</div><h1>Technician Dashboard</h1><p>View assigned maintenance jobs, emergency tasks, active work and personal availability.</p></div></div>
+<div id="technicianDashboard"><div class="stats-grid"><div class="stat-card"><span class="stat-label">Assigned jobs</span><div class="stat-value" id="techAssignedCount">0</div><div class="stat-change">Open work orders</div></div><div class="stat-card"><span class="stat-label">Emergency jobs</span><div class="stat-value" id="techEmergencyCount">0</div><div class="stat-change alert">Priority response</div></div><div class="stat-card"><span class="stat-label">In progress</span><div class="stat-value" id="techProgressCount">0</div><div class="stat-change">Currently being repaired</div></div><div class="stat-card"><span class="stat-label">Completed</span><div class="stat-value" id="techCompletedCount">0</div><div class="stat-change good">Closed maintenance work</div></div></div><div class="grid-main-side"><section class="card"><div class="card-header"><div><h2>My current jobs</h2><p>Assignments for your technician account</p></div><a class="btn-app btn-sm" href="assigned-jobs.html">View all</a></div><div class="card-body" id="techDashboardJobs"></div></section><div class="stack"><section class="card"><div class="card-header"><h3>Availability</h3></div><div class="card-body"><div class="profile-summary" style="padding:5px"><div class="profile-avatar">T</div><h2 data-user-name="">Technician</h2><p>Current status <strong id="techAvailability">-</strong></p></div><a class="btn-app btn-secondary" href="technician-profile.html" style="width:100%">Update availability</a></div></section><section class="card"><div class="card-header"><h3>Work steps</h3></div><div class="card-body timeline"><div class="timeline-item done"><span class="timeline-dot"></span><h4>Open assignment</h4><p>Review job details and safety warning.</p></div><div class="timeline-item"><span class="timeline-dot"></span><h4>Update progress</h4><p>Set accepted or in progress status.</p></div><div class="timeline-item"><span class="timeline-dot"></span><h4>Complete repair</h4><p>Add repair notes and optional proof.</p></div></div></section></div></div></div>
+</div>
+</main>
+</div>
+<div class="toast-container"></div>
+<script src="../../JS/main.js?v=20260823-notify-privacy"></script>
+<script src="../../JS/validation.js?v=20260823-res-tech-audit"></script>
+<script src="../../JS/api.js?v=20260823-notify-privacy"></script><script src="../../JS/auth.js?v=20260823-notify-privacy"></script>
+<script src="../../JS/sidebar.js"></script>
+<script src="../../JS/technician.js?v=20260823-res-tech-audit"></script>
+</body>
+</html>

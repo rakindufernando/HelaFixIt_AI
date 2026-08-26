@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submit Maintenance Ticket | HelaFixIt AI</title>
+<link href="../../CSS/base.css" rel="stylesheet"/>
+<link href="../../CSS/app.css?v=20260823-notify-privacy" rel="stylesheet"/>
+<link href="../../CSS/system-responsive.css?v=20260823-final-ui" rel="stylesheet"/>
+</head>
+<body class="app-body" data-allowed-role="resident" data-login-path="../Public pages/login.html" data-unauthorized-path="../Public pages/unauthorized.html">
+<div class="app-shell">
+<aside class="sidebar">
+<a class="sidebar-brand" href="../Public pages/index.html">
+<img alt="HelaFixIt AI logo" src="../../Assets/Images/helafixit-logo.png"/>
+<div><strong>HelaFixIt AI</strong><span>Apartment Maintenance</span></div>
+</a>
+<div class="sidebar-user"><div class="avatar" data-user-initial="">K</div><div><strong data-user-name="">User</strong><small data-user-role="">Resident</small></div></div>
+<nav class="sidebar-nav"><div class="nav-label">Main navigation</div><a class="app-nav-link" href="resident-dashboard.html"><span class="nav-icon">D</span><span>Dashboard</span></a><a class="app-nav-link active" href="submit-ticket.html"><span class="nav-icon">+</span><span>Submit Ticket</span></a><a class="app-nav-link" href="my-tickets.html"><span class="nav-icon">T</span><span>My Tickets</span></a><a class="app-nav-link" href="ticket-ai-result.html"><span class="nav-icon">AI</span><span>AI Result</span></a><a class="app-nav-link" href="resident-notifications.html"><span class="nav-icon">N</span><span>Notifications</span></a><a class="app-nav-link" href="resident-profile.html"><span class="nav-icon">P</span><span>Profile</span></a></nav>
+<div class="sidebar-bottom"><button class="app-nav-link" onclick="logout()" style="width:100%;border:0;background:transparent"><span class="nav-icon">X</span><span>Logout</span></button></div>
+</aside>
+<main class="app-main">
+<header class="topbar">
+<div class="topbar-left"><button aria-label="Open menu" class="sidebar-toggle" id="sidebarToggle">☰</button><span class="topbar-title">Resident Portal</span></div>
+<div class="topbar-actions"><button class="icon-button" title="Notifications">N<span class="notification-dot"></span></button><div class="user-chip"><div class="avatar" data-user-initial="">U</div><span data-user-name="">User</span></div></div>
+</header>
+<div class="page-content">
+<div class="page-heading"><div><div class="breadcrumb">HelaFixIt AI / Resident / Submit Maintenance Ticket</div><h1>Submit Maintenance Ticket</h1><p>Describe the maintenance problem clearly. This page now stores the ticket in the live HelaFixIt AI database.</p></div></div>
+<div class="grid-main-side"><section class="card"><div class="card-header"><div><h2>Maintenance issue details</h2><p>Required fields are marked with an asterisk</p></div></div><div class="card-body"><form id="ticketForm">
+<div class="form-grid"><div class="field full"><label>Short issue title <span class="required">*</span></label><input id="ticketTitle" maxlength="180" minlength="4" placeholder="Example Bathroom pipe leaking badly" required=""/></div><div class="field full"><label>Issue description <span class="required">*</span></label><textarea id="ticketDescription" minlength="10" placeholder="Explain what happened, what you can see or smell, and whether anyone is in danger. English, Sinhala, Singlish or mixed wording can be entered." required=""></textarea><small>Do not include unnecessary private information.</small></div>
+<div class="field"><label>Building block <span class="required">*</span></label><select id="ticketBlock" required=""><option value="">Loading blocks...</option></select></div><div class="field"><label>Floor <span class="required">*</span></label><select id="ticketFloor" required=""><option value="">Select floor</option></select></div><div class="field"><label>Area <span class="required">*</span></label><select id="ticketArea" required=""><option value="">Select area</option></select></div><div class="field"><label>Asset or item</label><input id="ticketAsset" maxlength="100" placeholder="Example Pipe, Lift, Socket"/></div><div class="field full"><label>Optional issue image</label><input accept="image/jpeg,image/png,image/webp" id="ticketImage" type="file"/><small>Optional JPG, PNG or WebP image. Maximum upload size is 5 MB.</small></div></div>
+<div class="form-actions"><button class="btn-app" type="submit">Submit maintenance ticket</button><button class="btn-app btn-secondary" type="reset">Clear form</button></div></form></div></section>
+<div class="stack"><div class="notice warning"><div><strong>Emergency safety</strong>If there is immediate danger to life or property, move to a safe location and follow the building emergency procedure. The system supports maintenance response but does not replace emergency services.</div></div><section class="card"><div class="card-header"><div><h3>AI maintenance workflow</h3><p>Each submitted ticket is analysed before it enters the maintenance queue</p></div></div><div class="card-body"><div class="detail-list"><div class="detail-item"><span>Prediction</span><strong>Category and priority</strong></div><div class="detail-item"><span>Risk</span><strong>0 to 100 score</strong></div><div class="detail-item"><span>Safety</span><strong>Hazard warning</strong></div><div class="detail-item"><span>Similarity</span><strong>Duplicate check</strong></div><div class="detail-item"><span>Recommendation</span><strong>Technician type</strong></div><div class="detail-item"><span>Emergency</span><strong>Auto assignment</strong></div></div></div></section></div></div>
+</div>
+</main>
+</div>
+<div class="toast-container"></div>
+<script src="../../JS/main.js?v=20260823-notify-privacy"></script>
+<script src="../../JS/validation.js?v=20260823-res-tech-audit"></script>
+<script src="../../JS/api.js?v=20260823-notify-privacy"></script><script src="../../JS/auth.js?v=20260823-notify-privacy"></script>
+<script src="../../JS/sidebar.js"></script>
+<script src="../../JS/ai-result.js?v=20260823-res-tech-audit"></script>
+<script src="../../JS/ticket.js?v=20260823-res-tech-audit"></script>
+<script src="../../JS/resident.js?v=20260823-res-tech-audit"></script>
+</body>
+</html>

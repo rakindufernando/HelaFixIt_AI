@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ticket Details | HelaFixIt AI</title>
+<link href="../../CSS/base.css" rel="stylesheet"/>
+<link href="../../CSS/app.css?v=20260823-notify-privacy" rel="stylesheet"/>
+<link href="../../CSS/system-responsive.css?v=20260823-final-ui" rel="stylesheet">
+</link></head>
+<body class="app-body" data-allowed-role="resident" data-login-path="../Public pages/login.html" data-unauthorized-path="../Public pages/unauthorized.html">
+<div class="app-shell">
+<aside class="sidebar">
+<a class="sidebar-brand" href="../Public pages/index.html">
+<img alt="HelaFixIt AI logo" src="../../Assets/Images/helafixit-logo.png"/>
+<div><strong>HelaFixIt AI</strong><span>Apartment Maintenance</span></div>
+</a>
+<div class="sidebar-user"><div class="avatar" data-user-initial="">K</div><div><strong data-user-name="">User</strong><small data-user-role="">Resident</small></div></div>
+<nav class="sidebar-nav"><div class="nav-label">Main navigation</div><a class="app-nav-link" href="resident-dashboard.html"><span class="nav-icon">D</span><span>Dashboard</span></a><a class="app-nav-link" href="submit-ticket.html"><span class="nav-icon">+</span><span>Submit Ticket</span></a><a class="app-nav-link" href="my-tickets.html"><span class="nav-icon">T</span><span>My Tickets</span></a><a class="app-nav-link" href="ticket-ai-result.html"><span class="nav-icon">AI</span><span>AI Result</span></a><a class="app-nav-link" href="resident-notifications.html"><span class="nav-icon">N</span><span>Notifications</span></a><a class="app-nav-link" href="resident-profile.html"><span class="nav-icon">P</span><span>Profile</span></a></nav>
+<div class="sidebar-bottom"><button class="app-nav-link" onclick="logout()" style="width:100%;border:0;background:transparent"><span class="nav-icon">X</span><span>Logout</span></button></div>
+</aside>
+<main class="app-main">
+<header class="topbar">
+<div class="topbar-left"><button aria-label="Open menu" class="sidebar-toggle" id="sidebarToggle">☰</button><span class="topbar-title">Resident Portal</span></div>
+<div class="topbar-actions"><button class="icon-button" title="Notifications">N<span class="notification-dot"></span></button><div class="user-chip"><div class="avatar" data-user-initial="">U</div><span data-user-name="">User</span></div></div>
+</header>
+<div class="page-content">
+<div class="page-heading"><div><div class="breadcrumb">HelaFixIt AI / Resident / Ticket Details</div><h1>Ticket Details</h1><p>View the full maintenance request, AI decision support information, technician assignment and progress timeline.</p></div></div>
+<div class="stack" id="residentTicketDetails"><section class="card"><div class="card-header"><div><h2><span id="detailTicketId">-</span> · <span id="detailTitle">Ticket</span></h2><p id="detailCreated">-</p></div><div style="display:flex;gap:6px"><span id="detailPriority"></span><span id="detailStatus"></span></div></div><div class="card-body"><div class="detail-list"><div class="detail-item"><span>Description</span><strong id="detailDescription">-</strong></div><div class="detail-item"><span>Location</span><strong id="detailLocation">-</strong></div><div class="detail-item"><span>Asset</span><strong id="detailAsset">-</strong></div><div class="detail-item"><span>AI category</span><strong id="detailCategory">-</strong></div><div class="detail-item"><span>Risk</span><strong id="detailRisk">-</strong></div><div class="detail-item"><span>Technician</span><strong id="detailTechnician">-</strong></div><div class="detail-item"><span>Duplicate result</span><strong id="detailDuplicate">-</strong></div><div class="detail-item"><span>Repair note</span><strong id="detailRepairNote">-</strong></div></div></div></section><div class="grid-2"><section class="card"><div class="card-header"><h3>Safety information</h3></div><div class="card-body"><div class="notice warning"><div><strong>Safety warning</strong><span id="detailSafety">-</span></div></div></div></section><section class="card"><div class="card-header"><h3>Progress timeline</h3></div><div class="card-body"><div class="timeline" id="ticketTimeline"></div></div></section></div></div>
+</div>
+</main>
+</div>
+<div class="toast-container"></div>
+<script src="../../JS/main.js?v=20260823-notify-privacy"></script>
+<script src="../../JS/validation.js?v=20260823-res-tech-audit"></script>
+<script src="../../JS/api.js?v=20260823-notify-privacy"></script><script src="../../JS/auth.js?v=20260823-notify-privacy"></script>
+<script src="../../JS/sidebar.js"></script>
+<script src="../../JS/ai-result.js?v=20260823-res-tech-audit"></script>
+<script src="../../JS/ticket.js?v=20260823-res-tech-audit"></script>
+<script src="../../JS/resident.js?v=20260823-res-tech-audit"></script>
+</body>
+</html>

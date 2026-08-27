@@ -48,20 +48,6 @@
     window.navigateWithId = function (url, id) { location.href = url + '?id=' + encodeURIComponent(id); };
     window.setText = function (id, text) { const el = getElement(id); if (el) el.textContent = text; };
 
-    function initLanding() {
-        const toggle = getElement('menuToggle');
-        const menu = getElement('navMenu');
-        if (toggle && menu) {
-            toggle.addEventListener('click', function () { document.body.classList.toggle('menu-open'); menu.classList.toggle('open'); });
-            menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ document.body.classList.remove('menu-open'); menu.classList.remove('open'); }); });
-        }
-        const reveals = document.querySelectorAll('.reveal');
-        if (reveals.length) {
-            const observer = new IntersectionObserver(function (entries) { entries.forEach(function(entry){ if(entry.isIntersecting){ entry.target.classList.add('show'); observer.unobserve(entry.target); } }); }, {threshold:.08});
-            reveals.forEach(function (el) { observer.observe(el); });
-        }
-    }
-
     function initModals() {
         document.querySelectorAll('[data-close-modal]').forEach(function(btn){ btn.addEventListener('click', function(){ closeModal(btn.dataset.closeModal); }); });
         document.querySelectorAll('.modal-backdrop').forEach(function(backdrop){ backdrop.addEventListener('click', function(e){ if(e.target === backdrop) closeModal(backdrop.id); }); });
@@ -159,7 +145,6 @@
     document.addEventListener('keydown', function (event) { if (event.key === 'Escape') { const open = document.querySelector('.modal-backdrop.show'); if (open && open.id) closeModal(open.id); } });
 
     document.addEventListener('DOMContentLoaded', function () {
-        initLanding();
         initModals();
         applyPublicSystemSettings();
         ensureNotificationButton();

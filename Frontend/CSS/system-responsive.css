@@ -134,14 +134,6 @@ body.user-management-page #passwordResetModal > .modal { width:min(560px,100%) !
   body.user-management-page #userModal .user-management-form-content { padding-top:12px !important; padding-bottom:12px !important; }
 }
 
-/* Landing page mobile safety */
-@media (max-width:640px) {
-  .site-header { top:8px; }
-  .navbar { max-width:100%; }
-  .nav-menu { max-height:calc(100dvh - 100px); overflow-y:auto; }
-  .hero-section { min-height:auto; }
-  .hero-content-area,.about-grid,.workflow-grid,.feature-grid,.user-role-grid,.footer-top { min-width:0; }
-}
 
 @media (prefers-reduced-motion:reduce) {
   *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }

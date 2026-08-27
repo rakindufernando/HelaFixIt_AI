@@ -1,0 +1,190 @@
+﻿ticket_text,expected_language,expected_category,expected_priority,expected_safety
+socket eken spark enawa,Singlish,Electrical,Emergency,SPARK
+sparks are coming from the socket,English,Electrical,Emergency,SPARK
+සොකට් එකෙන් ගිනි පුපුරු එනවා,Sinhala,Electrical,Emergency,SPARK
+socket එකෙන් spark එනවා,Mixed,Electrical,Emergency,SPARK
+current wire eka eliyata thiyenawa,Singlish,Electrical,Emergency,EXPOSED_WIRE
+an exposed live wire is visible,English,Electrical,Emergency,EXPOSED_WIRE
+විදුලි වයර් එක නිරාවරණව තියෙනවා,Sinhala,Electrical,Emergency,EXPOSED_WIRE
+live wire එක exposed වෙලා,Mixed,Electrical,Emergency,EXPOSED_WIRE
+socket eka godak rath wela,Singlish,Electrical,High,ELECTRICAL_OVERHEAT
+the wall socket is very hot,English,Electrical,High,ELECTRICAL_OVERHEAT
+සොකට් එක ගොඩක් රත් වෙලා,Sinhala,Electrical,High,ELECTRICAL_OVERHEAT
+socket එක very hot,Mixed,Electrical,High,ELECTRICAL_OVERHEAT
+pipe eka pupurala watura galanawa,Singlish,Plumbing,Emergency,BURST_PIPE
+a pipe has burst and water is flooding the room,English,Plumbing,Emergency,BURST_PIPE
+පයිප්පය පුපුරලා වතුර ගලනවා,Sinhala,Plumbing,Emergency,BURST_PIPE
+pipe එක burst වෙලා water ගලනවා,Mixed,Plumbing,Emergency,BURST_PIPE
+watura godak galanawa floor eka wet,Singlish,Plumbing,High,MAJOR_WATER_LEAK
+a major water leak is spreading across the floor,English,Plumbing,High,MAJOR_WATER_LEAK
+විශාල වතුර කාන්දුවක් බිම පුරා ගලනවා,Sinhala,Plumbing,High,MAJOR_WATER_LEAK
+major water leak එකක් floor එකට ගලනවා,Mixed,Plumbing,High,MAJOR_WATER_LEAK
+godak rath watura spray wenawa,Singlish,Plumbing,Emergency,HOT_WATER_SCALD
+very hot water is spraying from the pipe,English,Plumbing,Emergency,HOT_WATER_SCALD
+ගොඩක් උණු වතුර පයිප්පයෙන් එනවා,Sinhala,Plumbing,Emergency,HOT_WATER_SCALD
+hot water එක pipe එකෙන් spray වෙනවා,Mixed,Plumbing,Emergency,HOT_WATER_SCALD
+lift eka ida idan bimata kadan watila,Singlish,Lift,Emergency,LIFT_FALL
+the lift suddenly dropped down,English,Lift,Emergency,LIFT_FALL
+ලිෆ්ට් එක එකවර පහළට වැටුණා,Sinhala,Lift,Emergency,LIFT_FALL
+lift එක suddenly පහළට dropped,Mixed,Lift,Emergency,LIFT_FALL
+lift eka control nathi wela godak fast pahala yanawa,Singlish,Lift,Emergency,LIFT_UNCONTROLLED
+the lift is moving down too fast and feels uncontrolled,English,Lift,Emergency,LIFT_UNCONTROLLED
+ලිෆ්ට් එක පාලනය නැතිව ඉතා වේගයෙන් පහළට යනවා,Sinhala,Lift,Emergency,LIFT_UNCONTROLLED
+lift එක control නැතුව fast පහළට යනවා,Mixed,Lift,Emergency,LIFT_UNCONTROLLED
+lift eka yaddi door open wela,Singlish,Lift,Emergency,LIFT_DOOR_DANGER
+the lift is moving while the door is open,English,Lift,Emergency,LIFT_DOOR_DANGER
+ලිෆ්ට් එක යනකොට දොර ඇරලා තියෙනවා,Sinhala,Lift,Emergency,LIFT_DOOR_DANGER
+lift එක move වෙද්දී door open,Mixed,Lift,Emergency,LIFT_DOOR_DANGER
+ac eken duma enawa,Singlish,Air Conditioning,Emergency,AC_FIRE_ELECTRICAL
+smoke is coming from the air conditioner,English,Air Conditioning,Emergency,AC_FIRE_ELECTRICAL
+ඒසී එකෙන් දුම එනවා,Sinhala,Air Conditioning,Emergency,AC_FIRE_ELECTRICAL
+AC එකෙන් smoke එනවා,Mixed,Air Conditioning,Emergency,AC_FIRE_ELECTRICAL
+ac eken chemical smell ekak enawa,Singlish,Air Conditioning,High,AC_REFRIGERANT
+there is a chemical smell and hissing from the AC,English,Air Conditioning,High,AC_REFRIGERANT
+ඒසී එකෙන් රසායනික ගඳක් එනවා,Sinhala,Air Conditioning,High,AC_REFRIGERANT
+AC එකෙන් chemical smell එකක් එනවා,Mixed,Air Conditioning,High,AC_REFRIGERANT
+ac eken watura godak galanawa,Singlish,Air Conditioning,High,AC_MAJOR_LEAK
+a large amount of water is pouring from the AC,English,Air Conditioning,High,AC_MAJOR_LEAK
+ඒසී එකෙන් වතුර ගොඩක් ගලනවා,Sinhala,Air Conditioning,High,AC_MAJOR_LEAK
+AC එකෙන් water ගොඩක් leak වෙනවා,Mixed,Air Conditioning,High,AC_MAJOR_LEAK
+drain eken sewage overflow wenawa,Singlish,Drainage,High,SEWAGE
+sewage is overflowing from the drain,English,Drainage,High,SEWAGE
+ඩ්‍රේන් එකෙන් මළ ජලය උඩට එනවා,Sinhala,Drainage,High,SEWAGE
+drain එකෙන් sewage overflow වෙනවා,Mixed,Drainage,High,SEWAGE
+basement eka watura pirila,Singlish,Drainage,High,BASEMENT_FLOOD
+the basement is flooding and the water level is rising,English,Drainage,High,BASEMENT_FLOOD
+බේස්මන්ට් එක වතුරෙන් පිරිලා,Sinhala,Drainage,High,BASEMENT_FLOOD
+basement එක water වලින් flooded,Mixed,Drainage,High,BASEMENT_FLOOD
+manhole cover eka naha open wela,Singlish,Drainage,High,MANHOLE_DANGER
+the manhole cover is missing,English,Drainage,High,MANHOLE_DANGER
+මෑන්හෝල් කවරය නැහැ,Sinhala,Drainage,High,MANHOLE_DANGER
+manhole cover එක missing,Mixed,Drainage,High,MANHOLE_DANGER
+chemical eka floor eke spill wela,Singlish,Cleaning,Emergency,CHEMICAL_SPILL
+a chemical spill is blocking the walkway,English,Cleaning,Emergency,CHEMICAL_SPILL
+රසායනික ද්‍රව්‍ය බිම වැටීලා,Sinhala,Cleaning,Emergency,CHEMICAL_SPILL
+chemical spill එක floor එකේ,Mixed,Cleaning,Emergency,CHEMICAL_SPILL
+glass kadila bimata katu godak,Singlish,Cleaning,High,BROKEN_GLASS
+broken glass pieces are spread across the floor,English,Cleaning,High,BROKEN_GLASS
+බිම කැඩුණු වීදුරු කැබලි තියෙනවා,Sinhala,Cleaning,High,BROKEN_GLASS
+broken glass කැබලි floor එකේ,Mixed,Cleaning,High,BROKEN_GLASS
+needle ekak saha blood spill ekak thiyenawa,Singlish,Cleaning,High,BIOHAZARD
+a used needle and blood spill are on the floor,English,Cleaning,High,BIOHAZARD
+භාවිත කළ ඉඳිකටුවක් සහ රුධිරය බිම තියෙනවා,Sinhala,Cleaning,High,BIOHAZARD
+used needle එකක් සහ blood spill එකක්,Mixed,Cleaning,High,BIOHAZARD
+snake ekak common area eke innawa,Singlish,Pest Control,Emergency,SNAKE
+a snake is inside the occupied common area,English,Pest Control,Emergency,SNAKE
+පොදු ප්‍රදේශයේ සර්පයෙක් ඉන්නවා,Sinhala,Pest Control,Emergency,SNAKE
+snake එකක් common area එකේ,Mixed,Pest Control,Emergency,SNAKE
+bee swarm ekak residents langa innawa,Singlish,Pest Control,High,AGGRESSIVE_SWARM
+an aggressive bee swarm is close to residents,English,Pest Control,High,AGGRESSIVE_SWARM
+මී මැසි රංචුවක් නේවාසිකයන් අසල තියෙනවා,Sinhala,Pest Control,High,AGGRESSIVE_SWARM
+bee swarm එකක් residents ළඟ,Mixed,Pest Control,High,AGGRESSIVE_SWARM
+garbage room eke rats godak innawa,Singlish,Pest Control,High,RAT_INFESTATION
+there are many rats in the garbage room,English,Pest Control,High,RAT_INFESTATION
+කසළ කාමරයේ මීයන් ගොඩක් ඉන්නවා,Sinhala,Pest Control,High,RAT_INFESTATION
+garbage room එකේ rats ගොඩක්,Mixed,Pest Control,High,RAT_INFESTATION
+fire exit door eka jam wela arinne naha,Singlish,Security and Access,Emergency,FIRE_EXIT_DOOR
+the fire exit door is jammed and cannot open,English,Security and Access,Emergency,FIRE_EXIT_DOOR
+හදිසි පිටවීමේ දොර හිරවෙලා ඇරෙන්නේ නැහැ,Sinhala,Security and Access,Emergency,FIRE_EXIT_DOOR
+fire exit door එක jam වෙලා,Mixed,Security and Access,Emergency,FIRE_EXIT_DOOR
+main door lock karanna ba,Singlish,Security and Access,High,SECURITY_DOOR_FAILURE
+the main security door cannot be locked,English,Security and Access,High,SECURITY_DOOR_FAILURE
+ප්‍රධාන දොර ලොක් කරන්න බැහැ,Sinhala,Security and Access,High,SECURITY_DOOR_FAILURE
+main security door එක lock කරන්න බැහැ,Mixed,Security and Access,High,SECURITY_DOOR_FAILURE
+door frame eka watenna wage godak loose,Singlish,Carpentry,Emergency,FALLING_FITTING
+the heavy door frame may fall,English,Carpentry,Emergency,FALLING_FITTING
+දොර රාමුව වැටෙන්න පුළුවන්,Sinhala,Carpentry,Emergency,FALLING_FITTING
+door frame එක fall වෙන්න වගේ,Mixed,Carpentry,Emergency,FALLING_FITTING
+handrail eka galawila godak loose,Singlish,Carpentry,High,LOOSE_HANDRAIL
+the staircase handrail is detached,English,Carpentry,High,LOOSE_HANDRAIL
+පඩිපෙළ අත් වැට ගැලවිලා,Sinhala,Carpentry,High,LOOSE_HANDRAIL
+handrail එක detached වෙලා,Mixed,Carpentry,High,LOOSE_HANDRAIL
+kitchen eke gas smell ekak enawa,Singlish,Gas,Emergency,GAS
+there is a strong gas smell in the kitchen,English,Gas,Emergency,GAS
+කුස්සියේ ගෑස් ගඳක් එනවා,Sinhala,Gas,Emergency,GAS
+kitchen එකේ gas smell එකක්,Mixed,Gas,Emergency,GAS
+fire alarm eka wada naha,Singlish,Fire and Safety,High,FIRE_ALARM_FAILURE
+the fire alarm is not working,English,Fire and Safety,High,FIRE_ALARM_FAILURE
+ගිනි අනතුරු ඇඟවීම වැඩ නැහැ,Sinhala,Fire and Safety,High,FIRE_ALARM_FAILURE
+fire alarm එක වැඩ නැහැ,Mixed,Fire and Safety,High,FIRE_ALARM_FAILURE
+main gate eka open wela stuck,Singlish,Security and Access,High,ACCESS_SECURITY_FAILURE
+the main gate is stuck open and access control has failed,English,Security and Access,High,ACCESS_SECURITY_FAILURE
+ප්‍රධාන ගේට්ටුව ඇරලා හිරවෙලා,Sinhala,Security and Access,High,ACCESS_SECURITY_FAILURE
+main gate එක open වෙලා stuck,Mixed,Security and Access,High,ACCESS_SECURITY_FAILURE
+sign board eka watenna wage,Singlish,Other,High,FALLING_COMMON_OBJECT
+the sign board may fall into the walkway,English,Other,High,FALLING_COMMON_OBJECT
+සලකුණු පුවරුව වැටෙන්න පුළුවන්,Sinhala,Other,High,FALLING_COMMON_OBJECT
+sign board එක fall වෙන්න වගේ,Mixed,Other,High,FALLING_COMMON_OBJECT
+kamarayak gini gannawa,Singlish,Fire and Safety,Emergency,FIRE
+room එකේ fire එකක් තියෙනවා,Mixed,Fire and Safety,Emergency,FIRE
+There is heavy smoke in the room,English,Fire and Safety,Emergency,SMOKE
+කාමරයේ දුම පිරෙනවා,Sinhala,Fire and Safety,Emergency,SMOKE
+watura electrical panel langa enawa,Singlish,Electrical,Emergency,WATER_ELECTRIC
+වතුර විදුලි පුවරුව ළඟට එනවා,Sinhala,Electrical,Emergency,WATER_ELECTRIC
+lift eke kenek hira wela,Singlish,Lift,Emergency,LIFT_TRAP
+person කෙනෙක් lift එකේ stuck වෙලා,Mixed,Lift,Emergency,LIFT_TRAP
+The AC remote is not responding,English,Air Conditioning,Low,NONE
+ඒසී රිමෝට් එක ප්‍රතිචාර දක්වන්නේ නැහැ,Sinhala,Air Conditioning,Low,NONE
+ac remote eka response karanne naha,Singlish,Air Conditioning,Low,NONE
+AC remote එක response කරන්නේ නැහැ,Mixed,Air Conditioning,Low,NONE
+The cupboard hinge is loose,English,Carpentry,Low,NONE
+කබඩ් හින්ජ් එක ලූස් වෙලා,Sinhala,Carpentry,Low,NONE
+cupboard hinge eka loose,Singlish,Carpentry,Low,NONE
+cupboard hinge එක loose,Mixed,Carpentry,Low,NONE
+The common corridor needs cleaning,English,Cleaning,Low,NONE
+පොදු කොරිඩෝර් එක පිරිසිදු කරන්න ඕනේ,Sinhala,Cleaning,Low,NONE
+common corridor eka clean karanna one,Singlish,Cleaning,Low,NONE
+common corridor එක clean කරන්න ඕනේ,Mixed,Cleaning,Low,NONE
+The balcony drain is slow,English,Drainage,Low,NONE
+බැල්කනි ඩ්‍රේන් එකෙන් වතුර මන්දගාමීව බැස යනවා,Sinhala,Drainage,Low,NONE
+balcony drain eka slow,Singlish,Drainage,Low,NONE
+balcony drain එක slow,Mixed,Drainage,Low,NONE
+The corridor light is flickering,English,Electrical,Low,NONE
+කොරිඩෝර් ලයිට් එක දිලිසෙනවා,Sinhala,Electrical,Low,NONE
+corridor light eka flicker wenawa,Singlish,Electrical,Low,NONE
+corridor light එක flicker වෙනවා,Mixed,Electrical,Low,NONE
+The smoke detector is showing a fault,English,Fire and Safety,High,NONE
+ගිනි අනතුරු ඇඟවීමේ පද්ධතිය වැඩ කරන්නේ නැහැ,Sinhala,Fire and Safety,High,NONE
+smoke detector eka faulty,Singlish,Fire and Safety,High,NONE
+room එකක් fire වෙලා,Mixed,Fire and Safety,Emergency,NONE
+Gas is leaking from the valve,English,Gas,Emergency,NONE
+ගෑස් වෑල්වයෙන් කාන්දුවක් තියෙනවා,Sinhala,Gas,Emergency,NONE
+gas valve eken leak ekak enawa,Singlish,Gas,Emergency,NONE
+gas valve එකෙන් leak වෙනවා,Mixed,Gas,Emergency,NONE
+The lift floor display is not showing correctly,English,Lift,Low,NONE
+ලිෆ්ට් මහල් දර්ශකය හරියට පෙන්වන්නේ නැහැ,Sinhala,Lift,Low,NONE
+lift display eka hariyata pennanne naha,Singlish,Lift,Low,NONE
+lift display එක හරියට show වෙන්නේ නැහැ,Mixed,Lift,Low,NONE
+A common area sign is loose,English,Other,Low,NONE
+පොදු ප්‍රදේශයේ සලකුණ ලූස් වෙලා,Sinhala,Other,Low,NONE
+common area sign eka loose,Singlish,Other,Low,NONE
+common area sign එක loose,Mixed,Other,Low,NONE
+There are ants near the kitchen window,English,Pest Control,Low,NONE
+කුස්සියේ ජනේලය අසල කුහුඹුවන් ඉන්නවා,Sinhala,Pest Control,Low,NONE
+kitchen window langa ants innawa,Singlish,Pest Control,Low,NONE
+kitchen window එක ළඟ ants ඉන්නවා,Mixed,Pest Control,Low,NONE
+The bathroom tap has a slow drip,English,Plumbing,Low,NONE
+බාත්රූම් ටැප් එකෙන් වතුර ටික ටික කාන්දු වෙනවා,Sinhala,Plumbing,Low,NONE
+bathroom tap eken poddak watura leak wenawa,Singlish,Plumbing,Low,NONE
+bathroom tap එකෙන් පොඩි water leak එකක්,Mixed,Plumbing,Low,NONE
+The intercom is not working,English,Security and Access,Low,NONE
+ඉන්ටර්කොම් එක වැඩ කරන්නේ නැහැ,Sinhala,Security and Access,Low,NONE
+intercom eka wada naha,Singlish,Security and Access,Low,NONE
+intercom එක වැඩ කරන්නේ නැහැ,Mixed,Security and Access,Low,NONE
+There is a small surface crack on the wall,English,Structural,Low,NONE
+බිත්තියේ පොඩි මතුපිට ඉරිතැලීමක් තියෙනවා,Sinhala,Structural,Low,NONE
+wall eke podi crack ekak thiyenawa,Singlish,Structural,Low,NONE
+wall එකේ small crack එකක්,Mixed,Structural,Low,NONE
+kamarekin smoke smell ekak enawa,Singlish,Fire and Safety,Emergency,SMOKE
+kamare duma gandhak enawa,Singlish,Fire and Safety,Emergency,SMOKE
+කාමරයෙන් දුම් ගඳක් එනවා,Sinhala,Fire and Safety,Emergency,SMOKE
+room එකෙන් smoke smell එකක් එනවා,Mixed,Fire and Safety,Emergency,SMOKE
+Part of the ceiling is falling down,English,Structural,Emergency,CEILING_FALL
+ceiling eken kotas bimata watenawa,Singlish,Structural,Emergency,CEILING_FALL
+සිවිලිමේ කොටස් පහළට වැටෙනවා,Sinhala,Structural,Emergency,CEILING_FALL
+ceiling එකේ parts පහළට fall වෙනවා,Mixed,Structural,Emergency,CEILING_FALL
+gas hose eka crack wela leak wenawa,Singlish,Gas,Emergency,GAS_HOSE_DAMAGE
+The manhole cover is broken and open,English,Drainage,High,OPEN_MANHOLE
+lift alarm button eka wada naha,Singlish,Lift,High,LIFT_ALARM_FAILURE
+main entrance eka open wela stuck,Singlish,Security and Access,High,ENTRANCE_SECURITY_OPEN
+walkway uda heavy object ekak loose,Singlish,Other,High,OVERHEAD_OBJECT_LOOSE

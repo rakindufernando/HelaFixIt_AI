@@ -1,0 +1,509 @@
+﻿ticket_text,language_type,building_block,floor,area,asset_type,category,priority,technician_type,safety_risk,response_time,risk_score,duplicate_group,scenario_id
+The corridor light is flickering,English,Block A,3,Kitchen,Wiring,Electrical,Low,Electrician,Lighting fault,Within 48 hours,18,,challenge_electrical_lighting_fault
+කොරිඩෝර් ලයිට් එක දිලිසෙනවා,Sinhala,Block A,3,Electrical Room,Circuit breaker,Electrical,Low,Electrician,Lighting fault,Within 48 hours,18,,challenge_electrical_lighting_fault
+corridor light eka flicker wenawa,Singlish,Block A,3,Electrical Room,Socket,Electrical,Low,Electrician,Lighting fault,Within 48 hours,18,,challenge_electrical_lighting_fault
+corridor light එක flicker වෙනවා,Mixed,Block A,3,Kitchen,Distribution board,Electrical,Low,Electrician,Lighting fault,Within 48 hours,18,,challenge_electrical_lighting_fault
+The wall socket is not working,English,Block A,3,Kitchen,Switch,Electrical,Medium,Electrician,Socket fault,Within 24 hours,42,,challenge_electrical_socket_fault
+බිත්ති සොකට් එක වැඩ කරන්නේ නැහැ,Sinhala,Block A,3,Common Corridor,Distribution board,Electrical,Medium,Electrician,Socket fault,Within 24 hours,42,,challenge_electrical_socket_fault
+wall socket eka wada naha,Singlish,Block A,3,Bedroom,Socket,Electrical,Medium,Electrician,Socket fault,Within 24 hours,42,,challenge_electrical_socket_fault
+wall socket එක වැඩ කරන්නේ නැහැ,Mixed,Block A,3,Electrical Room,Switch,Electrical,Medium,Electrician,Socket fault,Within 24 hours,42,,challenge_electrical_socket_fault
+The circuit breaker keeps tripping,English,Block A,3,Electrical Room,Switch,Electrical,High,Electrician,Breaker fault,Within 4 hours,72,,challenge_electrical_breaker_fault
+සර්කිට් බ්‍රේකර් එක නැවත නැවත ට්‍රිප් වෙනවා,Sinhala,Block A,3,Kitchen,Circuit breaker,Electrical,High,Electrician,Breaker fault,Within 4 hours,72,,challenge_electrical_breaker_fault
+breaker eka aye aye trip wenawa,Singlish,Block A,3,Electrical Room,Distribution board,Electrical,High,Electrician,Breaker fault,Within 4 hours,72,,challenge_electrical_breaker_fault
+breaker එක repeatedly trip වෙනවා,Mixed,Block A,3,Bedroom,Socket,Electrical,High,Electrician,Breaker fault,Within 4 hours,72,,challenge_electrical_breaker_fault
+Sparks are coming from the socket,English,Block A,3,Electrical Room,Circuit breaker,Electrical,Emergency,Electrician,Electrical sparking,Immediate,95,,challenge_electrical_electrical_sparking
+සොකට් එකෙන් ගිනි පුපුරු එනවා,Sinhala,Block A,3,Bedroom,Distribution board,Electrical,Emergency,Electrician,Electrical sparking,Immediate,95,,challenge_electrical_electrical_sparking
+socket eken spark enawa,Singlish,Block A,3,Bedroom,Circuit breaker,Electrical,Emergency,Electrician,Electrical sparking,Immediate,95,,challenge_electrical_electrical_sparking
+socket එකෙන් spark එනවා,Mixed,Block A,3,Electrical Room,Distribution board,Electrical,Emergency,Electrician,Electrical sparking,Immediate,95,,challenge_electrical_electrical_sparking
+I received an electric shock from the switch,English,Block A,3,Bedroom,Socket,Electrical,Emergency,Electrician,Electric shock,Immediate,95,,challenge_electrical_electric_shock
+ස්විච් එක අල්ලද්දී විදුලි සැර වැදුනා,Sinhala,Block A,3,Electrical Room,Switch,Electrical,Emergency,Electrician,Electric shock,Immediate,95,,challenge_electrical_electric_shock
+switch eka alladdi current waduna,Singlish,Block A,3,Common Corridor,Circuit breaker,Electrical,Emergency,Electrician,Electric shock,Immediate,95,,challenge_electrical_electric_shock
+switch එක touch කරද්දී shock එකක් වැදුනා,Mixed,Block A,3,Kitchen,Circuit breaker,Electrical,Emergency,Electrician,Electric shock,Immediate,95,,challenge_electrical_electric_shock
+Water is reaching the electrical panel,English,Block A,3,Common Corridor,Wiring,Electrical,Emergency,Electrician,Water near electricity,Immediate,95,,challenge_electrical_water_near_electricity
+වතුර විදුලි පුවරුව ළඟට එනවා,Sinhala,Block A,3,Kitchen,Wiring,Electrical,Emergency,Electrician,Water near electricity,Immediate,95,,challenge_electrical_water_near_electricity
+watura electrical panel langata enawa,Singlish,Block A,3,Bedroom,Switch,Electrical,Emergency,Electrician,Water near electricity,Immediate,95,,challenge_electrical_water_near_electricity
+water එක electrical panel එක ළඟට එනවා,Mixed,Block A,3,Common Corridor,Distribution board,Electrical,Emergency,Electrician,Water near electricity,Immediate,95,,challenge_electrical_water_near_electricity
+The ceiling fan is not working,English,Block A,3,Common Corridor,Switch,Electrical,Medium,Electrician,Ceiling fan fault,Within 24 hours,42,,challenge_electrical_ceiling_fan_fault
+සිවිලිම් පංකාව වැඩ කරන්නේ නැහැ,Sinhala,Block A,3,Common Corridor,Switch,Electrical,Medium,Electrician,Ceiling fan fault,Within 24 hours,42,,challenge_electrical_ceiling_fan_fault
+ceiling fan eka wada naha,Singlish,Block A,3,Common Corridor,Socket,Electrical,Medium,Electrician,Ceiling fan fault,Within 24 hours,42,,challenge_electrical_ceiling_fan_fault
+ceiling fan එක වැඩ කරන්නේ නැහැ,Mixed,Block A,3,Electrical Room,Wiring,Electrical,Medium,Electrician,Ceiling fan fault,Within 24 hours,42,,challenge_electrical_ceiling_fan_fault
+The whole apartment has lost electrical power,English,Block A,3,Electrical Room,Distribution board,Electrical,High,Electrician,Apartment power outage,Within 4 hours,72,,challenge_electrical_apartment_power_outage
+මුළු අපාර්ට්මෙන්ට් එකේම විදුලිය නැහැ,Sinhala,Block A,3,Kitchen,Circuit breaker,Electrical,High,Electrician,Apartment power outage,Within 4 hours,72,,challenge_electrical_apartment_power_outage
+apartment eke current naha,Singlish,Block A,3,Common Corridor,Switch,Electrical,High,Electrician,Apartment power outage,Within 4 hours,72,,challenge_electrical_apartment_power_outage
+apartment එකේම power නැහැ,Mixed,Block A,3,Common Corridor,Circuit breaker,Electrical,High,Electrician,Apartment power outage,Within 4 hours,72,,challenge_electrical_apartment_power_outage
+The distribution board smells burnt,English,Block A,3,Electrical Room,Wiring,Electrical,High,Electrician,Electrical burning smell,Within 4 hours,72,,challenge_electrical_electrical_burning_smell
+විදුලි පුවරුවෙන් පිළිස්සුන ගඳක් එනවා,Sinhala,Block A,3,Bedroom,Distribution board,Electrical,High,Electrician,Electrical burning smell,Within 4 hours,72,,challenge_electrical_electrical_burning_smell
+distribution board eken burning smell ekak enawa,Singlish,Block A,3,Electrical Room,Switch,Electrical,High,Electrician,Electrical burning smell,Within 4 hours,72,,challenge_electrical_electrical_burning_smell
+distribution board එකෙන් burning smell එකක්,Mixed,Block A,3,Bedroom,Distribution board,Electrical,High,Electrician,Electrical burning smell,Within 4 hours,72,,challenge_electrical_electrical_burning_smell
+A live wire is exposed near the floor,English,Block A,3,Common Corridor,Wiring,Electrical,Emergency,Electrician,Exposed live wire,Immediate,95,,challenge_electrical_exposed_live_wire
+විදුලි වයර් එකක් බිම අසල නිරාවරණව තියෙනවා,Sinhala,Block A,3,Kitchen,Wiring,Electrical,Emergency,Electrician,Exposed live wire,Immediate,95,,challenge_electrical_exposed_live_wire
+live wire ekak floor langa eliyata thiyenawa,Singlish,Block A,3,Common Corridor,Socket,Electrical,Emergency,Electrician,Exposed live wire,Immediate,95,,challenge_electrical_exposed_live_wire
+live wire එක floor එක ළඟ exposed,Mixed,Block A,3,Common Corridor,Circuit breaker,Electrical,Emergency,Electrician,Exposed live wire,Immediate,95,,challenge_electrical_exposed_live_wire
+The socket is very hot when used,English,Block A,3,Electrical Room,Distribution board,Electrical,High,Electrician,Hot socket,Within 4 hours,72,,challenge_electrical_hot_socket
+සොකට් එක භාවිතා කරද්දී ගොඩක් රත් වෙනවා,Sinhala,Block A,3,Common Corridor,Socket,Electrical,High,Electrician,Hot socket,Within 4 hours,72,,challenge_electrical_hot_socket
+socket eka use karaddi godak rath wenawa,Singlish,Block A,3,Kitchen,Distribution board,Electrical,High,Electrician,Hot socket,Within 4 hours,72,,challenge_electrical_hot_socket
+socket එක use කරද්දී very hot,Mixed,Block A,3,Common Corridor,Wiring,Electrical,High,Electrician,Hot socket,Within 4 hours,72,,challenge_electrical_hot_socket
+The bathroom tap has a slow drip,English,Block A,3,Kitchen,Toilet,Plumbing,Low,Plumber,Small leak,Within 48 hours,18,,challenge_plumbing_small_leak
+බාත්රූම් ටැප් එකෙන් වතුර ටික ටික කාන්දු වෙනවා,Sinhala,Block A,3,Bathroom,Tap,Plumbing,Low,Plumber,Small leak,Within 48 hours,18,,challenge_plumbing_small_leak
+bathroom tap eken poddak watura leak wenawa,Singlish,Block A,3,Bedroom,Tap,Plumbing,Low,Plumber,Small leak,Within 48 hours,18,,challenge_plumbing_small_leak
+bathroom tap එකෙන් පොඩි water leak එකක්,Mixed,Block A,3,Bedroom,Tap,Plumbing,Low,Plumber,Small leak,Within 48 hours,18,,challenge_plumbing_small_leak
+The toilet is not flushing properly,English,Block A,3,Bedroom,Water pipe,Plumbing,Medium,Plumber,Toilet fault,Within 24 hours,42,,challenge_plumbing_toilet_fault
+වැසිකිළිය හරියට ෆ්ලෂ් වෙන්නේ නැහැ,Sinhala,Block A,3,Kitchen,Tap,Plumbing,Medium,Plumber,Toilet fault,Within 24 hours,42,,challenge_plumbing_toilet_fault
+toilet eka hariyata flush wenne naha,Singlish,Block A,3,Bathroom,Tap,Plumbing,Medium,Plumber,Toilet fault,Within 24 hours,42,,challenge_plumbing_toilet_fault
+toilet එක properly flush වෙන්නේ නැහැ,Mixed,Block A,3,Bedroom,Toilet,Plumbing,Medium,Plumber,Toilet fault,Within 24 hours,42,,challenge_plumbing_toilet_fault
+A large water leak is spreading across the floor,English,Block A,3,Kitchen,Water tank line,Plumbing,High,Plumber,Major leak,Within 4 hours,72,,challenge_plumbing_major_leak
+විශාල වතුර කාන්දුවක් බිම පුරා පැතිරෙනවා,Sinhala,Block A,3,Kitchen,Water pipe,Plumbing,High,Plumber,Major leak,Within 4 hours,72,,challenge_plumbing_major_leak
+loku watura leak ekak floor eka pura yanawa,Singlish,Block A,3,Bedroom,Tap,Plumbing,High,Plumber,Major leak,Within 4 hours,72,,challenge_plumbing_major_leak
+large water leak එක floor එක පුරා යනවා,Mixed,Block A,3,Bedroom,Water tank line,Plumbing,High,Plumber,Major leak,Within 4 hours,72,,challenge_plumbing_major_leak
+A water pipe has burst and water is pouring out,English,Block A,3,Bathroom,Shower,Plumbing,Emergency,Plumber,Burst pipe,Immediate,95,,challenge_plumbing_burst_pipe
+වතුර පයිප්පය පුපුරලා වතුර ගොඩක් ගලනවා,Sinhala,Block A,3,Kitchen,Shower,Plumbing,Emergency,Plumber,Burst pipe,Immediate,95,,challenge_plumbing_burst_pipe
+water pipe eka pupurala watura godak galanawa,Singlish,Block A,3,Kitchen,Toilet,Plumbing,Emergency,Plumber,Burst pipe,Immediate,95,,challenge_plumbing_burst_pipe
+water pipe එක burst වෙලා water ගොඩක් එනවා,Mixed,Block A,3,Bedroom,Water tank line,Plumbing,Emergency,Plumber,Burst pipe,Immediate,95,,challenge_plumbing_burst_pipe
+Very hot water is spraying from the pipe,English,Block A,3,Bathroom,Shower,Plumbing,Emergency,Plumber,Hot water hazard,Immediate,95,,challenge_plumbing_hot_water_hazard
+පයිප්පයෙන් ඉතා උණු වතුර විදිනවා,Sinhala,Block A,3,Bedroom,Shower,Plumbing,Emergency,Plumber,Hot water hazard,Immediate,95,,challenge_plumbing_hot_water_hazard
+pipe eken godak rath watura enawa,Singlish,Block A,3,Bathroom,Tap,Plumbing,Emergency,Plumber,Hot water hazard,Immediate,95,,challenge_plumbing_hot_water_hazard
+pipe එකෙන් very hot water spray වෙනවා,Mixed,Block A,3,Kitchen,Shower,Plumbing,Emergency,Plumber,Hot water hazard,Immediate,95,,challenge_plumbing_hot_water_hazard
+There is no water from the bathroom taps,English,Block A,3,Bedroom,Water tank line,Plumbing,Medium,Plumber,No water supply,Within 24 hours,42,,challenge_plumbing_no_water_supply
+බාත්රූම් ටැප් වලින් වතුර එන්නේ නැහැ,Sinhala,Block A,3,Bathroom,Toilet,Plumbing,Medium,Plumber,No water supply,Within 24 hours,42,,challenge_plumbing_no_water_supply
+bathroom tap walin watura enne naha,Singlish,Block A,3,Bathroom,Toilet,Plumbing,Medium,Plumber,No water supply,Within 24 hours,42,,challenge_plumbing_no_water_supply
+bathroom taps වලින් water එන්නේ නැහැ,Mixed,Block A,3,Bedroom,Water tank line,Plumbing,Medium,Plumber,No water supply,Within 24 hours,42,,challenge_plumbing_no_water_supply
+The water pressure is very low,English,Block A,3,Bedroom,Water pipe,Plumbing,Low,Plumber,Low water pressure,Within 48 hours,18,,challenge_plumbing_low_water_pressure
+වතුර පීඩනය ගොඩක් අඩුයි,Sinhala,Block A,3,Bathroom,Water tank line,Plumbing,Low,Plumber,Low water pressure,Within 48 hours,18,,challenge_plumbing_low_water_pressure
+watura pressure eka godak adui,Singlish,Block A,3,Kitchen,Shower,Plumbing,Low,Plumber,Low water pressure,Within 48 hours,18,,challenge_plumbing_low_water_pressure
+water pressure එක very low,Mixed,Block A,3,Kitchen,Water tank line,Plumbing,Low,Plumber,Low water pressure,Within 48 hours,18,,challenge_plumbing_low_water_pressure
+The toilet is overflowing onto the floor,English,Block A,3,Bedroom,Tap,Plumbing,High,Plumber,Overflowing toilet,Within 4 hours,72,,challenge_plumbing_overflowing_toilet
+වැසිකිළිය උතුරලා බිමට වතුර යනවා,Sinhala,Block A,3,Bedroom,Tap,Plumbing,High,Plumber,Overflowing toilet,Within 4 hours,72,,challenge_plumbing_overflowing_toilet
+toilet eka overflow wela floor ekata yanawa,Singlish,Block A,3,Kitchen,Shower,Plumbing,High,Plumber,Overflowing toilet,Within 4 hours,72,,challenge_plumbing_overflowing_toilet
+toilet එක overflow වෙලා floor එකට යනවා,Mixed,Block A,3,Kitchen,Water pipe,Plumbing,High,Plumber,Overflowing toilet,Within 4 hours,72,,challenge_plumbing_overflowing_toilet
+The water tank line is leaking heavily,English,Block A,3,Bathroom,Toilet,Plumbing,High,Plumber,Tank line leak,Within 4 hours,72,,challenge_plumbing_tank_line_leak
+වතුර ටැංකි නළයෙන් විශාල කාන්දුවක් තියෙනවා,Sinhala,Block A,3,Kitchen,Shower,Plumbing,High,Plumber,Tank line leak,Within 4 hours,72,,challenge_plumbing_tank_line_leak
+water tank line eken loku leak ekak,Singlish,Block A,3,Bathroom,Tap,Plumbing,High,Plumber,Tank line leak,Within 4 hours,72,,challenge_plumbing_tank_line_leak
+water tank line එකෙන් heavy leak එකක්,Mixed,Block A,3,Bedroom,Water tank line,Plumbing,High,Plumber,Tank line leak,Within 4 hours,72,,challenge_plumbing_tank_line_leak
+The shower pipe is leaking inside the wall,English,Block A,3,Bedroom,Water tank line,Plumbing,Medium,Plumber,Hidden shower leak,Within 24 hours,42,,challenge_plumbing_hidden_shower_leak
+ෂවර් නළය බිත්තිය ඇතුළේ කාන්දු වෙනවා,Sinhala,Block A,3,Bathroom,Water tank line,Plumbing,Medium,Plumber,Hidden shower leak,Within 24 hours,42,,challenge_plumbing_hidden_shower_leak
+shower pipe eka wall athule leak wenawa,Singlish,Block A,3,Kitchen,Water tank line,Plumbing,Medium,Plumber,Hidden shower leak,Within 24 hours,42,,challenge_plumbing_hidden_shower_leak
+shower pipe එක wall ඇතුළේ leak වෙනවා,Mixed,Block A,3,Bedroom,Water pipe,Plumbing,Medium,Plumber,Hidden shower leak,Within 24 hours,42,,challenge_plumbing_hidden_shower_leak
+The lift floor display is not showing correctly,English,Block A,3,Lift Lobby,Lift panel,Lift,Low,Lift Technician,Lift display,Within 48 hours,18,,challenge_lift_lift_display
+ලිෆ්ට් මහල් දර්ශකය හරියට පෙන්වන්නේ නැහැ,Sinhala,Block A,3,Lift Lobby,Lift motor,Lift,Low,Lift Technician,Lift display,Within 48 hours,18,,challenge_lift_lift_display
+lift display eka hariyata pennanne naha,Singlish,Block A,3,Common Corridor,Lift panel,Lift,Low,Lift Technician,Lift display,Within 48 hours,18,,challenge_lift_lift_display
+lift display එක හරියට show වෙන්නේ නැහැ,Mixed,Block A,3,Common Corridor,Passenger lift,Lift,Low,Lift Technician,Lift display,Within 48 hours,18,,challenge_lift_lift_display
+The lift door is not closing properly,English,Block A,3,Common Corridor,Passenger lift,Lift,Medium,Lift Technician,Lift door,Within 24 hours,42,,challenge_lift_lift_door
+ලිෆ්ට් දොර හරියට වැහෙන්නේ නැහැ,Sinhala,Block A,3,Lift Lobby,Lift door,Lift,Medium,Lift Technician,Lift door,Within 24 hours,42,,challenge_lift_lift_door
+lift door eka hariyata close wenne naha,Singlish,Block A,3,Common Corridor,Passenger lift,Lift,Medium,Lift Technician,Lift door,Within 24 hours,42,,challenge_lift_lift_door
+lift door එක properly close වෙන්නේ නැහැ,Mixed,Block A,3,Common Corridor,Lift panel,Lift,Medium,Lift Technician,Lift door,Within 24 hours,42,,challenge_lift_lift_door
+The lift is making a severe mechanical noise,English,Block A,3,Common Corridor,Lift panel,Lift,High,Lift Technician,Lift mechanical fault,Within 4 hours,72,,challenge_lift_lift_mechanical_fault
+ලිෆ්ට් එකෙන් දැඩි යාන්ත්‍රික ශබ්දයක් එනවා,Sinhala,Block A,3,Common Corridor,Lift panel,Lift,High,Lift Technician,Lift mechanical fault,Within 4 hours,72,,challenge_lift_lift_mechanical_fault
+lift eken loku mechanical sound ekak enawa,Singlish,Block A,3,Common Corridor,Passenger lift,Lift,High,Lift Technician,Lift mechanical fault,Within 4 hours,72,,challenge_lift_lift_mechanical_fault
+lift එකෙන් severe mechanical sound එකක් එනවා,Mixed,Block A,3,Lift Lobby,Passenger lift,Lift,High,Lift Technician,Lift mechanical fault,Within 4 hours,72,,challenge_lift_lift_mechanical_fault
+A person is trapped inside the lift,English,Block A,3,Lift Lobby,Lift motor,Lift,Emergency,Lift Technician,Lift entrapment,Immediate,95,,challenge_lift_lift_entrapment
+කෙනෙක් ලිෆ්ට් එක ඇතුළේ හිරවෙලා,Sinhala,Block A,3,Common Corridor,Lift motor,Lift,Emergency,Lift Technician,Lift entrapment,Immediate,95,,challenge_lift_lift_entrapment
+kenek lift eke athule hira wela,Singlish,Block A,3,Lift Lobby,Lift door,Lift,Emergency,Lift Technician,Lift entrapment,Immediate,95,,challenge_lift_lift_entrapment
+person කෙනෙක් lift එක ඇතුළේ stuck,Mixed,Block A,3,Lift Lobby,Passenger lift,Lift,Emergency,Lift Technician,Lift entrapment,Immediate,95,,challenge_lift_lift_entrapment
+The lift suddenly dropped down,English,Block A,3,Common Corridor,Lift panel,Lift,Emergency,Lift Technician,Lift drop,Immediate,95,,challenge_lift_lift_drop
+ලිෆ්ට් එක හදිසියේ පහළට වැටුණා,Sinhala,Block A,3,Lift Lobby,Lift door,Lift,Emergency,Lift Technician,Lift drop,Immediate,95,,challenge_lift_lift_drop
+lift eka uda idan bimata kadan watila,Singlish,Block A,3,Common Corridor,Lift door,Lift,Emergency,Lift Technician,Lift drop,Immediate,95,,challenge_lift_lift_drop
+lift එක suddenly පහළට dropped,Mixed,Block A,3,Common Corridor,Lift door,Lift,Emergency,Lift Technician,Lift drop,Immediate,95,,challenge_lift_lift_drop
+The lift is moving while the door is open,English,Block A,3,Lift Lobby,Lift motor,Lift,Emergency,Lift Technician,Dangerous lift door,Immediate,95,,challenge_lift_dangerous_lift_door
+ලිෆ්ට් එක යනකොට දොර ඇරලා තියෙනවා,Sinhala,Block A,3,Common Corridor,Lift door,Lift,Emergency,Lift Technician,Dangerous lift door,Immediate,95,,challenge_lift_dangerous_lift_door
+lift eka yanakota door eka open,Singlish,Block A,3,Lift Lobby,Lift door,Lift,Emergency,Lift Technician,Dangerous lift door,Immediate,95,,challenge_lift_dangerous_lift_door
+lift එක move වෙද්දී door open,Mixed,Block A,3,Common Corridor,Lift door,Lift,Emergency,Lift Technician,Dangerous lift door,Immediate,95,,challenge_lift_dangerous_lift_door
+The lift does not stop level with the floor,English,Block A,3,Lift Lobby,Lift panel,Lift,Medium,Lift Technician,Lift levelling fault,Within 24 hours,42,,challenge_lift_lift_levelling_fault
+ලිෆ්ට් එක මහලට සමාන මට්ටමක නවත්වන්නේ නැහැ,Sinhala,Block A,3,Lift Lobby,Lift motor,Lift,Medium,Lift Technician,Lift levelling fault,Within 24 hours,42,,challenge_lift_lift_levelling_fault
+lift eka floor level ekata stop wenne naha,Singlish,Block A,3,Common Corridor,Lift motor,Lift,Medium,Lift Technician,Lift levelling fault,Within 24 hours,42,,challenge_lift_lift_levelling_fault
+lift එක floor level එකට stop වෙන්නේ නැහැ,Mixed,Block A,3,Lift Lobby,Lift panel,Lift,Medium,Lift Technician,Lift levelling fault,Within 24 hours,42,,challenge_lift_lift_levelling_fault
+The lift is jerking strongly while moving,English,Block A,3,Common Corridor,Lift door,Lift,High,Lift Technician,Lift jerking,Within 4 hours,72,,challenge_lift_lift_jerking
+ලිෆ්ට් එක යනකොට දැඩි ලෙස ගැස්සෙනවා,Sinhala,Block A,3,Lift Lobby,Lift door,Lift,High,Lift Technician,Lift jerking,Within 4 hours,72,,challenge_lift_lift_jerking
+lift eka yaddi godak jerk wenawa,Singlish,Block A,3,Lift Lobby,Lift door,Lift,High,Lift Technician,Lift jerking,Within 4 hours,72,,challenge_lift_lift_jerking
+lift එක move වෙද්දී strong jerking,Mixed,Block A,3,Lift Lobby,Passenger lift,Lift,High,Lift Technician,Lift jerking,Within 4 hours,72,,challenge_lift_lift_jerking
+The lift alarm button is not working,English,Block A,3,Common Corridor,Passenger lift,Lift,High,Lift Technician,Lift alarm fault,Within 4 hours,72,,challenge_lift_lift_alarm_fault
+ලිෆ්ට් අනතුරු ඇඟවීමේ බොත්තම වැඩ කරන්නේ නැහැ,Sinhala,Block A,3,Common Corridor,Lift panel,Lift,High,Lift Technician,Lift alarm fault,Within 4 hours,72,,challenge_lift_lift_alarm_fault
+lift alarm button eka wada naha,Singlish,Block A,3,Common Corridor,Lift door,Lift,High,Lift Technician,Lift alarm fault,Within 4 hours,72,,challenge_lift_lift_alarm_fault
+lift alarm button එක වැඩ කරන්නේ නැහැ,Mixed,Block A,3,Lift Lobby,Lift door,Lift,High,Lift Technician,Lift alarm fault,Within 4 hours,72,,challenge_lift_lift_alarm_fault
+The lift call button is not responding,English,Block A,3,Common Corridor,Passenger lift,Lift,Medium,Lift Technician,Lift call button,Within 24 hours,42,,challenge_lift_lift_call_button
+ලිෆ්ට් කැඳවීමේ බොත්තම ප්‍රතිචාර දක්වන්නේ නැහැ,Sinhala,Block A,3,Lift Lobby,Lift panel,Lift,Medium,Lift Technician,Lift call button,Within 24 hours,42,,challenge_lift_lift_call_button
+lift call button eka response karanne naha,Singlish,Block A,3,Common Corridor,Lift panel,Lift,Medium,Lift Technician,Lift call button,Within 24 hours,42,,challenge_lift_lift_call_button
+lift call button එක response කරන්නේ නැහැ,Mixed,Block A,3,Common Corridor,Lift door,Lift,Medium,Lift Technician,Lift call button,Within 24 hours,42,,challenge_lift_lift_call_button
+The lift is moving unusually fast downward,English,Block A,3,Lift Lobby,Lift panel,Lift,Emergency,Lift Technician,Uncontrolled lift movement,Immediate,95,,challenge_lift_uncontrolled_lift_movement
+ලිෆ්ට් එක අසාමාන්‍ය ලෙස වේගයෙන් පහළට යනවා,Sinhala,Block A,3,Common Corridor,Lift panel,Lift,Emergency,Lift Technician,Uncontrolled lift movement,Immediate,95,,challenge_lift_uncontrolled_lift_movement
+lift eka godak fast pahala yanawa,Singlish,Block A,3,Lift Lobby,Passenger lift,Lift,Emergency,Lift Technician,Uncontrolled lift movement,Immediate,95,,challenge_lift_uncontrolled_lift_movement
+lift එක unusually fast පහළට යනවා,Mixed,Block A,3,Common Corridor,Lift door,Lift,Emergency,Lift Technician,Uncontrolled lift movement,Immediate,95,,challenge_lift_uncontrolled_lift_movement
+The AC remote is not responding,English,Block A,3,Bedroom,Split AC,Air Conditioning,Low,AC Technician,AC remote,Within 48 hours,18,,challenge_air_conditioning_ac_remote
+ඒසී රිමෝට් එක ප්‍රතිචාර දක්වන්නේ නැහැ,Sinhala,Block A,3,Bedroom,AC compressor,Air Conditioning,Low,AC Technician,AC remote,Within 48 hours,18,,challenge_air_conditioning_ac_remote
+ac remote eka response karanne naha,Singlish,Block A,3,Living Room,AC compressor,Air Conditioning,Low,AC Technician,AC remote,Within 48 hours,18,,challenge_air_conditioning_ac_remote
+AC remote එක response කරන්නේ නැහැ,Mixed,Block A,3,Lobby,Thermostat,Air Conditioning,Low,AC Technician,AC remote,Within 48 hours,18,,challenge_air_conditioning_ac_remote
+The air conditioner is not cooling properly,English,Block A,3,Lobby,AC fan,Air Conditioning,Medium,AC Technician,AC cooling,Within 24 hours,42,,challenge_air_conditioning_ac_cooling
+ඒසී එක හරියට සිසිල් කරන්නේ නැහැ,Sinhala,Block A,3,Bedroom,Split AC,Air Conditioning,Medium,AC Technician,AC cooling,Within 24 hours,42,,challenge_air_conditioning_ac_cooling
+ac eka hariyata cool wenne naha,Singlish,Block A,3,Bedroom,Split AC,Air Conditioning,Medium,AC Technician,AC cooling,Within 24 hours,42,,challenge_air_conditioning_ac_cooling
+AC එක properly cool වෙන්නේ නැහැ,Mixed,Block A,3,Living Room,AC compressor,Air Conditioning,Medium,AC Technician,AC cooling,Within 24 hours,42,,challenge_air_conditioning_ac_cooling
+A large amount of water is leaking from the AC,English,Block A,3,Bedroom,Split AC,Air Conditioning,High,AC Technician,AC water leak,Within 4 hours,72,,challenge_air_conditioning_ac_water_leak
+ඒසී එකෙන් වතුර ගොඩක් කාන්දු වෙනවා,Sinhala,Block A,3,Bedroom,Thermostat,Air Conditioning,High,AC Technician,AC water leak,Within 4 hours,72,,challenge_air_conditioning_ac_water_leak
+ac eken watura godak leak wenawa,Singlish,Block A,3,Bedroom,AC fan,Air Conditioning,High,AC Technician,AC water leak,Within 4 hours,72,,challenge_air_conditioning_ac_water_leak
+AC එකෙන් water ගොඩක් leak වෙනවා,Mixed,Block A,3,Living Room,AC compressor,Air Conditioning,High,AC Technician,AC water leak,Within 4 hours,72,,challenge_air_conditioning_ac_water_leak
+Smoke is coming from the air conditioner,English,Block A,3,Lobby,Thermostat,Air Conditioning,Emergency,AC Technician,AC smoke,Immediate,95,,challenge_air_conditioning_ac_smoke
+ඒසී එකෙන් දුම එනවා,Sinhala,Block A,3,Living Room,AC fan,Air Conditioning,Emergency,AC Technician,AC smoke,Immediate,95,,challenge_air_conditioning_ac_smoke
+ac eken duma enawa,Singlish,Block A,3,Lobby,AC fan,Air Conditioning,Emergency,AC Technician,AC smoke,Immediate,95,,challenge_air_conditioning_ac_smoke
+AC එකෙන් smoke එනවා,Mixed,Block A,3,Bedroom,Thermostat,Air Conditioning,Emergency,AC Technician,AC smoke,Immediate,95,,challenge_air_conditioning_ac_smoke
+The AC unit is sparking and smells burnt,English,Block A,3,Bedroom,AC compressor,Air Conditioning,Emergency,AC Technician,AC electrical hazard,Immediate,95,,challenge_air_conditioning_ac_electrical_hazard
+ඒසී යුනිට් එකෙන් ගිනි පුපුරු එනවා සහ පිළිස්සුන ගඳක් තියෙනවා,Sinhala,Block A,3,Lobby,Thermostat,Air Conditioning,Emergency,AC Technician,AC electrical hazard,Immediate,95,,challenge_air_conditioning_ac_electrical_hazard
+ac unit eken spark enawa saha burning smell ekak,Singlish,Block A,3,Lobby,AC compressor,Air Conditioning,Emergency,AC Technician,AC electrical hazard,Immediate,95,,challenge_air_conditioning_ac_electrical_hazard
+AC unit එකෙන් spark සහ burning smell එනවා,Mixed,Block A,3,Lobby,Split AC,Air Conditioning,Emergency,AC Technician,AC electrical hazard,Immediate,95,,challenge_air_conditioning_ac_electrical_hazard
+The AC does not turn on,English,Block A,3,Living Room,AC fan,Air Conditioning,Medium,AC Technician,AC power fault,Within 24 hours,42,,challenge_air_conditioning_ac_power_fault
+ඒසී එක ක්‍රියාත්මක වෙන්නේ නැහැ,Sinhala,Block A,3,Bedroom,Split AC,Air Conditioning,Medium,AC Technician,AC power fault,Within 24 hours,42,,challenge_air_conditioning_ac_power_fault
+ac eka on wenne naha,Singlish,Block A,3,Living Room,AC fan,Air Conditioning,Medium,AC Technician,AC power fault,Within 24 hours,42,,challenge_air_conditioning_ac_power_fault
+AC එක on වෙන්නේ නැහැ,Mixed,Block A,3,Living Room,Split AC,Air Conditioning,Medium,AC Technician,AC power fault,Within 24 hours,42,,challenge_air_conditioning_ac_power_fault
+Ice is forming on the AC indoor unit,English,Block A,3,Lobby,AC fan,Air Conditioning,Medium,AC Technician,AC icing,Within 24 hours,42,,challenge_air_conditioning_ac_icing
+ඒසී ඇතුළත යුනිට් එකේ අයිස් හැදෙනවා,Sinhala,Block A,3,Lobby,AC fan,Air Conditioning,Medium,AC Technician,AC icing,Within 24 hours,42,,challenge_air_conditioning_ac_icing
+ac indoor unit eke ice hadenawa,Singlish,Block A,3,Lobby,AC fan,Air Conditioning,Medium,AC Technician,AC icing,Within 24 hours,42,,challenge_air_conditioning_ac_icing
+AC indoor unit එකේ ice form වෙනවා,Mixed,Block A,3,Living Room,Split AC,Air Conditioning,Medium,AC Technician,AC icing,Within 24 hours,42,,challenge_air_conditioning_ac_icing
+The AC is making a loud compressor noise,English,Block A,3,Living Room,Split AC,Air Conditioning,High,AC Technician,AC compressor noise,Within 4 hours,72,,challenge_air_conditioning_ac_compressor_noise
+ඒසී කොම්ප්‍රෙසර් එකෙන් දැඩි ශබ්දයක් එනවා,Sinhala,Block A,3,Lobby,AC compressor,Air Conditioning,High,AC Technician,AC compressor noise,Within 4 hours,72,,challenge_air_conditioning_ac_compressor_noise
+ac compressor eken loku sound ekak enawa,Singlish,Block A,3,Living Room,AC fan,Air Conditioning,High,AC Technician,AC compressor noise,Within 4 hours,72,,challenge_air_conditioning_ac_compressor_noise
+AC compressor එකෙන් loud noise එකක්,Mixed,Block A,3,Lobby,AC compressor,Air Conditioning,High,AC Technician,AC compressor noise,Within 4 hours,72,,challenge_air_conditioning_ac_compressor_noise
+There is a strong chemical smell from the AC,English,Block A,3,Bedroom,Thermostat,Air Conditioning,High,AC Technician,AC chemical smell,Within 4 hours,72,,challenge_air_conditioning_ac_chemical_smell
+ඒසී එකෙන් දැඩි රසායනික ගඳක් එනවා,Sinhala,Block A,3,Bedroom,AC compressor,Air Conditioning,High,AC Technician,AC chemical smell,Within 4 hours,72,,challenge_air_conditioning_ac_chemical_smell
+ac eken chemical smell ekak enawa,Singlish,Block A,3,Bedroom,AC compressor,Air Conditioning,High,AC Technician,AC chemical smell,Within 4 hours,72,,challenge_air_conditioning_ac_chemical_smell
+AC එකෙන් strong chemical smell එකක්,Mixed,Block A,3,Living Room,Split AC,Air Conditioning,High,AC Technician,AC chemical smell,Within 4 hours,72,,challenge_air_conditioning_ac_chemical_smell
+The AC drain pipe keeps dripping indoors,English,Block A,3,Bedroom,AC fan,Air Conditioning,Medium,AC Technician,AC drain leak,Within 24 hours,42,,challenge_air_conditioning_ac_drain_leak
+ඒසී ඩ්‍රේන් නළයෙන් ඇතුළට වතුර ටික ටික එනවා,Sinhala,Block A,3,Living Room,Split AC,Air Conditioning,Medium,AC Technician,AC drain leak,Within 24 hours,42,,challenge_air_conditioning_ac_drain_leak
+ac drain pipe eken athulata watura drip wenawa,Singlish,Block A,3,Lobby,AC compressor,Air Conditioning,Medium,AC Technician,AC drain leak,Within 24 hours,42,,challenge_air_conditioning_ac_drain_leak
+AC drain pipe එකෙන් indoor water drip වෙනවා,Mixed,Block A,3,Bedroom,AC fan,Air Conditioning,Medium,AC Technician,AC drain leak,Within 24 hours,42,,challenge_air_conditioning_ac_drain_leak
+The balcony drain is slow,English,Block A,3,Garden,Floor drain,Drainage,Low,Plumber,Slow drain,Within 48 hours,18,,challenge_drainage_slow_drain
+බැල්කනි ඩ්‍රේන් එකෙන් වතුර මන්දගාමීව බැස යනවා,Sinhala,Block A,3,Bathroom,Manhole,Drainage,Low,Plumber,Slow drain,Within 48 hours,18,,challenge_drainage_slow_drain
+balcony drain eka slow,Singlish,Block A,3,Parking Basement,Manhole,Drainage,Low,Plumber,Slow drain,Within 48 hours,18,,challenge_drainage_slow_drain
+balcony drain එක slow,Mixed,Block A,3,Parking Basement,Floor drain,Drainage,Low,Plumber,Slow drain,Within 48 hours,18,,challenge_drainage_slow_drain
+The kitchen drain is blocked,English,Block A,3,Garden,Manhole,Drainage,Medium,Plumber,Blocked drain,Within 24 hours,42,,challenge_drainage_blocked_drain
+කුස්සියේ ඩ්‍රේන් එක අවහිර වෙලා,Sinhala,Block A,3,Bathroom,Floor drain,Drainage,Medium,Plumber,Blocked drain,Within 24 hours,42,,challenge_drainage_blocked_drain
+kitchen drain eka block wela,Singlish,Block A,3,Garden,Rainwater drain,Drainage,Medium,Plumber,Blocked drain,Within 24 hours,42,,challenge_drainage_blocked_drain
+kitchen drain එක blocked,Mixed,Block A,3,Common Corridor,Rainwater drain,Drainage,Medium,Plumber,Blocked drain,Within 24 hours,42,,challenge_drainage_blocked_drain
+Sewage is overflowing from the drain,English,Block A,3,Garden,Floor drain,Drainage,High,Plumber,Sewage overflow,Within 4 hours,72,,challenge_drainage_sewage_overflow
+ඩ්‍රේන් එකෙන් මළ ජලය උඩට එනවා,Sinhala,Block A,3,Garden,Rainwater drain,Drainage,High,Plumber,Sewage overflow,Within 4 hours,72,,challenge_drainage_sewage_overflow
+drain eken sewage overflow wenawa,Singlish,Block A,3,Parking Basement,Sewer line,Drainage,High,Plumber,Sewage overflow,Within 4 hours,72,,challenge_drainage_sewage_overflow
+drain එකෙන් sewage overflow වෙනවා,Mixed,Block A,3,Common Corridor,Manhole,Drainage,High,Plumber,Sewage overflow,Within 4 hours,72,,challenge_drainage_sewage_overflow
+The basement is flooding because the drain is blocked,English,Block A,3,Common Corridor,Manhole,Drainage,High,Plumber,Basement flooding,Within 4 hours,72,,challenge_drainage_basement_flooding
+බේස්මන්ට් එක වතුරෙන් පිරිලා ඩ්‍රේන් එක අවහිරයි,Sinhala,Block A,3,Parking Basement,Manhole,Drainage,High,Plumber,Basement flooding,Within 4 hours,72,,challenge_drainage_basement_flooding
+basement eka watura pirila drain eka block,Singlish,Block A,3,Parking Basement,Manhole,Drainage,High,Plumber,Basement flooding,Within 4 hours,72,,challenge_drainage_basement_flooding
+basement එක flooded because drain එක blocked,Mixed,Block A,3,Parking Basement,Rainwater drain,Drainage,High,Plumber,Basement flooding,Within 4 hours,72,,challenge_drainage_basement_flooding
+Sewage water is entering an occupied room,English,Block A,3,Garden,Manhole,Drainage,Emergency,Plumber,Severe sewage,Immediate,95,,challenge_drainage_severe_sewage
+මළ ජලය නේවාසික කාමරයට ඇතුල් වෙනවා,Sinhala,Block A,3,Bathroom,Floor drain,Drainage,Emergency,Plumber,Severe sewage,Immediate,95,,challenge_drainage_severe_sewage
+sewage watura room ekata enawa,Singlish,Block A,3,Parking Basement,Rainwater drain,Drainage,Emergency,Plumber,Severe sewage,Immediate,95,,challenge_drainage_severe_sewage
+sewage water එක room එකට එනවා,Mixed,Block A,3,Bathroom,Manhole,Drainage,Emergency,Plumber,Severe sewage,Immediate,95,,challenge_drainage_severe_sewage
+There is a bad sewage smell from the drain,English,Block A,3,Bathroom,Sewer line,Drainage,Medium,Plumber,Drain odour,Within 24 hours,42,,challenge_drainage_drain_odour
+ඩ්‍රේන් එකෙන් මළ ජල ගඳක් එනවා,Sinhala,Block A,3,Bathroom,Manhole,Drainage,Medium,Plumber,Drain odour,Within 24 hours,42,,challenge_drainage_drain_odour
+drain eken sewage gandha enawa,Singlish,Block A,3,Common Corridor,Floor drain,Drainage,Medium,Plumber,Drain odour,Within 24 hours,42,,challenge_drainage_drain_odour
+drain එකෙන් sewage smell එකක් එනවා,Mixed,Block A,3,Common Corridor,Floor drain,Drainage,Medium,Plumber,Drain odour,Within 24 hours,42,,challenge_drainage_drain_odour
+The roof rainwater drain is overflowing,English,Block A,3,Common Corridor,Rainwater drain,Drainage,High,Plumber,Roof drain overflow,Within 4 hours,72,,challenge_drainage_roof_drain_overflow
+වහලේ වැසි වතුර ඩ්‍රේන් එක උතුරනවා,Sinhala,Block A,3,Garden,Floor drain,Drainage,High,Plumber,Roof drain overflow,Within 4 hours,72,,challenge_drainage_roof_drain_overflow
+roof rainwater drain eka overflow wenawa,Singlish,Block A,3,Common Corridor,Manhole,Drainage,High,Plumber,Roof drain overflow,Within 4 hours,72,,challenge_drainage_roof_drain_overflow
+roof rainwater drain එක overflow වෙනවා,Mixed,Block A,3,Garden,Rainwater drain,Drainage,High,Plumber,Roof drain overflow,Within 4 hours,72,,challenge_drainage_roof_drain_overflow
+The manhole cover is broken and open,English,Block A,3,Bathroom,Sewer line,Drainage,High,Plumber,Open manhole,Within 4 hours,72,,challenge_drainage_open_manhole
+මෑන්හෝල් ආවරණය කැඩිලා විවෘතව තියෙනවා,Sinhala,Block A,3,Parking Basement,Rainwater drain,Drainage,High,Plumber,Open manhole,Within 4 hours,72,,challenge_drainage_open_manhole
+manhole cover eka kadila open wela,Singlish,Block A,3,Common Corridor,Sewer line,Drainage,High,Plumber,Open manhole,Within 4 hours,72,,challenge_drainage_open_manhole
+manhole cover එක broken සහ open,Mixed,Block A,3,Bathroom,Manhole,Drainage,High,Plumber,Open manhole,Within 4 hours,72,,challenge_drainage_open_manhole
+The bathroom floor drain is backing up,English,Block A,3,Common Corridor,Rainwater drain,Drainage,Medium,Plumber,Drain backup,Within 24 hours,42,,challenge_drainage_drain_backup
+බාත්රූම් බිම් ඩ්‍රේන් එකෙන් වතුර නැවත උඩට එනවා,Sinhala,Block A,3,Garden,Sewer line,Drainage,Medium,Plumber,Drain backup,Within 24 hours,42,,challenge_drainage_drain_backup
+bathroom floor drain eken watura uda enawa,Singlish,Block A,3,Garden,Manhole,Drainage,Medium,Plumber,Drain backup,Within 24 hours,42,,challenge_drainage_drain_backup
+bathroom floor drain එක back up වෙනවා,Mixed,Block A,3,Parking Basement,Rainwater drain,Drainage,Medium,Plumber,Drain backup,Within 24 hours,42,,challenge_drainage_drain_backup
+Storm water is entering the parking basement,English,Block A,3,Common Corridor,Sewer line,Drainage,High,Plumber,Storm water flooding,Within 4 hours,72,,challenge_drainage_storm_water_flooding
+වැසි වතුර පාර්කින් බේස්මන්ට් එකට ඇතුල් වෙනවා,Sinhala,Block A,3,Bathroom,Rainwater drain,Drainage,High,Plumber,Storm water flooding,Within 4 hours,72,,challenge_drainage_storm_water_flooding
+rain watura parking basement ekata enawa,Singlish,Block A,3,Common Corridor,Rainwater drain,Drainage,High,Plumber,Storm water flooding,Within 4 hours,72,,challenge_drainage_storm_water_flooding
+storm water එක parking basement එකට එනවා,Mixed,Block A,3,Parking Basement,Rainwater drain,Drainage,High,Plumber,Storm water flooding,Within 4 hours,72,,challenge_drainage_storm_water_flooding
+The common corridor needs cleaning,English,Block A,3,Staircase,Lobby floor,Cleaning,Low,Cleaner,Routine cleaning,Within 48 hours,18,,challenge_cleaning_routine_cleaning
+පොදු කොරිඩෝර් එක පිරිසිදු කරන්න ඕනේ,Sinhala,Block A,3,Lobby,Lobby floor,Cleaning,Low,Cleaner,Routine cleaning,Within 48 hours,18,,challenge_cleaning_routine_cleaning
+common corridor eka clean karanna one,Singlish,Block A,3,Common Corridor,Staircase,Cleaning,Low,Cleaner,Routine cleaning,Within 48 hours,18,,challenge_cleaning_routine_cleaning
+common corridor එක clean කරන්න ඕනේ,Mixed,Block A,3,Common Corridor,Lobby floor,Cleaning,Low,Cleaner,Routine cleaning,Within 48 hours,18,,challenge_cleaning_routine_cleaning
+There is a large slippery spill on the floor,English,Block A,3,Common Corridor,Lobby floor,Cleaning,Medium,Cleaner,Slip hazard,Within 24 hours,42,,challenge_cleaning_slip_hazard
+බිම ලිස්සන දියරයක් පැතිරලා තියෙනවා,Sinhala,Block A,3,Lobby,Common floor,Cleaning,Medium,Cleaner,Slip hazard,Within 24 hours,42,,challenge_cleaning_slip_hazard
+floor eke slippery spill ekak thiyenawa,Singlish,Block A,3,Garbage Room,Lobby floor,Cleaning,Medium,Cleaner,Slip hazard,Within 24 hours,42,,challenge_cleaning_slip_hazard
+floor එකේ slippery spill එකක්,Mixed,Block A,3,Staircase,Lobby floor,Cleaning,Medium,Cleaner,Slip hazard,Within 24 hours,42,,challenge_cleaning_slip_hazard
+Broken glass pieces are spread across the floor,English,Block A,3,Common Corridor,Common floor,Cleaning,High,Cleaner,Broken glass,Within 4 hours,72,,challenge_cleaning_broken_glass
+කැඩුණු වීදුරු කැබලි බිම පුරා තියෙනවා,Sinhala,Block A,3,Garbage Room,Common floor,Cleaning,High,Cleaner,Broken glass,Within 4 hours,72,,challenge_cleaning_broken_glass
+glass kadila bimata katu thiyenawa,Singlish,Block A,3,Common Corridor,Waste area,Cleaning,High,Cleaner,Broken glass,Within 4 hours,72,,challenge_cleaning_broken_glass
+broken glass කැබලි floor එකේ,Mixed,Block A,3,Garbage Room,Staircase,Cleaning,High,Cleaner,Broken glass,Within 4 hours,72,,challenge_cleaning_broken_glass
+A chemical spill is blocking the walkway,English,Block A,3,Lobby,Common floor,Cleaning,Emergency,Cleaner,Chemical spill,Immediate,95,,challenge_cleaning_chemical_spill
+රසායනික ද්‍රව්‍ය බිම වැටී මාර්ගය අවහිර වෙලා,Sinhala,Block A,3,Common Corridor,Lobby floor,Cleaning,Emergency,Cleaner,Chemical spill,Immediate,95,,challenge_cleaning_chemical_spill
+chemical spill ekak walkway eka block karala,Singlish,Block A,3,Staircase,Staircase,Cleaning,Emergency,Cleaner,Chemical spill,Immediate,95,,challenge_cleaning_chemical_spill
+chemical spill එක walkway එක block කරලා,Mixed,Block A,3,Staircase,Waste area,Cleaning,Emergency,Cleaner,Chemical spill,Immediate,95,,challenge_cleaning_chemical_spill
+A used needle and blood are on the floor,English,Block A,3,Lobby,Lobby floor,Cleaning,High,Cleaner,Biohazard,Within 4 hours,72,,challenge_cleaning_biohazard
+භාවිත කළ ඉඳිකටුවක් සහ රුධිරය බිම තියෙනවා,Sinhala,Block A,3,Lobby,Waste area,Cleaning,High,Cleaner,Biohazard,Within 4 hours,72,,challenge_cleaning_biohazard
+used needle ekak saha blood floor eke,Singlish,Block A,3,Staircase,Common floor,Cleaning,High,Cleaner,Biohazard,Within 4 hours,72,,challenge_cleaning_biohazard
+used needle එකක් සහ blood floor එකේ,Mixed,Block A,3,Lobby,Waste area,Cleaning,High,Cleaner,Biohazard,Within 4 hours,72,,challenge_cleaning_biohazard
+Garbage has not been collected from the common area,English,Block A,3,Staircase,Lobby floor,Cleaning,Low,Cleaner,Garbage collection,Within 48 hours,18,,challenge_cleaning_garbage_collection
+පොදු ප්‍රදේශයේ කසළ එකතු කරලා නැහැ,Sinhala,Block A,3,Garbage Room,Staircase,Cleaning,Low,Cleaner,Garbage collection,Within 48 hours,18,,challenge_cleaning_garbage_collection
+common area garbage collect karala naha,Singlish,Block A,3,Garbage Room,Waste area,Cleaning,Low,Cleaner,Garbage collection,Within 48 hours,18,,challenge_cleaning_garbage_collection
+common area garbage collect කරලා නැහැ,Mixed,Block A,3,Lobby,Waste area,Cleaning,Low,Cleaner,Garbage collection,Within 48 hours,18,,challenge_cleaning_garbage_collection
+There is mould growing on a damp common wall,English,Block A,3,Common Corridor,Waste area,Cleaning,Medium,Cleaner,Mould cleaning,Within 24 hours,42,,challenge_cleaning_mould_cleaning
+තෙත් පොදු බිත්තියේ පුස් හැදිලා,Sinhala,Block A,3,Lobby,Lobby floor,Cleaning,Medium,Cleaner,Mould cleaning,Within 24 hours,42,,challenge_cleaning_mould_cleaning
+common wall eke mould hadila,Singlish,Block A,3,Staircase,Waste area,Cleaning,Medium,Cleaner,Mould cleaning,Within 24 hours,42,,challenge_cleaning_mould_cleaning
+damp common wall එකේ mould තියෙනවා,Mixed,Block A,3,Common Corridor,Common floor,Cleaning,Medium,Cleaner,Mould cleaning,Within 24 hours,42,,challenge_cleaning_mould_cleaning
+Oil has spilled on the parking floor,English,Block A,3,Staircase,Lobby floor,Cleaning,Medium,Cleaner,Oil spill,Within 24 hours,42,,challenge_cleaning_oil_spill
+පාර්කින් බිමට තෙල් වැටිලා තියෙනවා,Sinhala,Block A,3,Staircase,Common floor,Cleaning,Medium,Cleaner,Oil spill,Within 24 hours,42,,challenge_cleaning_oil_spill
+parking floor eke oil spill wela,Singlish,Block A,3,Lobby,Lobby floor,Cleaning,Medium,Cleaner,Oil spill,Within 24 hours,42,,challenge_cleaning_oil_spill
+parking floor එකේ oil spill වෙලා,Mixed,Block A,3,Garbage Room,Lobby floor,Cleaning,Medium,Cleaner,Oil spill,Within 24 hours,42,,challenge_cleaning_oil_spill
+There is vomit and biological waste in the corridor,English,Block A,3,Garbage Room,Waste area,Cleaning,High,Cleaner,Biological contamination,Within 4 hours,72,,challenge_cleaning_biological_contamination
+කොරිඩෝර් එකේ ජෛව අපද්‍රව්‍ය තියෙනවා,Sinhala,Block A,3,Staircase,Common floor,Cleaning,High,Cleaner,Biological contamination,Within 4 hours,72,,challenge_cleaning_biological_contamination
+corridor eke biological waste thiyenawa,Singlish,Block A,3,Garbage Room,Lobby floor,Cleaning,High,Cleaner,Biological contamination,Within 4 hours,72,,challenge_cleaning_biological_contamination
+corridor එකේ biological waste තියෙනවා,Mixed,Block A,3,Common Corridor,Waste area,Cleaning,High,Cleaner,Biological contamination,Within 4 hours,72,,challenge_cleaning_biological_contamination
+The staircase is very dusty and dirty,English,Block A,3,Common Corridor,Waste area,Cleaning,Low,Cleaner,Staircase cleaning,Within 48 hours,18,,challenge_cleaning_staircase_cleaning
+පඩිපෙළ ගොඩක් දූවිලි සහ අපිරිසිදුයි,Sinhala,Block A,3,Garbage Room,Lobby floor,Cleaning,Low,Cleaner,Staircase cleaning,Within 48 hours,18,,challenge_cleaning_staircase_cleaning
+staircase eka godak dirty,Singlish,Block A,3,Garbage Room,Lobby floor,Cleaning,Low,Cleaner,Staircase cleaning,Within 48 hours,18,,challenge_cleaning_staircase_cleaning
+staircase එක very dusty and dirty,Mixed,Block A,3,Common Corridor,Lobby floor,Cleaning,Low,Cleaner,Staircase cleaning,Within 48 hours,18,,challenge_cleaning_staircase_cleaning
+There are ants near the kitchen window,English,Block A,3,Kitchen,Garbage room,Pest Control,Low,Pest Controller,Ants,Within 48 hours,18,,challenge_pest_control_ants
+කුස්සියේ ජනේලය අසල කුහුඹුවන් ඉන්නවා,Sinhala,Block A,3,Kitchen,Garbage room,Pest Control,Low,Pest Controller,Ants,Within 48 hours,18,,challenge_pest_control_ants
+kitchen window langa ants innawa,Singlish,Block A,3,Garbage Room,Common area,Pest Control,Low,Pest Controller,Ants,Within 48 hours,18,,challenge_pest_control_ants
+kitchen window එක ළඟ ants ඉන්නවා,Mixed,Block A,3,Balcony,Balcony,Pest Control,Low,Pest Controller,Ants,Within 48 hours,18,,challenge_pest_control_ants
+There are many cockroaches in the kitchen,English,Block A,3,Kitchen,Garbage room,Pest Control,Medium,Pest Controller,Cockroaches,Within 24 hours,42,,challenge_pest_control_cockroaches
+කුස්සියේ කැරපොත්තන් ගොඩක් ඉන්නවා,Sinhala,Block A,3,Garden,Kitchen area,Pest Control,Medium,Pest Controller,Cockroaches,Within 24 hours,42,,challenge_pest_control_cockroaches
+kitchen eke cockroaches godak innawa,Singlish,Block A,3,Garden,Common area,Pest Control,Medium,Pest Controller,Cockroaches,Within 24 hours,42,,challenge_pest_control_cockroaches
+kitchen එකේ cockroaches ගොඩක්,Mixed,Block A,3,Garden,Garbage room,Pest Control,Medium,Pest Controller,Cockroaches,Within 24 hours,42,,challenge_pest_control_cockroaches
+There are many rats in the garbage room,English,Block A,3,Balcony,Kitchen area,Pest Control,High,Pest Controller,Rat infestation,Within 4 hours,72,,challenge_pest_control_rat_infestation
+කසළ කාමරයේ මීයන් ගොඩක් ඉන්නවා,Sinhala,Block A,3,Garbage Room,Garbage room,Pest Control,High,Pest Controller,Rat infestation,Within 4 hours,72,,challenge_pest_control_rat_infestation
+garbage room eke rats godak innawa,Singlish,Block A,3,Garbage Room,Garbage room,Pest Control,High,Pest Controller,Rat infestation,Within 4 hours,72,,challenge_pest_control_rat_infestation
+garbage room එකේ rats ගොඩක්,Mixed,Block A,3,Garden,Kitchen area,Pest Control,High,Pest Controller,Rat infestation,Within 4 hours,72,,challenge_pest_control_rat_infestation
+A snake is inside the occupied common area,English,Block A,3,Garbage Room,Balcony,Pest Control,Emergency,Pest Controller,Snake,Immediate,95,,challenge_pest_control_snake
+පොදු ප්‍රදේශයේ සර්පයෙක් ඉන්නවා,Sinhala,Block A,3,Kitchen,Common area,Pest Control,Emergency,Pest Controller,Snake,Immediate,95,,challenge_pest_control_snake
+snake ekak common area eke innawa,Singlish,Block A,3,Garbage Room,Kitchen area,Pest Control,Emergency,Pest Controller,Snake,Immediate,95,,challenge_pest_control_snake
+snake එකක් common area එකේ,Mixed,Block A,3,Garden,Kitchen area,Pest Control,Emergency,Pest Controller,Snake,Immediate,95,,challenge_pest_control_snake
+An aggressive bee swarm is close to residents,English,Block A,3,Kitchen,Garbage room,Pest Control,High,Pest Controller,Bee swarm,Within 4 hours,72,,challenge_pest_control_bee_swarm
+මී මැසි රංචුවක් නේවාසිකයන් අසල තියෙනවා,Sinhala,Block A,3,Garbage Room,Balcony,Pest Control,High,Pest Controller,Bee swarm,Within 4 hours,72,,challenge_pest_control_bee_swarm
+bee swarm ekak residents langa,Singlish,Block A,3,Kitchen,Balcony,Pest Control,High,Pest Controller,Bee swarm,Within 4 hours,72,,challenge_pest_control_bee_swarm
+bee swarm එකක් residents ළඟ,Mixed,Block A,3,Garden,Kitchen area,Pest Control,High,Pest Controller,Bee swarm,Within 4 hours,72,,challenge_pest_control_bee_swarm
+There are many mosquitoes near stagnant water,English,Block A,3,Garbage Room,Balcony,Pest Control,Medium,Pest Controller,Mosquito problem,Within 24 hours,42,,challenge_pest_control_mosquito_problem
+වතුර රැඳී ඇති තැන මදුරුවන් ගොඩක් ඉන්නවා,Sinhala,Block A,3,Garden,Common area,Pest Control,Medium,Pest Controller,Mosquito problem,Within 24 hours,42,,challenge_pest_control_mosquito_problem
+watura ekathu wela mosquitoes godak innawa,Singlish,Block A,3,Garden,Kitchen area,Pest Control,Medium,Pest Controller,Mosquito problem,Within 24 hours,42,,challenge_pest_control_mosquito_problem
+stagnant water ළඟ mosquitoes ගොඩක්,Mixed,Block A,3,Balcony,Kitchen area,Pest Control,Medium,Pest Controller,Mosquito problem,Within 24 hours,42,,challenge_pest_control_mosquito_problem
+Bedbugs are reported inside the bedroom,English,Block A,3,Garbage Room,Kitchen area,Pest Control,Medium,Pest Controller,Bedbug problem,Within 24 hours,42,,challenge_pest_control_bedbug_problem
+නිදන කාමරයේ ඇඳ මකුණන් ඉන්නවා,Sinhala,Block A,3,Kitchen,Kitchen area,Pest Control,Medium,Pest Controller,Bedbug problem,Within 24 hours,42,,challenge_pest_control_bedbug_problem
+bedroom eke bedbugs innawa,Singlish,Block A,3,Kitchen,Garbage room,Pest Control,Medium,Pest Controller,Bedbug problem,Within 24 hours,42,,challenge_pest_control_bedbug_problem
+bedroom එකේ bedbugs තියෙනවා,Mixed,Block A,3,Balcony,Balcony,Pest Control,Medium,Pest Controller,Bedbug problem,Within 24 hours,42,,challenge_pest_control_bedbug_problem
+Termites are damaging a wooden door frame,English,Block A,3,Garden,Common area,Pest Control,High,Pest Controller,Termite damage,Within 4 hours,72,,challenge_pest_control_termite_damage
+වේයන් ලී දොර රාමුවට හානි කරනවා,Sinhala,Block A,3,Garbage Room,Garbage room,Pest Control,High,Pest Controller,Termite damage,Within 4 hours,72,,challenge_pest_control_termite_damage
+termite la door frame eka kanawa,Singlish,Block A,3,Kitchen,Common area,Pest Control,High,Pest Controller,Termite damage,Within 4 hours,72,,challenge_pest_control_termite_damage
+termites door frame එක damage කරනවා,Mixed,Block A,3,Balcony,Garbage room,Pest Control,High,Pest Controller,Termite damage,Within 4 hours,72,,challenge_pest_control_termite_damage
+A wasp nest is near the balcony,English,Block A,3,Garbage Room,Kitchen area,Pest Control,Medium,Pest Controller,Wasp nest,Within 24 hours,42,,challenge_pest_control_wasp_nest
+බැල්කනිය අසල බඹර කූඩුවක් තියෙනවා,Sinhala,Block A,3,Garbage Room,Kitchen area,Pest Control,Medium,Pest Controller,Wasp nest,Within 24 hours,42,,challenge_pest_control_wasp_nest
+balcony langa wasp nest ekak,Singlish,Block A,3,Kitchen,Kitchen area,Pest Control,Medium,Pest Controller,Wasp nest,Within 24 hours,42,,challenge_pest_control_wasp_nest
+balcony ළඟ wasp nest එකක්,Mixed,Block A,3,Garbage Room,Balcony,Pest Control,Medium,Pest Controller,Wasp nest,Within 24 hours,42,,challenge_pest_control_wasp_nest
+Small insects are appearing around the kitchen cupboards,English,Block A,3,Kitchen,Balcony,Pest Control,Low,Pest Controller,Small insect problem,Within 48 hours,18,,challenge_pest_control_small_insect_problem
+කුස්සියේ කබඩ් අසල පොඩි කෘමීන් ඉන්නවා,Sinhala,Block A,3,Balcony,Kitchen area,Pest Control,Low,Pest Controller,Small insect problem,Within 48 hours,18,,challenge_pest_control_small_insect_problem
+kitchen cupboard langa podi insects innawa,Singlish,Block A,3,Garden,Kitchen area,Pest Control,Low,Pest Controller,Small insect problem,Within 48 hours,18,,challenge_pest_control_small_insect_problem
+kitchen cupboards ළඟ small insects තියෙනවා,Mixed,Block A,3,Balcony,Garbage room,Pest Control,Low,Pest Controller,Small insect problem,Within 48 hours,18,,challenge_pest_control_small_insect_problem
+The cupboard hinge is loose,English,Block A,3,Bedroom,Handrail,Carpentry,Low,Carpenter,Loose hinge,Within 48 hours,18,,challenge_carpentry_loose_hinge
+කබඩ් හින්ජ් එක ලූස් වෙලා,Sinhala,Block A,3,Lobby,Cupboard,Carpentry,Low,Carpenter,Loose hinge,Within 48 hours,18,,challenge_carpentry_loose_hinge
+cupboard hinge eka loose,Singlish,Block A,3,Bedroom,Window,Carpentry,Low,Carpenter,Loose hinge,Within 48 hours,18,,challenge_carpentry_loose_hinge
+cupboard hinge එක loose,Mixed,Block A,3,Lobby,Cupboard,Carpentry,Low,Carpenter,Loose hinge,Within 48 hours,18,,challenge_carpentry_loose_hinge
+The bedroom door will not close properly,English,Block A,3,Staircase,Door,Carpentry,Medium,Carpenter,Door fault,Within 24 hours,42,,challenge_carpentry_door_fault
+නිදන කාමරයේ දොර හරියට වැහෙන්නේ නැහැ,Sinhala,Block A,3,Lobby,Window,Carpentry,Medium,Carpenter,Door fault,Within 24 hours,42,,challenge_carpentry_door_fault
+bedroom door eka hariyata wahanna ba,Singlish,Block A,3,Bedroom,Window,Carpentry,Medium,Carpenter,Door fault,Within 24 hours,42,,challenge_carpentry_door_fault
+bedroom door එක properly close වෙන්නේ නැහැ,Mixed,Block A,3,Bedroom,Door frame,Carpentry,Medium,Carpenter,Door fault,Within 24 hours,42,,challenge_carpentry_door_fault
+The heavy door frame may fall,English,Block A,3,Lobby,Handrail,Carpentry,High,Carpenter,Falling frame,Within 4 hours,72,,challenge_carpentry_falling_frame
+බර දොර රාමුව වැටෙන්න වගේ ලූස් වෙලා,Sinhala,Block A,3,Lobby,Window,Carpentry,High,Carpenter,Falling frame,Within 4 hours,72,,challenge_carpentry_falling_frame
+door frame eka watenna wage loose,Singlish,Block A,3,Lobby,Handrail,Carpentry,High,Carpenter,Falling frame,Within 4 hours,72,,challenge_carpentry_falling_frame
+heavy door frame එක fall වෙන්න වගේ,Mixed,Block A,3,Bedroom,Door,Carpentry,High,Carpenter,Falling frame,Within 4 hours,72,,challenge_carpentry_falling_frame
+The staircase handrail is loose and unsafe,English,Block A,3,Staircase,Window,Carpentry,High,Carpenter,Handrail hazard,Within 4 hours,72,,challenge_carpentry_handrail_hazard
+පඩිපෙළ අත්පාවරුව ගොඩක් ලූස්,Sinhala,Block A,3,Staircase,Window,Carpentry,High,Carpenter,Handrail hazard,Within 4 hours,72,,challenge_carpentry_handrail_hazard
+staircase handrail eka godak loose,Singlish,Block A,3,Bedroom,Window,Carpentry,High,Carpenter,Handrail hazard,Within 4 hours,72,,challenge_carpentry_handrail_hazard
+staircase handrail එක unsafe ලෙස loose,Mixed,Block A,3,Staircase,Window,Carpentry,High,Carpenter,Handrail hazard,Within 4 hours,72,,challenge_carpentry_handrail_hazard
+The window frame is damaged and will not close,English,Block A,3,Staircase,Handrail,Carpentry,Medium,Carpenter,Window frame fault,Within 24 hours,42,,challenge_carpentry_window_frame_fault
+ජනේල රාමුව හානිවෙලා වැහෙන්නේ නැහැ,Sinhala,Block A,3,Lobby,Door frame,Carpentry,Medium,Carpenter,Window frame fault,Within 24 hours,42,,challenge_carpentry_window_frame_fault
+window frame eka damage wela close wenne naha,Singlish,Block A,3,Staircase,Window,Carpentry,Medium,Carpenter,Window frame fault,Within 24 hours,42,,challenge_carpentry_window_frame_fault
+window frame එක damaged සහ close වෙන්නේ නැහැ,Mixed,Block A,3,Lobby,Handrail,Carpentry,Medium,Carpenter,Window frame fault,Within 24 hours,42,,challenge_carpentry_window_frame_fault
+A wooden shelf is loose,English,Block A,3,Staircase,Window,Carpentry,Low,Carpenter,Loose shelf,Within 48 hours,18,,challenge_carpentry_loose_shelf
+ලී රාක්කයක් ලූස් වෙලා,Sinhala,Block A,3,Lobby,Door frame,Carpentry,Low,Carpenter,Loose shelf,Within 48 hours,18,,challenge_carpentry_loose_shelf
+wooden shelf eka loose,Singlish,Block A,3,Staircase,Cupboard,Carpentry,Low,Carpenter,Loose shelf,Within 48 hours,18,,challenge_carpentry_loose_shelf
+wooden shelf එක loose,Mixed,Block A,3,Staircase,Handrail,Carpentry,Low,Carpenter,Loose shelf,Within 48 hours,18,,challenge_carpentry_loose_shelf
+The cupboard door is broken,English,Block A,3,Staircase,Door frame,Carpentry,Medium,Carpenter,Cupboard door,Within 24 hours,42,,challenge_carpentry_cupboard_door
+කබඩ් දොර කැඩිලා,Sinhala,Block A,3,Bedroom,Cupboard,Carpentry,Medium,Carpenter,Cupboard door,Within 24 hours,42,,challenge_carpentry_cupboard_door
+cupboard door eka kadila,Singlish,Block A,3,Bedroom,Door frame,Carpentry,Medium,Carpenter,Cupboard door,Within 24 hours,42,,challenge_carpentry_cupboard_door
+cupboard door එක broken,Mixed,Block A,3,Lobby,Door frame,Carpentry,Medium,Carpenter,Cupboard door,Within 24 hours,42,,challenge_carpentry_cupboard_door
+A wall mounted wooden cabinet is coming loose,English,Block A,3,Lobby,Door frame,Carpentry,High,Carpenter,Loose wall cabinet,Within 4 hours,72,,challenge_carpentry_loose_wall_cabinet
+බිත්තියට සවි කළ ලී කබඩ් එක ගැලවෙන්න වගේ,Sinhala,Block A,3,Bedroom,Cupboard,Carpentry,High,Carpenter,Loose wall cabinet,Within 4 hours,72,,challenge_carpentry_loose_wall_cabinet
+wall cabinet eka galawenna wage,Singlish,Block A,3,Lobby,Window,Carpentry,High,Carpenter,Loose wall cabinet,Within 4 hours,72,,challenge_carpentry_loose_wall_cabinet
+wall cabinet එක coming loose,Mixed,Block A,3,Bedroom,Window,Carpentry,High,Carpenter,Loose wall cabinet,Within 4 hours,72,,challenge_carpentry_loose_wall_cabinet
+The wooden main door is scraping and cannot close,English,Block A,3,Lobby,Handrail,Carpentry,Medium,Carpenter,Wooden door fault,Within 24 hours,42,,challenge_carpentry_wooden_door_fault
+ලී ප්‍රධාන දොර බිමට ගැටී වැහෙන්නේ නැහැ,Sinhala,Block A,3,Staircase,Cupboard,Carpentry,Medium,Carpenter,Wooden door fault,Within 24 hours,42,,challenge_carpentry_wooden_door_fault
+wooden main door eka floor eke galila close wenne naha,Singlish,Block A,3,Staircase,Window,Carpentry,Medium,Carpenter,Wooden door fault,Within 24 hours,42,,challenge_carpentry_wooden_door_fault
+wooden main door එක scrape වෙලා close වෙන්නේ නැහැ,Mixed,Block A,3,Bedroom,Door frame,Carpentry,Medium,Carpenter,Wooden door fault,Within 24 hours,42,,challenge_carpentry_wooden_door_fault
+There is smoke smell coming from the room,English,Block A,3,Kitchen,Fire extinguisher,Fire and Safety,Emergency,Fire and Safety Technician,Smoke smell,Immediate,95,,challenge_fire_and_safety_smoke_smell
+කාමරයෙන් දුම් ගඳක් එනවා,Sinhala,Block A,3,Common Corridor,Smoke detector,Fire and Safety,Emergency,Fire and Safety Technician,Smoke smell,Immediate,95,,challenge_fire_and_safety_smoke_smell
+kamarekin smoke smell ekak enawa,Singlish,Block A,3,Kitchen,Smoke detector,Fire and Safety,Emergency,Fire and Safety Technician,Smoke smell,Immediate,95,,challenge_fire_and_safety_smoke_smell
+room එකෙන් smoke smell එකක් එනවා,Mixed,Block A,3,Bedroom,Common area,Fire and Safety,Emergency,Fire and Safety Technician,Smoke smell,Immediate,95,,challenge_fire_and_safety_smoke_smell
+A room is catching fire,English,Block A,3,Lobby,Smoke detector,Fire and Safety,Emergency,Fire and Safety Technician,Fire,Immediate,95,,challenge_fire_and_safety_fire
+කාමරයක ගින්නක් ඇතිවෙලා,Sinhala,Block A,3,Bedroom,Fire extinguisher,Fire and Safety,Emergency,Fire and Safety Technician,Fire,Immediate,95,,challenge_fire_and_safety_fire
+kamarayak gini gannawa,Singlish,Block A,3,Kitchen,Fire extinguisher,Fire and Safety,Emergency,Fire and Safety Technician,Fire,Immediate,95,,challenge_fire_and_safety_fire
+room එකක් fire වෙලා,Mixed,Block A,3,Lobby,Fire extinguisher,Fire and Safety,Emergency,Fire and Safety Technician,Fire,Immediate,95,,challenge_fire_and_safety_fire
+The fire alarm is not working,English,Block A,3,Lobby,Fire alarm,Fire and Safety,High,Fire and Safety Technician,Fire alarm fault,Within 4 hours,72,,challenge_fire_and_safety_fire_alarm_fault
+ගිනි අනතුරු ඇඟවීමේ පද්ධතිය වැඩ කරන්නේ නැහැ,Sinhala,Block A,3,Lobby,Common area,Fire and Safety,High,Fire and Safety Technician,Fire alarm fault,Within 4 hours,72,,challenge_fire_and_safety_fire_alarm_fault
+fire alarm eka wada naha,Singlish,Block A,3,Common Corridor,Fire extinguisher,Fire and Safety,High,Fire and Safety Technician,Fire alarm fault,Within 4 hours,72,,challenge_fire_and_safety_fire_alarm_fault
+fire alarm එක වැඩ කරන්නේ නැහැ,Mixed,Block A,3,Bedroom,Fire alarm,Fire and Safety,High,Fire and Safety Technician,Fire alarm fault,Within 4 hours,72,,challenge_fire_and_safety_fire_alarm_fault
+The smoke detector is showing a fault,English,Block A,3,Common Corridor,Fire extinguisher,Fire and Safety,High,Fire and Safety Technician,Smoke detector fault,Within 4 hours,72,,challenge_fire_and_safety_smoke_detector_fault
+දුම් සංවේදකයේ දෝෂයක් තියෙනවා,Sinhala,Block A,3,Bedroom,Fire alarm,Fire and Safety,High,Fire and Safety Technician,Smoke detector fault,Within 4 hours,72,,challenge_fire_and_safety_smoke_detector_fault
+smoke detector eka faulty,Singlish,Block A,3,Lobby,Common area,Fire and Safety,High,Fire and Safety Technician,Smoke detector fault,Within 4 hours,72,,challenge_fire_and_safety_smoke_detector_fault
+smoke detector එක faulty,Mixed,Block A,3,Common Corridor,Fire alarm,Fire and Safety,High,Fire and Safety Technician,Smoke detector fault,Within 4 hours,72,,challenge_fire_and_safety_smoke_detector_fault
+The fire extinguisher is damaged or empty,English,Block A,3,Bedroom,Common area,Fire and Safety,High,Fire and Safety Technician,Fire extinguisher fault,Within 4 hours,72,,challenge_fire_and_safety_fire_extinguisher_fault
+ගිනි නිවන උපකරණය හානි වෙලා හෝ හිස්,Sinhala,Block A,3,Kitchen,Smoke detector,Fire and Safety,High,Fire and Safety Technician,Fire extinguisher fault,Within 4 hours,72,,challenge_fire_and_safety_fire_extinguisher_fault
+fire extinguisher eka damage wela,Singlish,Block A,3,Common Corridor,Fire extinguisher,Fire and Safety,High,Fire and Safety Technician,Fire extinguisher fault,Within 4 hours,72,,challenge_fire_and_safety_fire_extinguisher_fault
+fire extinguisher එක damaged,Mixed,Block A,3,Kitchen,Fire extinguisher,Fire and Safety,High,Fire and Safety Technician,Fire extinguisher fault,Within 4 hours,72,,challenge_fire_and_safety_fire_extinguisher_fault
+The emergency light is not working,English,Block A,3,Kitchen,Common area,Fire and Safety,High,Fire and Safety Technician,Emergency light fault,Within 4 hours,72,,challenge_fire_and_safety_emergency_light_fault
+හදිසි ආලෝකය වැඩ කරන්නේ නැහැ,Sinhala,Block A,3,Bedroom,Common area,Fire and Safety,High,Fire and Safety Technician,Emergency light fault,Within 4 hours,72,,challenge_fire_and_safety_emergency_light_fault
+emergency light eka wada naha,Singlish,Block A,3,Kitchen,Smoke detector,Fire and Safety,High,Fire and Safety Technician,Emergency light fault,Within 4 hours,72,,challenge_fire_and_safety_emergency_light_fault
+emergency light එක වැඩ කරන්නේ නැහැ,Mixed,Block A,3,Lobby,Fire alarm,Fire and Safety,High,Fire and Safety Technician,Emergency light fault,Within 4 hours,72,,challenge_fire_and_safety_emergency_light_fault
+The fire hose reel cabinet is damaged,English,Block A,3,Bedroom,Smoke detector,Fire and Safety,High,Fire and Safety Technician,Fire hose reel fault,Within 4 hours,72,,challenge_fire_and_safety_fire_hose_reel_fault
+ගිනි හෝස් රීල් කබඩ් එක හානිවෙලා,Sinhala,Block A,3,Common Corridor,Fire extinguisher,Fire and Safety,High,Fire and Safety Technician,Fire hose reel fault,Within 4 hours,72,,challenge_fire_and_safety_fire_hose_reel_fault
+fire hose reel cabinet eka damage wela,Singlish,Block A,3,Lobby,Fire extinguisher,Fire and Safety,High,Fire and Safety Technician,Fire hose reel fault,Within 4 hours,72,,challenge_fire_and_safety_fire_hose_reel_fault
+fire hose reel cabinet එක damaged,Mixed,Block A,3,Lobby,Fire alarm,Fire and Safety,High,Fire and Safety Technician,Fire hose reel fault,Within 4 hours,72,,challenge_fire_and_safety_fire_hose_reel_fault
+Smoke is filling the common corridor,English,Block A,3,Common Corridor,Fire extinguisher,Fire and Safety,Emergency,Fire and Safety Technician,Heavy smoke,Immediate,95,,challenge_fire_and_safety_heavy_smoke
+පොදු කොරිඩෝර් එක දුමෙන් පිරෙනවා,Sinhala,Block A,3,Lobby,Fire alarm,Fire and Safety,Emergency,Fire and Safety Technician,Heavy smoke,Immediate,95,,challenge_fire_and_safety_heavy_smoke
+common corridor eka duma walin pirenawa,Singlish,Block A,3,Common Corridor,Common area,Fire and Safety,Emergency,Fire and Safety Technician,Heavy smoke,Immediate,95,,challenge_fire_and_safety_heavy_smoke
+common corridor එක smoke වලින් fill වෙනවා,Mixed,Block A,3,Kitchen,Smoke detector,Fire and Safety,Emergency,Fire and Safety Technician,Heavy smoke,Immediate,95,,challenge_fire_and_safety_heavy_smoke
+The fire alarm keeps showing a system fault,English,Block A,3,Common Corridor,Fire alarm,Fire and Safety,High,Fire and Safety Technician,Fire alarm system fault,Within 4 hours,72,,challenge_fire_and_safety_fire_alarm_system_fault
+ගිනි අනතුරු ඇඟවීමේ පද්ධතියේ දෝෂයක් පෙන්වනවා,Sinhala,Block A,3,Lobby,Smoke detector,Fire and Safety,High,Fire and Safety Technician,Fire alarm system fault,Within 4 hours,72,,challenge_fire_and_safety_fire_alarm_system_fault
+fire alarm eke system fault ekak pennanawa,Singlish,Block A,3,Kitchen,Common area,Fire and Safety,High,Fire and Safety Technician,Fire alarm system fault,Within 4 hours,72,,challenge_fire_and_safety_fire_alarm_system_fault
+fire alarm එක system fault show කරනවා,Mixed,Block A,3,Bedroom,Fire extinguisher,Fire and Safety,High,Fire and Safety Technician,Fire alarm system fault,Within 4 hours,72,,challenge_fire_and_safety_fire_alarm_system_fault
+The fire extinguisher inspection date has expired,English,Block A,3,Lobby,Fire extinguisher,Fire and Safety,High,Fire and Safety Technician,Extinguisher expired,Within 4 hours,72,,challenge_fire_and_safety_extinguisher_expired
+ගිනි නිවන උපකරණයේ පරීක්ෂණ දිනය කල් ඉකුත් වෙලා,Sinhala,Block A,3,Bedroom,Smoke detector,Fire and Safety,High,Fire and Safety Technician,Extinguisher expired,Within 4 hours,72,,challenge_fire_and_safety_extinguisher_expired
+fire extinguisher date eka expire wela,Singlish,Block A,3,Common Corridor,Smoke detector,Fire and Safety,High,Fire and Safety Technician,Extinguisher expired,Within 4 hours,72,,challenge_fire_and_safety_extinguisher_expired
+fire extinguisher inspection date එක expired,Mixed,Block A,3,Common Corridor,Fire extinguisher,Fire and Safety,High,Fire and Safety Technician,Extinguisher expired,Within 4 hours,72,,challenge_fire_and_safety_extinguisher_expired
+There is a strong gas smell in the kitchen,English,Block A,3,Service Area,Gas meter,Gas,Emergency,Gas Technician,Gas smell,Immediate,95,,challenge_gas_gas_smell
+කුස්සියේ දැඩි ගෑස් ගඳක් එනවා,Sinhala,Block A,3,Kitchen,Gas appliance,Gas,Emergency,Gas Technician,Gas smell,Immediate,95,,challenge_gas_gas_smell
+kitchen eke loku gas smell ekak enawa,Singlish,Block A,3,Kitchen,Gas valve,Gas,Emergency,Gas Technician,Gas smell,Immediate,95,,challenge_gas_gas_smell
+kitchen එකේ strong gas smell එකක්,Mixed,Block A,3,Service Area,Gas valve,Gas,Emergency,Gas Technician,Gas smell,Immediate,95,,challenge_gas_gas_smell
+Gas is leaking from the valve,English,Block A,3,Service Area,Gas valve,Gas,Emergency,Gas Technician,Gas leak,Immediate,95,,challenge_gas_gas_leak
+ගෑස් වෑල්වයෙන් කාන්දුවක් තියෙනවා,Sinhala,Block A,3,Service Area,Gas appliance,Gas,Emergency,Gas Technician,Gas leak,Immediate,95,,challenge_gas_gas_leak
+gas valve eken leak ekak enawa,Singlish,Block A,3,Service Area,Gas valve,Gas,Emergency,Gas Technician,Gas leak,Immediate,95,,challenge_gas_gas_leak
+gas valve එකෙන් leak වෙනවා,Mixed,Block A,3,Service Area,Gas line,Gas,Emergency,Gas Technician,Gas leak,Immediate,95,,challenge_gas_gas_leak
+The gas valve is not closing properly,English,Block A,3,Kitchen,Gas valve,Gas,High,Gas Technician,Gas valve fault,Within 4 hours,72,,challenge_gas_gas_valve_fault
+ගෑස් වෑල්වය හරියට වැහෙන්නේ නැහැ,Sinhala,Block A,3,Kitchen,Gas line,Gas,High,Gas Technician,Gas valve fault,Within 4 hours,72,,challenge_gas_gas_valve_fault
+gas valve eka hariyata close wenne naha,Singlish,Block A,3,Kitchen,Gas appliance,Gas,High,Gas Technician,Gas valve fault,Within 4 hours,72,,challenge_gas_gas_valve_fault
+gas valve එක properly close වෙන්නේ නැහැ,Mixed,Block A,3,Service Area,Gas valve,Gas,High,Gas Technician,Gas valve fault,Within 4 hours,72,,challenge_gas_gas_valve_fault
+The gas hose is cracked and leaking,English,Block A,3,Kitchen,Gas meter,Gas,Emergency,Gas Technician,Gas hose leak,Immediate,95,,challenge_gas_gas_hose_leak
+ගෑස් හෝස් එක ඉරිතැලිලා කාන්දු වෙනවා,Sinhala,Block A,3,Kitchen,Gas appliance,Gas,Emergency,Gas Technician,Gas hose leak,Immediate,95,,challenge_gas_gas_hose_leak
+gas hose eka crack wela leak wenawa,Singlish,Block A,3,Service Area,Gas appliance,Gas,Emergency,Gas Technician,Gas hose leak,Immediate,95,,challenge_gas_gas_hose_leak
+gas hose එක cracked and leaking,Mixed,Block A,3,Kitchen,Gas appliance,Gas,Emergency,Gas Technician,Gas hose leak,Immediate,95,,challenge_gas_gas_hose_leak
+The gas stove flame is unusually yellow,English,Block A,3,Service Area,Gas valve,Gas,High,Gas Technician,Abnormal gas flame,Within 4 hours,72,,challenge_gas_abnormal_gas_flame
+ගෑස් ලිපේ ගිනි දැල්ල අසාමාන්‍ය ලෙස කහ පාටයි,Sinhala,Block A,3,Kitchen,Gas appliance,Gas,High,Gas Technician,Abnormal gas flame,Within 4 hours,72,,challenge_gas_abnormal_gas_flame
+gas stove flame eka yellow wela,Singlish,Block A,3,Service Area,Gas meter,Gas,High,Gas Technician,Abnormal gas flame,Within 4 hours,72,,challenge_gas_abnormal_gas_flame
+gas stove flame එක unusually yellow,Mixed,Block A,3,Kitchen,Gas valve,Gas,High,Gas Technician,Abnormal gas flame,Within 4 hours,72,,challenge_gas_abnormal_gas_flame
+The gas valve is stuck open,English,Block A,3,Kitchen,Gas meter,Gas,Emergency,Gas Technician,Gas valve stuck open,Immediate,95,,challenge_gas_gas_valve_stuck_open
+ගෑස් වෑල්වය විවෘතව හිරවෙලා,Sinhala,Block A,3,Kitchen,Gas meter,Gas,Emergency,Gas Technician,Gas valve stuck open,Immediate,95,,challenge_gas_gas_valve_stuck_open
+gas valve eka open wela stuck,Singlish,Block A,3,Kitchen,Gas valve,Gas,Emergency,Gas Technician,Gas valve stuck open,Immediate,95,,challenge_gas_gas_valve_stuck_open
+gas valve එක stuck open,Mixed,Block A,3,Kitchen,Gas line,Gas,Emergency,Gas Technician,Gas valve stuck open,Immediate,95,,challenge_gas_gas_valve_stuck_open
+The gas meter is making an unusual noise,English,Block A,3,Kitchen,Gas line,Gas,High,Gas Technician,Gas meter noise,Within 4 hours,72,,challenge_gas_gas_meter_noise
+ගෑස් මීටරයෙන් අසාමාන්‍ය ශබ්දයක් එනවා,Sinhala,Block A,3,Kitchen,Gas valve,Gas,High,Gas Technician,Gas meter noise,Within 4 hours,72,,challenge_gas_gas_meter_noise
+gas meter eken unusual sound ekak,Singlish,Block A,3,Kitchen,Gas line,Gas,High,Gas Technician,Gas meter noise,Within 4 hours,72,,challenge_gas_gas_meter_noise
+gas meter එකෙන් unusual noise එකක්,Mixed,Block A,3,Service Area,Gas meter,Gas,High,Gas Technician,Gas meter noise,Within 4 hours,72,,challenge_gas_gas_meter_noise
+There is a gas smell near the cylinder connection,English,Block A,3,Kitchen,Gas appliance,Gas,Emergency,Gas Technician,Cylinder gas smell,Immediate,95,,challenge_gas_cylinder_gas_smell
+ගෑස් සිලින්ඩර් සම්බන්ධතාවය අසල ගෑස් ගඳක් එනවා,Sinhala,Block A,3,Kitchen,Gas valve,Gas,Emergency,Gas Technician,Cylinder gas smell,Immediate,95,,challenge_gas_cylinder_gas_smell
+cylinder connection langa gas smell ekak,Singlish,Block A,3,Service Area,Gas meter,Gas,Emergency,Gas Technician,Cylinder gas smell,Immediate,95,,challenge_gas_cylinder_gas_smell
+cylinder connection එක ළඟ gas smell එකක්,Mixed,Block A,3,Kitchen,Gas line,Gas,Emergency,Gas Technician,Cylinder gas smell,Immediate,95,,challenge_gas_cylinder_gas_smell
+There is a small surface crack on the wall,English,Block A,3,Living Room,Wall,Structural,Low,Building Technician,Minor crack,Within 48 hours,18,,challenge_structural_minor_crack
+බිත්තියේ පොඩි මතුපිට ඉරිතැලීමක් තියෙනවා,Sinhala,Block A,3,Parking Basement,Column,Structural,Low,Building Technician,Minor crack,Within 48 hours,18,,challenge_structural_minor_crack
+wall eke podi crack ekak thiyenawa,Singlish,Block A,3,Parking Basement,Column,Structural,Low,Building Technician,Minor crack,Within 48 hours,18,,challenge_structural_minor_crack
+wall එකේ small crack එකක්,Mixed,Block A,3,Balcony,Wall,Structural,Low,Building Technician,Minor crack,Within 48 hours,18,,challenge_structural_minor_crack
+A large crack has appeared in the wall,English,Block A,3,Living Room,Roof,Structural,High,Building Technician,Major crack,Within 4 hours,72,,challenge_structural_major_crack
+බිත්තියේ විශාල ඉරිතැලීමක් ඇතිවෙලා,Sinhala,Block A,3,Bedroom,Roof,Structural,High,Building Technician,Major crack,Within 4 hours,72,,challenge_structural_major_crack
+wall eke loku crack ekak enawa,Singlish,Block A,3,Bedroom,Roof,Structural,High,Building Technician,Major crack,Within 4 hours,72,,challenge_structural_major_crack
+wall එකේ large crack එකක්,Mixed,Block A,3,Parking Basement,Balcony slab,Structural,High,Building Technician,Major crack,Within 4 hours,72,,challenge_structural_major_crack
+Part of the ceiling is falling down,English,Block A,3,Parking Basement,Column,Structural,Emergency,Building Technician,Falling ceiling,Immediate,95,,challenge_structural_falling_ceiling
+සිවිලිමේ කොටස් පහළට වැටෙනවා,Sinhala,Block A,3,Living Room,Column,Structural,Emergency,Building Technician,Falling ceiling,Immediate,95,,challenge_structural_falling_ceiling
+ceiling eken kotas bimata watenawa,Singlish,Block A,3,Bedroom,Balcony slab,Structural,Emergency,Building Technician,Falling ceiling,Immediate,95,,challenge_structural_falling_ceiling
+ceiling එකේ parts පහළට fall වෙනවා,Mixed,Block A,3,Parking Basement,Wall,Structural,Emergency,Building Technician,Falling ceiling,Immediate,95,,challenge_structural_falling_ceiling
+The balcony slab has a severe crack and is moving,English,Block A,3,Living Room,Roof,Structural,Emergency,Building Technician,Structural danger,Immediate,95,,challenge_structural_structural_danger
+බැල්කනි ස්ලැබ් එකේ දැඩි ඉරිතැලීමක් සහ චලනයක් තියෙනවා,Sinhala,Block A,3,Parking Basement,Balcony slab,Structural,Emergency,Building Technician,Structural danger,Immediate,95,,challenge_structural_structural_danger
+balcony slab eke loku crack ekak saha move wenawa,Singlish,Block A,3,Living Room,Wall,Structural,Emergency,Building Technician,Structural danger,Immediate,95,,challenge_structural_structural_danger
+balcony slab එක severe crack සහ movement,Mixed,Block A,3,Balcony,Balcony slab,Structural,Emergency,Building Technician,Structural danger,Immediate,95,,challenge_structural_structural_danger
+Water is entering through a damaged roof,English,Block A,3,Bedroom,Wall,Structural,High,Building Technician,Roof damage,Within 4 hours,72,,challenge_structural_roof_damage
+වහලයට හානි වෙලා වතුර ඇතුල් වෙනවා,Sinhala,Block A,3,Balcony,Wall,Structural,High,Building Technician,Roof damage,Within 4 hours,72,,challenge_structural_roof_damage
+roof eka damage wela watura enawa,Singlish,Block A,3,Living Room,Roof,Structural,High,Building Technician,Roof damage,Within 4 hours,72,,challenge_structural_roof_damage
+damaged roof එකෙන් water එනවා,Mixed,Block A,3,Living Room,Column,Structural,High,Building Technician,Roof damage,Within 4 hours,72,,challenge_structural_roof_damage
+Damp patches are spreading on the wall,English,Block A,3,Bedroom,Roof,Structural,Medium,Building Technician,Wall dampness,Within 24 hours,42,,challenge_structural_wall_dampness
+බිත්තියේ තෙත් පැල්ලම් පැතිරෙනවා,Sinhala,Block A,3,Living Room,Ceiling,Structural,Medium,Building Technician,Wall dampness,Within 24 hours,42,,challenge_structural_wall_dampness
+wall eke damp patch wadi wenawa,Singlish,Block A,3,Living Room,Roof,Structural,Medium,Building Technician,Wall dampness,Within 24 hours,42,,challenge_structural_wall_dampness
+wall එකේ damp patches spread වෙනවා,Mixed,Block A,3,Balcony,Ceiling,Structural,Medium,Building Technician,Wall dampness,Within 24 hours,42,,challenge_structural_wall_dampness
+Plaster is falling from the ceiling,English,Block A,3,Balcony,Column,Structural,High,Building Technician,Falling plaster,Within 4 hours,72,,challenge_structural_falling_plaster
+සිවිලිමේ ප්ලාස්ටර් කැබලි පහළට වැටෙනවා,Sinhala,Block A,3,Balcony,Column,Structural,High,Building Technician,Falling plaster,Within 4 hours,72,,challenge_structural_falling_plaster
+ceiling plaster bimata watenawa,Singlish,Block A,3,Balcony,Column,Structural,High,Building Technician,Falling plaster,Within 4 hours,72,,challenge_structural_falling_plaster
+ceiling plaster එක fall වෙනවා,Mixed,Block A,3,Parking Basement,Balcony slab,Structural,High,Building Technician,Falling plaster,Within 4 hours,72,,challenge_structural_falling_plaster
+A balcony railing fixing is loose in the concrete,English,Block A,3,Balcony,Ceiling,Structural,High,Building Technician,Railing structural fixing,Within 4 hours,72,,challenge_structural_railing_structural_fixing
+බැල්කනි අත්පාවරුවේ සවි කිරීම කොන්ක්‍රීට් එකෙන් ලූස් වෙලා,Sinhala,Block A,3,Balcony,Column,Structural,High,Building Technician,Railing structural fixing,Within 4 hours,72,,challenge_structural_railing_structural_fixing
+balcony railing fixing eka concrete eken loose,Singlish,Block A,3,Balcony,Ceiling,Structural,High,Building Technician,Railing structural fixing,Within 4 hours,72,,challenge_structural_railing_structural_fixing
+balcony railing fixing එක concrete එකෙන් loose,Mixed,Block A,3,Parking Basement,Roof,Structural,High,Building Technician,Railing structural fixing,Within 4 hours,72,,challenge_structural_railing_structural_fixing
+Several roof tiles are broken,English,Block A,3,Parking Basement,Column,Structural,Medium,Building Technician,Broken roof tiles,Within 24 hours,42,,challenge_structural_broken_roof_tiles
+වහලේ ටයිල් කිහිපයක් කැඩිලා,Sinhala,Block A,3,Living Room,Wall,Structural,Medium,Building Technician,Broken roof tiles,Within 24 hours,42,,challenge_structural_broken_roof_tiles
+roof tiles kihipayak kadila,Singlish,Block A,3,Balcony,Column,Structural,Medium,Building Technician,Broken roof tiles,Within 24 hours,42,,challenge_structural_broken_roof_tiles
+several roof tiles broken,Mixed,Block A,3,Bedroom,Balcony slab,Structural,Medium,Building Technician,Broken roof tiles,Within 24 hours,42,,challenge_structural_broken_roof_tiles
+A column has a new deep crack,English,Block A,3,Parking Basement,Ceiling,Structural,High,Building Technician,Column crack,Within 4 hours,72,,challenge_structural_column_crack
+කොලමක අලුත් ගැඹුරු ඉරිතැලීමක් තියෙනවා,Sinhala,Block A,3,Bedroom,Roof,Structural,High,Building Technician,Column crack,Within 4 hours,72,,challenge_structural_column_crack
+column eke aluth deep crack ekak,Singlish,Block A,3,Bedroom,Column,Structural,High,Building Technician,Column crack,Within 4 hours,72,,challenge_structural_column_crack
+column එකේ new deep crack එකක්,Mixed,Block A,3,Parking Basement,Column,Structural,High,Building Technician,Column crack,Within 4 hours,72,,challenge_structural_column_crack
+The intercom is not working,English,Block A,3,Entrance,Access gate,Security and Access,Low,Security Technician,Intercom fault,Within 48 hours,18,,challenge_security_and_access_intercom_fault
+ඉන්ටර්කොම් එක වැඩ කරන්නේ නැහැ,Sinhala,Block A,3,Entrance,Access card reader,Security and Access,Low,Security Technician,Intercom fault,Within 48 hours,18,,challenge_security_and_access_intercom_fault
+intercom eka wada naha,Singlish,Block A,3,Parking,Intercom,Security and Access,Low,Security Technician,Intercom fault,Within 48 hours,18,,challenge_security_and_access_intercom_fault
+intercom එක වැඩ කරන්නේ නැහැ,Mixed,Block A,3,Entrance,Security lock,Security and Access,Low,Security Technician,Intercom fault,Within 48 hours,18,,challenge_security_and_access_intercom_fault
+The access card reader is not responding,English,Block A,3,Entrance,Access card reader,Security and Access,Medium,Security Technician,Access reader,Within 24 hours,42,,challenge_security_and_access_access_reader
+ප්‍රවේශ කාඩ් කියවනය ප්‍රතිචාර දක්වන්නේ නැහැ,Sinhala,Block A,3,Parking,Main door,Security and Access,Medium,Security Technician,Access reader,Within 24 hours,42,,challenge_security_and_access_access_reader
+access card reader eka response karanne naha,Singlish,Block A,3,Entrance,Intercom,Security and Access,Medium,Security Technician,Access reader,Within 24 hours,42,,challenge_security_and_access_access_reader
+access card reader එක response කරන්නේ නැහැ,Mixed,Block A,3,Entrance,Security lock,Security and Access,Medium,Security Technician,Access reader,Within 24 hours,42,,challenge_security_and_access_access_reader
+The main security door cannot be locked,English,Block A,3,Parking,Main door,Security and Access,High,Security Technician,Security door,Within 4 hours,72,,challenge_security_and_access_security_door
+ප්‍රධාන ආරක්ෂක දොර ලොක් කරන්න බැහැ,Sinhala,Block A,3,Entrance,Intercom,Security and Access,High,Security Technician,Security door,Within 4 hours,72,,challenge_security_and_access_security_door
+main security door eka lock karanna ba,Singlish,Block A,3,Entrance,Access gate,Security and Access,High,Security Technician,Security door,Within 4 hours,72,,challenge_security_and_access_security_door
+main security door එක lock කරන්න බැහැ,Mixed,Block A,3,Parking,Main door,Security and Access,High,Security Technician,Security door,Within 4 hours,72,,challenge_security_and_access_security_door
+The parking gate is stuck open,English,Block A,3,Lobby,Main door,Security and Access,High,Security Technician,Gate fault,Within 4 hours,72,,challenge_security_and_access_gate_fault
+පාර්කින් ගේට්ටුව ඇරී හිරවෙලා,Sinhala,Block A,3,Lobby,Access gate,Security and Access,High,Security Technician,Gate fault,Within 4 hours,72,,challenge_security_and_access_gate_fault
+parking gate eka open wela stuck,Singlish,Block A,3,Parking,Access gate,Security and Access,High,Security Technician,Gate fault,Within 4 hours,72,,challenge_security_and_access_gate_fault
+parking gate එක open වෙලා stuck,Mixed,Block A,3,Parking,Access card reader,Security and Access,High,Security Technician,Gate fault,Within 4 hours,72,,challenge_security_and_access_gate_fault
+The emergency exit door is locked and cannot open,English,Block A,3,Lobby,Access gate,Security and Access,Emergency,Security Technician,Blocked emergency exit,Immediate,95,,challenge_security_and_access_blocked_emergency_exit
+හදිසි පිටවීමේ දොර ලොක් වෙලා ඇරෙන්නේ නැහැ,Sinhala,Block A,3,Lobby,Access card reader,Security and Access,Emergency,Security Technician,Blocked emergency exit,Immediate,95,,challenge_security_and_access_blocked_emergency_exit
+emergency exit door eka lock wela arinne naha,Singlish,Block A,3,Parking,Access gate,Security and Access,Emergency,Security Technician,Blocked emergency exit,Immediate,95,,challenge_security_and_access_blocked_emergency_exit
+emergency exit door එක locked සහ open වෙන්නේ නැහැ,Mixed,Block A,3,Entrance,Access card reader,Security and Access,Emergency,Security Technician,Blocked emergency exit,Immediate,95,,challenge_security_and_access_blocked_emergency_exit
+The visitor intercom cannot call the apartment,English,Block A,3,Lobby,Security lock,Security and Access,Medium,Security Technician,Visitor intercom,Within 24 hours,42,,challenge_security_and_access_visitor_intercom
+අමුත්තන්ගේ ඉන්ටර්කොම් එකෙන් අපාර්ට්මෙන්ට් එකට ඇමතුම් යන්නේ නැහැ,Sinhala,Block A,3,Lobby,Main door,Security and Access,Medium,Security Technician,Visitor intercom,Within 24 hours,42,,challenge_security_and_access_visitor_intercom
+visitor intercom eken apartment ekata call wenne naha,Singlish,Block A,3,Parking,Security lock,Security and Access,Medium,Security Technician,Visitor intercom,Within 24 hours,42,,challenge_security_and_access_visitor_intercom
+visitor intercom එකෙන් apartment එකට call වෙන්නේ නැහැ,Mixed,Block A,3,Parking,Intercom,Security and Access,Medium,Security Technician,Visitor intercom,Within 24 hours,42,,challenge_security_and_access_visitor_intercom
+The entrance door lock is broken,English,Block A,3,Lobby,Access gate,Security and Access,High,Security Technician,Entrance lock,Within 4 hours,72,,challenge_security_and_access_entrance_lock
+ප්‍රවේශ දොරේ ලොක් එක කැඩිලා,Sinhala,Block A,3,Entrance,Access card reader,Security and Access,High,Security Technician,Entrance lock,Within 4 hours,72,,challenge_security_and_access_entrance_lock
+entrance door lock eka kadila,Singlish,Block A,3,Parking,Access gate,Security and Access,High,Security Technician,Entrance lock,Within 4 hours,72,,challenge_security_and_access_entrance_lock
+entrance door lock එක broken,Mixed,Block A,3,Entrance,Security lock,Security and Access,High,Security Technician,Entrance lock,Within 4 hours,72,,challenge_security_and_access_entrance_lock
+The access gate opens without a valid card,English,Block A,3,Entrance,Security lock,Security and Access,High,Security Technician,Access control failure,Within 4 hours,72,,challenge_security_and_access_access_control_failure
+ප්‍රවේශ ගේට්ටුව වලංගු කාඩ් එකක් නැතුව ඇරෙනවා,Sinhala,Block A,3,Entrance,Intercom,Security and Access,High,Security Technician,Access control failure,Within 4 hours,72,,challenge_security_and_access_access_control_failure
+access gate eka card nathuwa open wenawa,Singlish,Block A,3,Entrance,Main door,Security and Access,High,Security Technician,Access control failure,Within 4 hours,72,,challenge_security_and_access_access_control_failure
+access gate එක valid card නැතුව open වෙනවා,Mixed,Block A,3,Parking,Security lock,Security and Access,High,Security Technician,Access control failure,Within 4 hours,72,,challenge_security_and_access_access_control_failure
+The parking barrier does not open,English,Block A,3,Entrance,Access card reader,Security and Access,Medium,Security Technician,Parking barrier,Within 24 hours,42,,challenge_security_and_access_parking_barrier
+පාර්කින් බාධකය ඇරෙන්නේ නැහැ,Sinhala,Block A,3,Entrance,Security lock,Security and Access,Medium,Security Technician,Parking barrier,Within 24 hours,42,,challenge_security_and_access_parking_barrier
+parking barrier eka open wenne naha,Singlish,Block A,3,Parking,Intercom,Security and Access,Medium,Security Technician,Parking barrier,Within 24 hours,42,,challenge_security_and_access_parking_barrier
+parking barrier එක open වෙන්නේ නැහැ,Mixed,Block A,3,Entrance,Security lock,Security and Access,Medium,Security Technician,Parking barrier,Within 24 hours,42,,challenge_security_and_access_parking_barrier
+The main entrance is stuck open at night,English,Block A,3,Entrance,Access gate,Security and Access,High,Security Technician,Entrance security risk,Within 4 hours,72,,challenge_security_and_access_entrance_security_risk
+ප්‍රධාන පිවිසුම රාත්‍රියේ විවෘතව හිරවෙලා,Sinhala,Block A,3,Parking,Access gate,Security and Access,High,Security Technician,Entrance security risk,Within 4 hours,72,,challenge_security_and_access_entrance_security_risk
+main entrance eka raatriye open wela stuck,Singlish,Block A,3,Lobby,Access card reader,Security and Access,High,Security Technician,Entrance security risk,Within 4 hours,72,,challenge_security_and_access_entrance_security_risk
+main entrance එක night time open වෙලා stuck,Mixed,Block A,3,Parking,Main door,Security and Access,High,Security Technician,Entrance security risk,Within 4 hours,72,,challenge_security_and_access_entrance_security_risk
+A common area sign is loose,English,Block A,3,Garden,Shared facility,Other,Low,General Maintenance,Loose sign,Within 48 hours,18,,challenge_other_loose_sign
+පොදු ප්‍රදේශයේ සලකුණ ලූස් වෙලා,Sinhala,Block A,3,Garden,Common fitting,Other,Low,General Maintenance,Loose sign,Within 48 hours,18,,challenge_other_loose_sign
+common area sign eka loose,Singlish,Block A,3,Common Corridor,Signage,Other,Low,General Maintenance,Loose sign,Within 48 hours,18,,challenge_other_loose_sign
+common area sign එක loose,Mixed,Block A,3,Common Corridor,Signage,Other,Low,General Maintenance,Loose sign,Within 48 hours,18,,challenge_other_loose_sign
+A shared facility fitting is not working,English,Block A,3,Common Corridor,Shared facility,Other,Medium,General Maintenance,General maintenance,Within 24 hours,42,,challenge_other_general_maintenance
+පොදු පහසුකමක උපකරණයක් වැඩ කරන්නේ නැහැ,Sinhala,Block A,3,Lobby,Signage,Other,Medium,General Maintenance,General maintenance,Within 24 hours,42,,challenge_other_general_maintenance
+shared facility fitting eka wada naha,Singlish,Block A,3,Common Corridor,General fixture,Other,Medium,General Maintenance,General maintenance,Within 24 hours,42,,challenge_other_general_maintenance
+shared facility fitting එක work වෙන්නේ නැහැ,Mixed,Block A,3,Lobby,Signage,Other,Medium,General Maintenance,General maintenance,Within 24 hours,42,,challenge_other_general_maintenance
+A heavy object is loose above the walkway,English,Block A,3,Lobby,Shared facility,Other,High,General Maintenance,Falling object,Within 4 hours,72,,challenge_other_falling_object
+ගමන් මාර්ගයට ඉහළින් බර වස්තුවක් ලූස් වෙලා,Sinhala,Block A,3,Common Corridor,Signage,Other,High,General Maintenance,Falling object,Within 4 hours,72,,challenge_other_falling_object
+walkway uda heavy object ekak loose,Singlish,Block A,3,Common Corridor,Common fitting,Other,High,General Maintenance,Falling object,Within 4 hours,72,,challenge_other_falling_object
+walkway එක උඩ heavy object එක loose,Mixed,Block A,3,Lobby,Common fitting,Other,High,General Maintenance,Falling object,Within 4 hours,72,,challenge_other_falling_object
+The apartment notice board is damaged,English,Block A,3,Lobby,Common fitting,Other,Low,General Maintenance,Notice board,Within 48 hours,18,,challenge_other_notice_board
+අපාර්ට්මෙන්ට් දැන්වීම් පුවරුව හානිවෙලා,Sinhala,Block A,3,Garden,Common fitting,Other,Low,General Maintenance,Notice board,Within 48 hours,18,,challenge_other_notice_board
+notice board eka damage wela,Singlish,Block A,3,Common Corridor,Shared facility,Other,Low,General Maintenance,Notice board,Within 48 hours,18,,challenge_other_notice_board
+notice board එක damaged,Mixed,Block A,3,Garden,Signage,Other,Low,General Maintenance,Notice board,Within 48 hours,18,,challenge_other_notice_board
+A common area bench is broken,English,Block A,3,Lobby,Signage,Other,Medium,General Maintenance,Broken bench,Within 24 hours,42,,challenge_other_broken_bench
+පොදු ප්‍රදේශයේ බංකුවක් කැඩිලා,Sinhala,Block A,3,Garden,Signage,Other,Medium,General Maintenance,Broken bench,Within 24 hours,42,,challenge_other_broken_bench
+common area bench eka kadila,Singlish,Block A,3,Garden,Common fitting,Other,Medium,General Maintenance,Broken bench,Within 24 hours,42,,challenge_other_broken_bench
+common area bench එක broken,Mixed,Block A,3,Lobby,Common fitting,Other,Medium,General Maintenance,Broken bench,Within 24 hours,42,,challenge_other_broken_bench
+A mailbox door is damaged,English,Block A,3,Lobby,Signage,Other,Medium,General Maintenance,Mailbox fault,Within 24 hours,42,,challenge_other_mailbox_fault
+තැපැල් පෙට්ටි දොර හානිවෙලා,Sinhala,Block A,3,Common Corridor,Signage,Other,Medium,General Maintenance,Mailbox fault,Within 24 hours,42,,challenge_other_mailbox_fault
+mailbox door eka damage wela,Singlish,Block A,3,Lobby,General fixture,Other,Medium,General Maintenance,Mailbox fault,Within 24 hours,42,,challenge_other_mailbox_fault
+mailbox door එක damaged,Mixed,Block A,3,Common Corridor,Signage,Other,Medium,General Maintenance,Mailbox fault,Within 24 hours,42,,challenge_other_mailbox_fault
+A metal sign bracket is loose above the entrance,English,Block A,3,Garden,Signage,Other,High,General Maintenance,Loose overhead sign,Within 4 hours,72,,challenge_other_loose_overhead_sign
+පිවිසුමට ඉහළින් ලෝහ සලකුණු සවිකිරීම ලූස් වෙලා,Sinhala,Block A,3,Common Corridor,General fixture,Other,High,General Maintenance,Loose overhead sign,Within 4 hours,72,,challenge_other_loose_overhead_sign
+entrance uda metal sign bracket eka loose,Singlish,Block A,3,Common Corridor,General fixture,Other,High,General Maintenance,Loose overhead sign,Within 4 hours,72,,challenge_other_loose_overhead_sign
+entrance එක උඩ metal sign bracket එක loose,Mixed,Block A,3,Garden,Signage,Other,High,General Maintenance,Loose overhead sign,Within 4 hours,72,,challenge_other_loose_overhead_sign
+A shared drying rack is broken,English,Block A,3,Lobby,Common fitting,Other,Medium,General Maintenance,Shared fitting fault,Within 24 hours,42,,challenge_other_shared_fitting_fault
+පොදු වියළන රාක්කය කැඩිලා,Sinhala,Block A,3,Garden,Shared facility,Other,Medium,General Maintenance,Shared fitting fault,Within 24 hours,42,,challenge_other_shared_fitting_fault
+shared drying rack eka kadila,Singlish,Block A,3,Garden,Shared facility,Other,Medium,General Maintenance,Shared fitting fault,Within 24 hours,42,,challenge_other_shared_fitting_fault
+shared drying rack එක broken,Mixed,Block A,3,Garden,General fixture,Other,Medium,General Maintenance,Shared fitting fault,Within 24 hours,42,,challenge_other_shared_fitting_fault

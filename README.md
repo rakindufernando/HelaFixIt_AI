@@ -1,4 +1,4 @@
-# HelaFixIt AI
+﻿# HelaFixIt AI
 
 ## AI-Based Multilingual Apartment Maintenance Ticket Prioritization, Risk Scoring, and Technician Recommendation System
 
@@ -503,7 +503,6 @@ HelaFixIt_AI
 |   |-- database documentation
 |   `-- database validation files
 |
-|-- Documentation
 |
 |-- Frontend
 |   |-- Assets

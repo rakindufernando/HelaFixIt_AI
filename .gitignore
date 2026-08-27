@@ -146,3 +146,7 @@ coverage/
 # Keep repository documentation
 !README.md
 !Backend/.env.example
+
+# Re-ignore generated Python cache files after AI evidence exceptions
+**/__pycache__/
+*.py[cod]

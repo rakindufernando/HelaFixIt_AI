@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "category_to_skill": {
+    "Electrical": "Electrician",
+    "Plumbing": "Plumber",
+    "Lift": "Lift Technician",
+    "Air Conditioning": "AC Technician",
+    "Drainage": "Plumber",
+    "Cleaning": "Cleaner",
+    "Pest Control": "Pest Control Technician",
+    "Carpentry": "Carpenter",
+    "Other": "General Maintenance",
+    "Fire and Safety": "Fire and Safety Technician",
+    "Gas": "Gas Technician",
+    "Structural": "Building Technician",
+    "Security and Access": "Security Technician"
+  },
+  "score_weights": {
+    "skill_match": 45,
+    "available": 20,
+    "workload": 15,
+    "same_building": 8,
+    "rating": 7,
+    "emergency_eligible": 5
+  }
+}

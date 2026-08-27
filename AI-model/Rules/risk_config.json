@@ -1,0 +1,108 @@
+{
+  "version": "3.0.0",
+  "priority_base": {
+    "Emergency": 68,
+    "High": 45,
+    "Medium": 25,
+    "Low": 10
+  },
+  "safety_multiplier": 0.55,
+  "safety_cap": 24,
+  "category_multiplier": 0.35,
+  "category_cap": 8,
+  "location_weights": {
+    "electrical room": 8,
+    "lift": 7,
+    "parking basement": 6,
+    "basement": 6,
+    "bathroom": 4,
+    "kitchen": 4,
+    "common corridor": 3,
+    "lobby": 3
+  },
+  "duplicate_weights": {
+    "0.88": 8,
+    "0.78": 6,
+    "0.70": 4
+  },
+  "history_per_ticket": 1.5,
+  "history_cap": 5,
+  "after_hours_safety_bonus": 4,
+  "weekend_safety_bonus": 3,
+  "risk_levels": {
+    "Low": [
+      0,
+      30
+    ],
+    "Medium": [
+      31,
+      60
+    ],
+    "High": [
+      61,
+      85
+    ],
+    "Critical": [
+      86,
+      100
+    ]
+  },
+  "manual_review_confidence": 0.58,
+  "duplicate_threshold": 0.7,
+  "auto_assignment_priorities": [
+    "Emergency"
+  ],
+  "auto_assignment_risk_levels": [
+    "Critical"
+  ],
+  "critical_safety_minimum_risk": 90,
+  "high_safety_minimum_risk": 68,
+  "critical_safety_priority": "Emergency",
+  "high_safety_minimum_priority": "High",
+  "critical_safety_codes": [
+    "FIRE",
+    "SMOKE",
+    "GAS",
+    "SPARK",
+    "SHOCK",
+    "EXPOSED_WIRE",
+    "BURNING_ELECTRICAL",
+    "WATER_ELECTRIC",
+    "BURST_PIPE",
+    "HOT_WATER_SCALD",
+    "LIFT_TRAP",
+    "LIFT_FALL",
+    "LIFT_UNCONTROLLED",
+    "LIFT_DOOR_DANGER",
+    "LIFT_MECHANICAL_CRITICAL",
+    "AC_FIRE_ELECTRICAL",
+    "CHEMICAL_SPILL",
+    "SNAKE",
+    "FIRE_EXIT_DOOR",
+    "FALLING_FITTING"
+  ],
+  "high_safety_codes": [
+    "ELECTRICAL_OVERHEAT",
+    "MAJOR_WATER_LEAK",
+    "CEILING_WATER_DAMAGE",
+    "AC_REFRIGERANT",
+    "AC_MAJOR_LEAK",
+    "SEWAGE",
+    "DRAIN_FLOOD",
+    "BASEMENT_FLOOD",
+    "MANHOLE_DANGER",
+    "BROKEN_GLASS",
+    "BIOHAZARD",
+    "SLIP_HAZARD",
+    "AGGRESSIVE_SWARM",
+    "RAT_INFESTATION",
+    "TERMITE_STRUCTURAL",
+    "SECURITY_DOOR_FAILURE",
+    "LOOSE_HANDRAIL",
+    "SHATTERED_WINDOW_DOOR",
+    "FALLING_COMMON_OBJECT",
+    "ACCESS_SECURITY_FAILURE",
+    "FIRE_ALARM_FAILURE",
+    "BARRIER_DANGER"
+  ]
+}

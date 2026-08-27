@@ -1,0 +1,93 @@
+{
+  "Air Conditioning": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 940.0
+  },
+  "Carpentry": {
+    "precision": 0.9922330097087378,
+    "recall": 1.0,
+    "f1-score": 0.9961013645224172,
+    "support": 1022.0
+  },
+  "Cleaning": {
+    "precision": 0.9778247096092925,
+    "recall": 1.0,
+    "f1-score": 0.9887880405766151,
+    "support": 926.0
+  },
+  "Drainage": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 919.0
+  },
+  "Electrical": {
+    "precision": 0.9964243146603099,
+    "recall": 1.0,
+    "f1-score": 0.9982089552238806,
+    "support": 836.0
+  },
+  "Fire and Safety": {
+    "precision": 0.9641693811074918,
+    "recall": 0.9736842105263158,
+    "f1-score": 0.9689034369885434,
+    "support": 912.0
+  },
+  "Gas": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1135.0
+  },
+  "Lift": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 845.0
+  },
+  "Other": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 622.0
+  },
+  "Pest Control": {
+    "precision": 1.0,
+    "recall": 0.963855421686747,
+    "f1-score": 0.9815950920245399,
+    "support": 913.0
+  },
+  "Plumbing": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 944.0
+  },
+  "Security and Access": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 891.0
+  },
+  "Structural": {
+    "precision": 1.0,
+    "recall": 0.9913885898815931,
+    "f1-score": 0.9956756756756757,
+    "support": 929.0
+  },
+  "accuracy": 0.9945073516984959,
+  "macro avg": {
+    "precision": 0.994665493468141,
+    "recall": 0.9945329401611273,
+    "f1-score": 0.9945594280778209,
+    "support": 11834.0
+  },
+  "weighted avg": {
+    "precision": 0.9945801098231016,
+    "recall": 0.9945073516984959,
+    "f1-score": 0.9945035459639748,
+    "support": 11834.0
+  }
+}

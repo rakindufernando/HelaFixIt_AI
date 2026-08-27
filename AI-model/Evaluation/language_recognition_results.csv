@@ -1,0 +1,131 @@
+﻿expected_language,predicted_language,passed,singlish_score,english_score,reason,ticket_text
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The bathroom tap is leaking slowly
+English,English,True,0,4,No strong Sinhala or Singlish pattern was detected,Please check the broken bedroom door
+English,English,True,0,11,No strong Sinhala or Singlish pattern was detected,There is smoke near the electrical panel
+English,English,True,0,9,No strong Sinhala or Singlish pattern was detected,The lift door is not opening properly
+English,English,True,0,6,No strong Sinhala or Singlish pattern was detected,Water is collecting near the basement drain
+English,English,True,0,9,No strong Sinhala or Singlish pattern was detected,The air conditioner is not cooling the room
+English,English,True,0,9,No strong Sinhala or Singlish pattern was detected,There are cockroaches in the kitchen
+English,English,True,0,9,No strong Sinhala or Singlish pattern was detected,The corridor needs cleaning today
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The wall socket is damaged
+English,English,True,0,6,No strong Sinhala or Singlish pattern was detected,Please send a plumber for the leaking pipe
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The main door cannot be locked
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The waste pipe is blocked
+English,English,True,0,9,No strong Sinhala or Singlish pattern was detected,The emergency light is not working
+English,English,True,0,6,No strong Sinhala or Singlish pattern was detected,A person is stuck inside the lift
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The AC is making a loud noise
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The balcony drain is slow
+English,English,True,0,4,No strong Sinhala or Singlish pattern was detected,Please inspect the loose cupboard hinge
+English,English,True,0,11,No strong Sinhala or Singlish pattern was detected,There is a burning smell from the switch
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The toilet has a water flow problem
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The common area floor is dirty
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The power outlet has stopped working
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The sink pipe is dripping
+English,English,True,0,9,No strong Sinhala or Singlish pattern was detected,The lift call button does not respond
+English,English,True,0,2,No strong Sinhala or Singlish pattern was detected,The kitchen drain smells bad
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The window frame is loose
+English,English,True,0,4,No strong Sinhala or Singlish pattern was detected,The resident reported a maintenance problem today
+English,English,True,0,4,No strong Sinhala or Singlish pattern was detected,Please arrange the correct technician
+English,English,True,0,9,No strong Sinhala or Singlish pattern was detected,This issue has been present since last night
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The water pressure is low in the apartment
+English,English,True,0,7,No strong Sinhala or Singlish pattern was detected,The common corridor light is flickering
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,බාත්රූම් ටැප් එකෙන් වතුර කාන්දු වෙනවා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,නිදන කාමරයේ දොර කැඩිලා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,විදුලි පැනලය අසල දුම එනවා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,ලිෆ්ට් දොර හරියට ඇරෙන්නේ නැහැ
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,බේස්මන්ට් ඩ්‍රේන් එක අසල වතුර එකතු වෙනවා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,ඒසී එක කාමරය හරියට සිසිල් කරන්නේ නැහැ
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,කුස්සියේ කැරපොත්තෝ ගොඩක් ඉන්නවා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,කොරිඩෝව අද පිරිසිදු කරන්න ඕන
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,බිත්ති සොකට් එකට හානි වෙලා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,කාන්දු වන පයිප්පය බලන්න
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,ප්‍රධාන දොර ලොක් කරන්න බැහැ
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,අපද්‍රව්‍ය පයිප්පය අවහිර වෙලා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,හදිසි ආලෝකය ක්‍රියා කරන්නේ නැහැ
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,කෙනෙක් ලිෆ්ට් එක ඇතුළේ හිරවෙලා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,ඒසී එකෙන් ලොකු ශබ්දයක් එනවා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,බැල්කනි ඩ්‍රේන් එකෙන් වතුර මන්දගාමීව බැස යනවා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,කබඩ් එකේ හින්ජ් එක ලූස් වෙලා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,ස්විච් එකෙන් පිළිස්සෙන ගඳක් එනවා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,වැසිකිළියේ වතුර ගලායෑමේ ගැටලුවක් තියෙනවා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,පොදු ප්‍රදේශයේ බිම අපිරිසිදුයි
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,විදුලි අවුට්ලට් එක වැඩ කරන්නේ නැහැ
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,සින්ක් පයිප්පයෙන් වතුර ටික ටික වැටෙනවා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,ලිෆ්ට් බොත්තම ප්‍රතිචාර දක්වන්නේ නැහැ
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,කුස්සියේ ඩ්‍රේන් එකෙන් නරක ගඳක් එනවා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,ජනේල රාමුව ලූස් වෙලා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,නේවාසිකයෙක් අද නඩත්තු ගැටලුවක් වාර්තා කළා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,නිවැරදි තාක්ෂණිකයෙකු යවන්න
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,මෙම ගැටලුව ඊයේ රාත්‍රියේ සිට තියෙනවා
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,අපාර්ට්මෙන්ට් එකේ වතුර පීඩනය අඩුයි
+Sinhala,Sinhala,True,0,0,Sinhala script is present without Latin text,පොදු කොරිඩෝවේ ලයිට් එක නිවී නිවී දල්වෙනවා
+Singlish,Singlish,True,17,0,Singlish grammar or transliterated Sinhala markers are present,bathroom tap eken watura leak wenawa
+Singlish,Singlish,True,5,0,Singlish grammar or transliterated Sinhala markers are present,bedroom door eka kadila
+Singlish,Singlish,True,6,0,Singlish grammar or transliterated Sinhala markers are present,electrical panel langa duma enawa
+Singlish,Singlish,True,11,0,Singlish grammar or transliterated Sinhala markers are present,lift door eka arinne naha
+Singlish,Singlish,True,8,0,Singlish grammar or transliterated Sinhala markers are present,basement drain langa watura ekathu wenawa
+Singlish,Singlish,True,7,0,Singlish grammar or transliterated Sinhala markers are present,ac eka room eka cool karanne naha
+Singlish,Singlish,True,13,0,Singlish grammar or transliterated Sinhala markers are present,kitchen eke panu godak innawa
+Singlish,Singlish,True,5,0,Singlish grammar or transliterated Sinhala markers are present,corridor eka ada clean karanna one
+Singlish,Singlish,True,5,0,Singlish grammar or transliterated Sinhala markers are present,wall socket eka damage wela
+Singlish,Singlish,True,5,0,Singlish grammar or transliterated Sinhala markers are present,leak wena pipe eka balanna
+Singlish,Singlish,True,7,0,Singlish grammar or transliterated Sinhala markers are present,main door eka lock karanna ba
+Singlish,Singlish,True,9,0,Singlish grammar or transliterated Sinhala markers are present,waste pipe eka block wela
+Singlish,Singlish,True,15,0,Singlish grammar or transliterated Sinhala markers are present,emergency light eka wada naha
+Singlish,Singlish,True,13,0,Singlish grammar or transliterated Sinhala markers are present,kenek lift eke hira wela
+Singlish,Singlish,True,13,0,Singlish grammar or transliterated Sinhala markers are present,ac eken loku sound ekak enawa
+Singlish,Singlish,True,3,0,Singlish grammar or transliterated Sinhala markers are present,balcony drain eka slow
+Singlish,Singlish,True,5,0,Singlish grammar or transliterated Sinhala markers are present,cupboard hinge eka loose wela
+Singlish,Singlish,True,16,0,Singlish grammar or transliterated Sinhala markers are present,switch eken burning smell ekak enawa
+Singlish,Singlish,True,15,0,Singlish grammar or transliterated Sinhala markers are present,toilet eke water flow issue ekak thiyenawa
+Singlish,Singlish,True,5,0,Singlish grammar or transliterated Sinhala markers are present,common area floor eka dirty wela
+Singlish,Singlish,True,9,0,Singlish grammar or transliterated Sinhala markers are present,power outlet eka wada karanne naha
+Singlish,Singlish,True,9,0,Singlish grammar or transliterated Sinhala markers are present,sink pipe eken watura drip wenawa
+Singlish,Singlish,True,7,0,Singlish grammar or transliterated Sinhala markers are present,lift button eka response karanne naha
+Singlish,Singlish,True,11,0,Singlish grammar or transliterated Sinhala markers are present,kitchen drain eken bad smell ekak enawa
+Singlish,Singlish,True,5,0,Singlish grammar or transliterated Sinhala markers are present,window frame eka loose wela
+Singlish,Singlish,True,10,0,Singlish grammar or transliterated Sinhala markers are present,resident kenek ada maintenance issue ekak report kara
+Singlish,Singlish,True,6,0,Singlish grammar or transliterated Sinhala markers are present,hari technician kenek ewanna
+Singlish,Singlish,True,14,0,Singlish grammar or transliterated Sinhala markers are present,me issue eka iye raa idan thiyenawa
+Singlish,Singlish,True,11,0,Singlish grammar or transliterated Sinhala markers are present,apartment eke watura pressure eka adui
+Singlish,Singlish,True,6,0,Singlish grammar or transliterated Sinhala markers are present,corridor light eka blink wenawa
+Singlish,Singlish,True,11,0,Singlish grammar or transliterated Sinhala markers are present,kamarayak gini gannawa
+Singlish,Singlish,True,18,0,Singlish grammar or transliterated Sinhala markers are present,socket eken spark venawa danma balanna
+Singlish,Singlish,True,11,0,Singlish grammar or transliterated Sinhala markers are present,current waduna switch eka alladdi
+Singlish,Singlish,True,7,0,Singlish grammar or transliterated Sinhala markers are present,vatura electrical panel langata yanawa
+Singlish,Singlish,True,13,0,Singlish grammar or transliterated Sinhala markers are present,lift eke lamayek hira wela
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Bathroom tap එකෙන් water leak වෙනවා
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Bedroom door eka කැඩිලා please check කරන්න
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Electrical panel එක ළඟ smoke එනවා
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Lift door eka open වෙන්නේ නැහැ
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Basement drain එක ළඟ water collect වෙනවා
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,AC eka room එක cool කරන්නේ නැහැ
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Kitchen එකේ cockroaches ගොඩක් ඉන්නවා
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Corridor eka අද clean කරන්න ඕන
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Wall socket එක damage වෙලා
+Mixed,Mixed,True,17,6,English sentence structure and Singlish grammar are both present,Please check this because pipe eken watura leak wenawa
+Mixed,Mixed,True,4,11,English sentence structure and Singlish grammar are both present,The main door is not secure and lock karanna ba
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Waste pipe එක block වෙලා
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Emergency light eka වැඩ කරන්නේ නැහැ
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Person කෙනෙක් lift eke stuck වෙලා
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,AC එකෙන් unusual sound ekak enawa
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Balcony drain eka slow වෙලා
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Cupboard hinge එක loose wela
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Switch එකෙන් burning smell ekak enawa
+Mixed,Mixed,True,12,11,English sentence structure and Singlish grammar are both present,The toilet is not working and water flow issue ekak thiyenawa
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Common area floor එක dirty වෙලා
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Power outlet eka suddenly වැඩ නැහැ
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Sink pipe එකෙන් watura drip wenawa
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Lift button eka response කරන්නේ නැහැ
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Kitchen drain එකෙන් bad smell enawa
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Window frame eka loose වෙලා
+Mixed,Mixed,True,11,6,English sentence structure and Singlish grammar are both present,Please check this maintenance issue because meka ada idan thiyenawa
+Mixed,Mixed,True,6,9,English sentence structure and Singlish grammar are both present,The resident needs help and hari technician kenek ewanna
+Mixed,Mixed,True,8,9,English sentence structure and Singlish grammar are both present,"This issue has continued since last night, ikmanata balanna"
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Apartment water pressure එක adui
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,Common corridor light eka blink වෙනවා
+Mixed,Mixed,True,0,0,Sinhala and meaningful Latin wording are both present,"Room එකේ fire එකක්, danma balanna"
+Mixed,Mixed,True,11,9,English sentence structure and Singlish grammar are both present,The socket is sparking and meka ikmanata balanna
+Mixed,Mixed,True,9,6,English sentence structure and Singlish grammar are both present,"Water is near the panel, current issue ekak wenna puluwan"
+Mixed,Mixed,True,12,4,English sentence structure and Singlish grammar are both present,The lift stopped and kenek athule hira wela
+Mixed,Mixed,True,15,6,English sentence structure and Singlish grammar are both present,Please attend today because AC eka cool wenne naha

@@ -1,0 +1,9 @@
+task,language_type,rows,accuracy,macro_f1
+Category,English,2964,0.9956140350877193,0.995619521406354
+Category,Mixed,2933,0.99727241732015,0.9972527472527474
+Category,Singlish,2924,0.9982900136798906,0.9983385634494724
+Category,Sinhala,3013,0.9870560902754729,0.9872818809438214
+Priority,English,2964,1.0,1.0
+Priority,Mixed,2933,1.0,1.0
+Priority,Singlish,2924,1.0,1.0
+Priority,Sinhala,3013,1.0,1.0

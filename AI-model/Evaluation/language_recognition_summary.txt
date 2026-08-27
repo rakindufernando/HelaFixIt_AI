@@ -1,0 +1,8 @@
+HelaFixIt AI language recognition validation
+Validation examples 130
+Correct predictions 130
+Overall accuracy 100.000%
+English accuracy 100.000% (30/30)
+Mixed accuracy 100.000% (35/35)
+Singlish accuracy 100.000% (35/35)
+Sinhala accuracy 100.000% (30/30)

@@ -1,0 +1,16 @@
+{
+  "dataset_rows": 60000,
+  "challenge_rows": 508,
+  "test_rows_for_evaluation": 11834,
+  "split_method": "StratifiedGroupKFold with non-overlapping scenario_id groups between evaluation train and test.",
+  "category_accuracy": 0.99451,
+  "category_macro_f1": 0.99456,
+  "priority_accuracy": 1.0,
+  "priority_macro_f1": 1.0,
+  "category_challenge_accuracy": 1.0,
+  "category_challenge_macro_f1": 1.0,
+  "priority_challenge_accuracy": 0.8937,
+  "priority_challenge_macro_f1": 0.8887,
+  "evaluation_seconds": 21.16,
+  "note": "Evaluation results describe performance on the prepared holdout and challenge datasets. Real user wording may still require review."
+}

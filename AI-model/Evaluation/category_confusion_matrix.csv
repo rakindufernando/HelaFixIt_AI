@@ -1,0 +1,14 @@
+,Air Conditioning,Carpentry,Cleaning,Drainage,Electrical,Fire and Safety,Gas,Lift,Other,Pest Control,Plumbing,Security and Access,Structural
+Air Conditioning,940,0,0,0,0,0,0,0,0,0,0,0,0
+Carpentry,0,1022,0,0,0,0,0,0,0,0,0,0,0
+Cleaning,0,0,926,0,0,0,0,0,0,0,0,0,0
+Drainage,0,0,0,919,0,0,0,0,0,0,0,0,0
+Electrical,0,0,0,0,836,0,0,0,0,0,0,0,0
+Fire and Safety,0,0,21,0,3,888,0,0,0,0,0,0,0
+Gas,0,0,0,0,0,0,1135,0,0,0,0,0,0
+Lift,0,0,0,0,0,0,0,845,0,0,0,0,0
+Other,0,0,0,0,0,0,0,0,622,0,0,0,0
+Pest Control,0,0,0,0,0,33,0,0,0,880,0,0,0
+Plumbing,0,0,0,0,0,0,0,0,0,0,944,0,0
+Security and Access,0,0,0,0,0,0,0,0,0,0,0,891,0
+Structural,0,8,0,0,0,0,0,0,0,0,0,0,921

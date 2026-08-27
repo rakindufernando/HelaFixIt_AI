@@ -1,0 +1,5 @@
+language_type,rows,correct,accuracy
+English,30,30,1.0
+Mixed,35,35,1.0
+Singlish,35,35,1.0
+Sinhala,30,30,1.0

@@ -1,0 +1,5 @@
+task,evaluation,accuracy,macro_f1,weighted_f1
+Category,Group holdout,0.9945073516984959,0.9945594280778209,0.9945035459639748
+Category,Separate challenge set,1.0,1.0,1.0
+Priority,Group holdout,1.0,1.0,1.0
+Priority,Separate challenge set,0.8937007874015748,0.8887026283615681,0.893833866271819

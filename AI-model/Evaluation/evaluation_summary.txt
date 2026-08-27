@@ -1,0 +1,11 @@
+HelaFixIt AI model evaluation
+Dataset rows: 60,000
+Evaluation holdout rows: 11,834
+Challenge rows: 508
+Category accuracy: 99.451%
+Category macro F1: 99.456%
+Priority accuracy: 100.000%
+Priority macro F1: 100.000%
+Challenge category accuracy: 100.000%
+Challenge priority accuracy: 89.370%
+Evaluation results should be reported together with the test method and dataset used.

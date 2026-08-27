@@ -1,0 +1,15 @@
+column,description
+ticket_text,Resident maintenance issue description used as the main text input.
+language_type,"Language style label such as English, Sinhala, Singlish or Mixed."
+building_block,Apartment building or block context.
+floor,Floor context associated with the maintenance issue.
+area,"Maintenance area such as bathroom, kitchen, corridor or service area."
+asset_type,Main asset or equipment related to the issue.
+category,Target maintenance category used for category model training.
+priority,Target priority used for priority model training.
+technician_type,Expected technician skill type associated with the issue.
+safety_risk,Safety risk label associated with the generated maintenance scenario.
+response_time,Prepared response-time class used as supporting labelled context.
+risk_score,Prepared numerical risk value used for supporting analysis and validation.
+duplicate_group,Scenario grouping field used to relate semantically similar records.
+scenario_id,Scenario group identifier used to reduce leakage during grouped evaluation.

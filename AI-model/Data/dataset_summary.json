@@ -1,0 +1,32 @@
+{
+  "rows": 60000,
+  "unique_ticket_texts": 60000,
+  "languages": {
+    "English": 15000,
+    "Mixed": 15000,
+    "Singlish": 15000,
+    "Sinhala": 15000
+  },
+  "categories": {
+    "Air Conditioning": 4631,
+    "Carpentry": 4617,
+    "Cleaning": 4639,
+    "Drainage": 4604,
+    "Electrical": 4592,
+    "Fire and Safety": 4632,
+    "Gas": 4563,
+    "Lift": 4616,
+    "Other": 4636,
+    "Pest Control": 4598,
+    "Plumbing": 4646,
+    "Security and Access": 4548,
+    "Structural": 4678
+  },
+  "priorities": {
+    "Emergency": 12090,
+    "High": 23262,
+    "Low": 7945,
+    "Medium": 16703
+  },
+  "scenario_groups": 127
+}

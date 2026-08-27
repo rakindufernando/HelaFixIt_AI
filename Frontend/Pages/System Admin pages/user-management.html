@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Management | HelaFixIt AI</title>
+<link href="../../CSS/base.css" rel="stylesheet"/>
+<link href="../../CSS/app.css?v=20260823-user-functional" rel="stylesheet"/>
+<link href="../../CSS/system-responsive.css?v=20260823-user-functional" rel="stylesheet"/>
+</head>
+<body class="app-body user-management-page" data-allowed-role="systemAdmin" data-login-path="../Public pages/login.html" data-unauthorized-path="../Public pages/unauthorized.html">
+<div class="app-shell">
+<aside class="sidebar">
+<a class="sidebar-brand" href="../Public pages/index.html"><img alt="HelaFixIt AI logo" src="../../Assets/Images/helafixit-logo.png"/><div><strong>HelaFixIt AI</strong><span>Apartment Maintenance</span></div></a>
+<div class="sidebar-user"><div class="avatar" data-user-initial="">S</div><div><strong data-user-name="">User</strong><small data-user-role="">System Admin</small></div></div>
+<nav class="sidebar-nav"><div class="nav-label">Main navigation</div><a class="app-nav-link" href="system-admin-dashboard.html"><span class="nav-icon">D</span><span>Dashboard</span></a><a class="app-nav-link active" href="user-management.html"><span class="nav-icon">U</span><span>Users</span></a><a class="app-nav-link" href="registration-requests.html"><span class="nav-icon">R</span><span>Registrations</span></a><a class="app-nav-link" href="role-management.html"><span class="nav-icon">R</span><span>Roles</span></a><a class="app-nav-link" href="technician-skill-management.html"><span class="nav-icon">S</span><span>Technician Skills</span></a><a class="app-nav-link" href="issue-category-management.html"><span class="nav-icon">C</span><span>Issue Categories</span></a><a class="app-nav-link" href="building-management.html"><span class="nav-icon">B</span><span>Buildings</span></a><a class="app-nav-link" href="floor-area-management.html"><span class="nav-icon">F</span><span>Floors &amp; Areas</span></a><a class="app-nav-link" href="safety-rule-management.html"><span class="nav-icon">!</span><span>Safety Rules</span></a><a class="app-nav-link" href="system-settings.html"><span class="nav-icon">S</span><span>System Settings</span></a><a class="app-nav-link" href="backup.html"><span class="nav-icon">B</span><span>Backup</span></a><a class="app-nav-link" href="audit-logs.html"><span class="nav-icon">L</span><span>Audit Logs</span></a></nav>
+<div class="sidebar-bottom"><button class="app-nav-link" onclick="logout()" style="width:100%;border:0;background:transparent"><span class="nav-icon">X</span><span>Logout</span></button></div>
+</aside>
+<main class="app-main">
+<header class="topbar"><div class="topbar-left"><button aria-label="Open menu" class="sidebar-toggle" id="sidebarToggle">☰</button><span class="topbar-title">System Admin Portal</span></div><div class="topbar-actions"><div class="user-chip"><div class="avatar" data-user-initial="">U</div><span data-user-name="">User</span></div></div></header>
+<div class="page-content">
+<div class="page-heading"><div><div class="breadcrumb">HelaFixIt AI / System Admin / User Management</div><h1>User Management</h1><p>Create staff accounts and manage approved resident, administrator and technician accounts.</p></div></div>
+<section class="card">
+<div class="card-header"><div><h2>System users</h2><p>Account details are loaded from the database.</p></div><div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn-app btn-secondary btn-sm" href="../Public pages/change-password.html">Change my password</a><button class="btn-app btn-sm" id="addUserButton">+ Add staff user</button></div></div>
+<div class="card-body">
+<div class="toolbar" style="gap:10px;flex-wrap:wrap">
+<div class="search-box"><input id="userSearch" maxlength="190" placeholder="Search name, email, mobile or user ID"/></div>
+<select class="filter-select" id="userRoleFilter"><option value="">All roles</option><option value="resident">Resident</option><option value="admin">Apartment Admin</option><option value="technician">Technician</option><option value="systemAdmin">System Admin</option></select>
+<select class="filter-select" id="userStatusFilter"><option value="">All statuses</option><option>Active</option><option>Pending</option><option>Suspended</option><option>Disabled</option><option>Locked</option></select>
+<select class="filter-select" id="userDeletedFilter"><option value="active">Current accounts</option><option value="deleted">Deleted accounts</option><option value="all">All accounts</option></select>
+</div>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>User</th><th>Contact</th><th>Role</th><th>Building</th><th>Status</th><th>Last login</th><th>Actions</th></tr></thead><tbody id="userRows"></tbody></table></div>
+</div>
+</section>
+
+
+</div>
+</main>
+</div>
+<div aria-hidden="true" class="modal-backdrop" id="userModal" role="dialog" aria-modal="true"><div class="modal user-management-modal"><div class="modal-header"><div><h3 id="userModalTitle">User account</h3><p id="userModalSubtitle" style="margin-top:4px">Manage account information</p></div><button class="modal-close" data-close-modal="userModal">×</button></div><div class="modal-body">
+<form class="user-management-form" id="userEditForm" novalidate>
+<div class="user-management-form-content" id="userFormScroll">
+<div class="user-form-status" id="userFormStatus" hidden></div>
+<input id="editUserId" type="hidden"/>
+<div class="form-grid">
+<div class="field"><label>Full name <span class="required">*</span></label><input autocomplete="name" data-validate="name" id="editUserName" maxlength="150" required=""/></div>
+<div class="field"><label>Email address <span class="required">*</span></label><input autocomplete="email" data-validate="email" id="editUserEmail" maxlength="190" placeholder="name@helafixit.lk" required="" type="email"/><small>New staff accounts use an @helafixit.lk email address.</small></div>
+<div class="field"><label>Mobile number <span class="required">*</span></label><input autocomplete="tel" data-validate="mobile" id="editUserPhone" inputmode="tel" maxlength="20" placeholder="0771234567" required=""/><small>Accepted formats include 0771234567 and +94771234567.</small></div>
+<div class="field"><label>Account status</label><select id="editUserStatus"><option>Active</option><option>Pending</option><option>Suspended</option><option>Disabled</option><option>Locked</option></select></div>
+<div class="field"><label>Role</label><select id="editUserRole"><option value="admin">Apartment Admin</option><option value="technician">Technician</option><option value="systemAdmin">System Admin</option></select><small>Resident accounts are created only through approved registration requests.</small></div>
+<div class="field"><label class="check-row"><input id="editEmailVerified" type="checkbox"/><span>Email address verified</span></label></div>
+</div>
+<div class="user-form-section" id="createOnlyFields" style="margin-top:18px">
+<h4>Initial sign in</h4>
+<div class="default-password-box">
+<div>
+<span class="default-password-label">Initial password</span>
+<strong id="defaultStaffPassword">helafixit@321</strong>
+<small>The password is assigned automatically. The new staff user must change it after the first sign in.</small>
+</div>
+<button class="btn-app btn-secondary btn-sm" id="copyDefaultPassword" type="button">Copy password</button>
+</div>
+</div>
+<div id="residentUserFields" style="display:none;margin-top:18px"><h4>Resident details</h4><div class="form-grid" style="margin-top:10px"><div class="field"><label>Building <span class="required">*</span></label><select id="editResidentBuilding"></select></div><div class="field"><label>Floor <span class="required">*</span></label><select id="editResidentFloor"></select></div><div class="field"><label>Apartment / Unit</label><input data-validate="unit" id="editResidentUnit" maxlength="40" placeholder="A-503"/></div><div class="field"><label>Resident type</label><select id="editResidentType"><option>Owner</option><option>Tenant</option><option>Family</option><option>Other</option></select></div><div class="field"><label>Preferred language</label><select id="editResidentLanguage"><option>English</option><option>Sinhala</option><option>Singlish</option><option>Mixed</option></select></div></div></div>
+<div id="adminUserFields" style="display:none;margin-top:18px"><h4>Apartment Admin details</h4><div class="form-grid" style="margin-top:10px"><div class="field"><label>Assigned building <span class="required">*</span></label><select id="editAdminBuilding"></select></div><div class="field"><label>Job title</label><input id="editAdminJobTitle" maxlength="100" value="Apartment Administrator"/></div><div class="field"><label class="check-row"><input checked="" id="editCanReviewEmergencies" type="checkbox"/><span>Can review emergency tickets</span></label></div></div></div>
+<div id="technicianUserFields" style="display:none;margin-top:18px"><h4>Technician details</h4><div class="form-grid" style="margin-top:10px"><div class="field"><label>Assigned building <span class="required">*</span></label><select id="editTechBuilding"></select></div><div class="field"><label>Primary skill <span class="required">*</span></label><select id="editUserSkill"></select></div><div class="field"><label>Employee code <span class="required">*</span></label><input data-validate="employee-code" id="editEmployeeCode" maxlength="50" placeholder="TEC-001"/></div><div class="field"><label>Availability</label><select id="editAvailability"><option>Available</option><option>Busy</option><option>Off Duty</option><option>On Leave</option></select></div><div class="field"><label>Maximum active jobs</label><input id="editMaxJobs" max="20" min="1" type="number" value="4"/></div><div class="field"><label class="check-row"><input id="editEmergencyEligible" type="checkbox"/><span>Eligible for emergency work</span></label></div></div></div>
+<div class="notice" id="userAccountInfo" style="display:none;margin-top:18px"></div>
+</div>
+<div class="form-actions user-management-form-actions">
+<button class="btn-app" id="saveUserButton" type="submit">Save user</button>
+<button class="btn-app btn-secondary" data-close-modal="userModal" type="button">Cancel</button>
+</div>
+</form>
+</div></div></div><div aria-hidden="true" class="modal-backdrop" id="passwordResetModal" role="dialog" aria-modal="true"><div class="modal" style="max-width:560px"><div class="modal-header"><div><h3>Reset user password</h3><p id="resetPasswordUserLabel" style="margin-top:4px"></p></div><button class="modal-close" data-close-modal="passwordResetModal">×</button></div><div class="modal-body"><form id="adminResetPasswordForm" novalidate><input id="resetUserId" type="hidden"/><div class="field"><label>Temporary password <span class="required">*</span></label><input autocomplete="new-password" data-validate="password" id="adminTemporaryPassword" maxlength="64" required="" type="password"/><small>Use 8 to 64 characters with at least one letter and one number.</small></div><div class="field" style="margin-top:12px"><label>Confirm temporary password <span class="required">*</span></label><input autocomplete="new-password" id="adminTemporaryPasswordConfirm" maxlength="64" required="" type="password"/></div><div class="notice" style="margin-top:14px">The user will be required to change the temporary password after the next sign in.</div><div class="form-actions"><button class="btn-app" id="resetPasswordButton" type="submit">Reset password</button><button class="btn-app btn-secondary" data-close-modal="passwordResetModal" type="button">Cancel</button></div></form></div></div></div><div class="toast-container"></div>
+<script src="../../JS/main.js?v=20260823-notify-privacy"></script><script src="../../JS/validation.js"></script><script src="../../JS/api.js?v=20260823-notify-privacy"></script><script src="../../JS/auth.js?v=20260823-notify-privacy"></script><script src="../../JS/sidebar.js"></script><script src="../../JS/user-management.js?v=20260823-user-functional"></script>
+</body>
+</html>

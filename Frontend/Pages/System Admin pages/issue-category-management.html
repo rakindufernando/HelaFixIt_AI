@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Category Management | HelaFixIt AI</title>
+    <link rel="stylesheet" href="../../CSS/base.css">
+    <link rel="stylesheet" href="../../CSS/app.css?v=20260823-notify-privacy">
+<link href="../../CSS/system-responsive.css?v=20260823-final-ui" rel="stylesheet"/>
+</head>
+<body class="app-body" data-allowed-role="systemAdmin" data-login-path="../Public pages/login.html" data-unauthorized-path="../Public pages/unauthorized.html">
+<div class="app-shell">
+    <aside class="sidebar">
+        <a class="sidebar-brand" href="../Public pages/index.html">
+            <img src="../../Assets/Images/helafixit-logo.png" alt="HelaFixIt AI logo">
+            <div><strong>HelaFixIt AI</strong><span>Apartment Maintenance</span></div>
+        </a>
+        <div class="sidebar-user"><div class="avatar" data-user-initial>S</div><div><strong data-user-name>User</strong><small data-user-role>System Admin</small></div></div>
+        <nav class="sidebar-nav"><div class="nav-label">Main navigation</div><a class="app-nav-link" href="system-admin-dashboard.html"><span class="nav-icon">D</span><span>Dashboard</span></a><a class="app-nav-link" href="registration-requests.html"><span class="nav-icon">A</span><span>Registrations</span></a><a class="app-nav-link" href="user-management.html"><span class="nav-icon">U</span><span>Users</span></a><a class="app-nav-link" href="role-management.html"><span class="nav-icon">R</span><span>Roles</span></a><a class="app-nav-link" href="technician-skill-management.html"><span class="nav-icon">S</span><span>Technician Skills</span></a><a class="app-nav-link active" href="issue-category-management.html"><span class="nav-icon">C</span><span>Issue Categories</span></a><a class="app-nav-link" href="building-management.html"><span class="nav-icon">B</span><span>Buildings</span></a><a class="app-nav-link" href="floor-area-management.html"><span class="nav-icon">F</span><span>Floors &amp; Areas</span></a><a class="app-nav-link" href="safety-rule-management.html"><span class="nav-icon">!</span><span>Safety Rules</span></a><a class="app-nav-link" href="system-settings.html"><span class="nav-icon">S</span><span>System Settings</span></a><a class="app-nav-link" href="backup.html"><span class="nav-icon">B</span><span>Backup</span></a><a class="app-nav-link" href="audit-logs.html"><span class="nav-icon">L</span><span>Audit Logs</span></a><a class="app-nav-link" href="system-admin-notifications.html"><span class="nav-icon">N</span><span>Notifications</span></a><a class="app-nav-link" href="system-admin-profile.html"><span class="nav-icon">P</span><span>Profile</span></a></nav>
+        <div class="sidebar-bottom"><button class="app-nav-link" style="width:100%;border:0;background:transparent" onclick="logout()"><span class="nav-icon">X</span><span>Logout</span></button></div>
+    </aside>
+    <main class="app-main">
+        <header class="topbar">
+            <div class="topbar-left"><button class="sidebar-toggle" id="sidebarToggle" aria-label="Open menu">☰</button><span class="topbar-title">System Admin Portal</span></div>
+            <div class="topbar-actions"><button class="icon-button" title="Notifications">N<span class="notification-dot"></span></button><div class="user-chip"><div class="avatar" data-user-initial>U</div><span data-user-name>User</span></div></div>
+        </header>
+        <div class="page-content">
+            <div class="page-heading"><div><div class="breadcrumb">HelaFixIt AI / System Admin / Issue Category Management</div><h1>Issue Category Management</h1><p>Manage maintenance categories, technician mappings and simple risk weights used by the system configuration.</p></div></div>
+            <div class="grid-main-side"><section class="card"><div class="card-header"><h2>Maintenance categories</h2></div><div class="card-body table-wrap"><table class="data-table"><thead><tr><th>ID</th><th>Category</th><th>Technician type</th><th>Risk weight</th><th>Status</th><th>Action</th></tr></thead><tbody id="categoryRows"></tbody></table></div></section><aside class="card"><div class="card-header"><h3>Add category</h3></div><div class="card-body"><form id="categoryForm"><div class="field"><label>Category code</label><input id="newCategoryCode" required placeholder="Example GEN"></div><div class="field"><label>Category name</label><input id="newCategoryName" required></div><div class="field" style="margin-top:10px"><label>Default technician skill</label><select id="newCategoryTech"></select></div><div class="field" style="margin-top:10px"><label>Default priority</label><select id="newCategoryPriority"><option>Low</option><option selected>Medium</option><option>High</option><option>Emergency</option></select></div><div class="field" style="margin-top:10px"><label>Risk weight</label><input id="newCategoryWeight" type="number" min="0" max="30" value="5"></div><div class="field" style="margin-top:10px"><label>Description</label><textarea id="newCategoryDescription" rows="3" maxlength="255"></textarea></div><div class="form-actions"><button class="btn-app" type="submit">Add category</button></div></form></div></aside></div>
+        </div>
+    </main>
+</div>
+<div class="toast-container"></div>
+    <script src="../../JS/main.js?v=20260823-notify-privacy"></script>
+    <script src="../../JS/validation.js"></script>
+    <script src="../../JS/api.js?v=20260823-notify-privacy"></script><script src="../../JS/auth.js?v=20260823-notify-privacy"></script>
+    <script src="../../JS/sidebar.js"></script>
+    <script src="../../JS/system-admin.js"></script>
+</body>
+</html>

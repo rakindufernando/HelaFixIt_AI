@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor and Area Management | HelaFixIt AI</title>
+    <link rel="stylesheet" href="../../CSS/base.css">
+    <link rel="stylesheet" href="../../CSS/app.css?v=20260823-notify-privacy">
+<link href="../../CSS/system-responsive.css?v=20260823-final-ui" rel="stylesheet"/>
+</head>
+<body class="app-body" data-allowed-role="systemAdmin" data-login-path="../Public pages/login.html" data-unauthorized-path="../Public pages/unauthorized.html">
+<div class="app-shell">
+    <aside class="sidebar">
+        <a class="sidebar-brand" href="../Public pages/index.html">
+            <img src="../../Assets/Images/helafixit-logo.png" alt="HelaFixIt AI logo">
+            <div><strong>HelaFixIt AI</strong><span>Apartment Maintenance</span></div>
+        </a>
+        <div class="sidebar-user"><div class="avatar" data-user-initial>S</div><div><strong data-user-name>User</strong><small data-user-role>System Admin</small></div></div>
+        <nav class="sidebar-nav"><div class="nav-label">Main navigation</div><a class="app-nav-link" href="system-admin-dashboard.html"><span class="nav-icon">D</span><span>Dashboard</span></a><a class="app-nav-link" href="registration-requests.html"><span class="nav-icon">A</span><span>Registrations</span></a><a class="app-nav-link" href="user-management.html"><span class="nav-icon">U</span><span>Users</span></a><a class="app-nav-link" href="role-management.html"><span class="nav-icon">R</span><span>Roles</span></a><a class="app-nav-link" href="technician-skill-management.html"><span class="nav-icon">S</span><span>Technician Skills</span></a><a class="app-nav-link" href="issue-category-management.html"><span class="nav-icon">C</span><span>Issue Categories</span></a><a class="app-nav-link" href="building-management.html"><span class="nav-icon">B</span><span>Buildings</span></a><a class="app-nav-link active" href="floor-area-management.html"><span class="nav-icon">F</span><span>Floors &amp; Areas</span></a><a class="app-nav-link" href="safety-rule-management.html"><span class="nav-icon">!</span><span>Safety Rules</span></a><a class="app-nav-link" href="system-settings.html"><span class="nav-icon">S</span><span>System Settings</span></a><a class="app-nav-link" href="backup.html"><span class="nav-icon">B</span><span>Backup</span></a><a class="app-nav-link" href="audit-logs.html"><span class="nav-icon">L</span><span>Audit Logs</span></a><a class="app-nav-link" href="system-admin-notifications.html"><span class="nav-icon">N</span><span>Notifications</span></a><a class="app-nav-link" href="system-admin-profile.html"><span class="nav-icon">P</span><span>Profile</span></a></nav>
+        <div class="sidebar-bottom"><button class="app-nav-link" style="width:100%;border:0;background:transparent" onclick="logout()"><span class="nav-icon">X</span><span>Logout</span></button></div>
+    </aside>
+    <main class="app-main">
+        <header class="topbar">
+            <div class="topbar-left"><button class="sidebar-toggle" id="sidebarToggle" aria-label="Open menu">☰</button><span class="topbar-title">System Admin Portal</span></div>
+            <div class="topbar-actions"><button class="icon-button" title="Notifications">N<span class="notification-dot"></span></button><div class="user-chip"><div class="avatar" data-user-initial>U</div><span data-user-name>User</span></div></div>
+        </header>
+        <div class="page-content">
+            <div class="page-heading"><div><div class="breadcrumb">HelaFixIt AI / System Admin / Floor and Area Management</div><h1>Floor and Area Management</h1><p>Configure floors and maintenance areas used by registration, ticket location and risk scoring.</p></div></div>
+            <div class="grid-2"><section class="card"><div class="card-header"><h2>Configured floors</h2></div><div class="card-body"><form id="floorForm" class="form-grid"><div class="field"><label>Building</label><select id="floorBuilding" required></select></div><div class="field"><label>Floor number</label><input id="floorNumber" type="number" required></div><div class="field"><label>Floor name</label><input id="floorName" placeholder="Example Floor 5"></div><div class="form-actions"><button class="btn-app" type="submit">Add floor</button></div></form><div class="table-wrap" style="margin-top:16px"><table class="data-table"><thead><tr><th>Building</th><th>No.</th><th>Name</th><th>Status</th><th>Action</th></tr></thead><tbody id="floorRows"></tbody></table></div></div></section><section class="card"><div class="card-header"><h2>Maintenance areas</h2></div><div class="card-body"><form id="areaForm" class="form-grid"><div class="field"><label>Building</label><select id="areaBuilding" required></select></div><div class="field"><label>Floor</label><select id="areaFloor"></select></div><div class="field"><label>Area name</label><input id="newArea" required></div><div class="field"><label>Area type</label><select id="areaType"><option>Common</option><option>Private</option><option>Service</option><option>Outdoor</option><option>Other</option></select></div><div class="field"><label>Risk weight</label><input id="areaRisk" type="number" min="0" max="30" value="0"></div><div class="form-actions"><button class="btn-app" type="submit">Add area</button></div></form><div class="table-wrap" style="margin-top:16px"><table class="data-table"><thead><tr><th>ID</th><th>Area</th><th>Type</th><th>Risk</th><th>Status</th><th>Action</th></tr></thead><tbody id="areaRows"></tbody></table></div></div></section></div></div><section class="card" style="margin-top:16px"><div class="card-header"><div><h3>Apartments and units</h3><p>Maintain unit numbers used by resident profiles and registration.</p></div></div><div class="card-body"><form id="unitForm" class="form-grid"><div class="field"><label>Building</label><select id="unitBuilding" required></select></div><div class="field"><label>Floor</label><select id="unitFloor" required></select></div><div class="field"><label>Unit number</label><input id="unitNumber" maxlength="40" required placeholder="Example 5A"></div><div class="field"><label>Unit type</label><select id="unitType"><option>Apartment</option><option>Common Facility</option><option>Staff</option><option>Other</option></select></div><div class="form-actions"><button class="btn-app" type="submit">Add unit</button></div></form><div class="table-wrap" style="margin-top:16px"><table class="data-table"><thead><tr><th>Building</th><th>Floor</th><th>Unit</th><th>Type</th><th>Status</th><th>Action</th></tr></thead><tbody id="unitRows"></tbody></table></div></div></section>
+        </div>
+    </main>
+</div>
+<div class="toast-container"></div>
+    <script src="../../JS/main.js?v=20260823-notify-privacy"></script>
+    <script src="../../JS/validation.js"></script>
+    <script src="../../JS/api.js?v=20260823-notify-privacy"></script><script src="../../JS/auth.js?v=20260823-notify-privacy"></script>
+    <script src="../../JS/sidebar.js"></script>
+    <script src="../../JS/system-admin.js"></script>
+</body>
+</html>

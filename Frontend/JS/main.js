@@ -56,6 +56,12 @@
         document.querySelectorAll('.modal-backdrop').forEach(function(backdrop){ backdrop.addEventListener('click', function(e){ if(e.target === backdrop) closeModal(backdrop.id); }); });
     }
 
+    function normalizeNavigationLabels() {
+        document.querySelectorAll('.sidebar-nav a[href$="backup.html"]').forEach(function(link){
+            const label = link.querySelector('span:last-child');
+            if (label) label.textContent = 'Data Export';
+        });
+    }
 
     function loadSystemAdminManagementEnhancements() {
         const body = document.body;
@@ -125,6 +131,7 @@
             return null;
         }
     };
+
 
     async function applyPublicSystemSettings() {
         if (typeof window.apiRequest !== 'function') return;
@@ -214,10 +221,12 @@
     }
     window.refreshNotificationButton = refreshNotificationButton;
 
+
     document.addEventListener('keydown', function (event) { if (event.key === 'Escape') { const open = document.querySelector('.modal-backdrop.show'); if (open && open.id) closeModal(open.id); } });
 
     document.addEventListener('DOMContentLoaded', function () {
         initModals();
+        normalizeNavigationLabels();
         loadSystemAdminManagementEnhancements();
         loadLifecycleEnhancements();
         applyPublicSystemSettings();

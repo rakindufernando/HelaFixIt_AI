@@ -57,6 +57,26 @@
     }
 
 
+    function loadSystemAdminManagementEnhancements() {
+        const body = document.body;
+        if (!body || body.dataset.allowedRole !== 'systemAdmin') return;
+        const path = decodeURIComponent(window.location.pathname || '').toLowerCase();
+        const pages = [
+            'technician-skill-management.html',
+            'issue-category-management.html',
+            'building-management.html',
+            'floor-area-management.html',
+            'safety-rule-management.html',
+            'backup.html'
+        ];
+        if (!pages.some(function (name) { return path.endsWith('/' + name); })) return;
+        if (document.querySelector('script[data-system-admin-enhancements]')) return;
+        const script = document.createElement('script');
+        script.src = '/JS/system-admin-enhancements.js?v=20260829-final';
+        script.setAttribute('data-system-admin-enhancements', 'true');
+        document.body.appendChild(script);
+    }
+
     async function applyPublicSystemSettings() {
         if (typeof window.apiRequest !== 'function') return;
         try {
@@ -149,6 +169,7 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         initModals();
+        loadSystemAdminManagementEnhancements();
         applyPublicSystemSettings();
         ensureNotificationButton();
         window.setTimeout(refreshNotificationButton, 0);

@@ -61,7 +61,7 @@ def user_options():
         'floors': [{'id':int(f['floor_id']),'buildingId':int(f['building_id']),'number':int(f['floor_number']),'name':f['name']} for f in floors],
         'skills': [{'id':int(s['skill_id']),'name':s['skill_name']} for s in skills],
         'defaultTechnicianMaxJobs': get_int_setting('technician_default_max_jobs', 4, 1, 20),
-        'defaultStaffPassword': current_app.config.get('DEFAULT_STAFF_PASSWORD', 'helafixit@321'),
+        'defaultStaffPassword': current_app.config['DEFAULT_STAFF_PASSWORD'],
     }
 
 
@@ -184,7 +184,7 @@ def create_user(payload, created_by):
     email = normalize_email(payload.get('email'))
     phone = normalize_mobile(payload.get('phone'))
     role_code = ROLE_MAP.get(payload.get('role'), payload.get('role'))
-    password = current_app.config.get('DEFAULT_STAFF_PASSWORD', 'helafixit@321')
+    password = current_app.config['DEFAULT_STAFF_PASSWORD']
     requested_status = payload.get('status') if payload.get('status') in {'Pending','Active','Suspended','Disabled','Locked'} else 'Active'
     email_verified = _bool(payload.get('email_verified', True))
 
@@ -393,22 +393,13 @@ def update_user(user_id,payload,updated_by):
 
 
 def reset_user_password(user_id,temp_password,updated_by):
-    if int(user_id)==int(updated_by): return None,'Use Change Password to update your own System Admin password.',400
-    valid,msg=validate_password(temp_password)
-    if not valid: return None,msg,400
-    connection=get_connection()
-    try:
-        with connection.cursor() as c:
-            c.execute('SELECT user_id,is_deleted FROM users WHERE user_id=%s FOR UPDATE',(user_id,)); row=c.fetchone()
-            if not row: return None,'User not found.',404
-            if row.get('is_deleted'): return None,'Restore the deleted account before resetting its password.',400
-            password_hash=generate_password_hash(temp_password,method='pbkdf2:sha256:600000')
-            c.execute("UPDATE users SET password_hash=%s,must_change_password=TRUE,failed_login_count=0,locked_until=NULL,last_password_change_at=NOW(),auth_version=auth_version+1,account_status=IF(account_status='Locked','Active',account_status) WHERE user_id=%s",(password_hash,user_id))
-            c.execute('UPDATE password_reset_tokens SET used_at=NOW() WHERE user_id=%s AND used_at IS NULL',(user_id,))
-            c.execute("INSERT INTO audit_logs(user_id,action_type,entity_type,entity_id,reason) VALUES(%s,'PASSWORD_RESET_BY_ADMIN','User',%s,'Temporary password issued by System Admin; password change required at next sign in')",(updated_by,str(user_id)))
-        connection.commit(); return {'id':int(user_id),'mustChangePassword':True},None,200
-    except Exception: connection.rollback(); raise
-    finally: connection.close()
+    """Compatibility wrapper for the final temporary-password workflow.
+
+    The user's permanent password hash is never overwritten here. All System
+    Admin password actions issue a separate temporary password instead.
+    """
+    from services.temporary_password_service import set_temporary_password
+    return set_temporary_password(user_id, temp_password, updated_by)
 
 
 def unlock_user(user_id,updated_by):

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backup and Restore | HelaFixIt AI</title>
+    <title>Data Export | HelaFixIt AI</title>
     <link rel="stylesheet" href="../../CSS/base.css">
     <link rel="stylesheet" href="../../CSS/app.css?v=20260823-notify-privacy">
 <link href="../../CSS/system-responsive.css?v=20260823-final-ui" rel="stylesheet"/>
@@ -16,7 +16,7 @@
             <div><strong>HelaFixIt AI</strong><span>Apartment Maintenance</span></div>
         </a>
         <div class="sidebar-user"><div class="avatar" data-user-initial>S</div><div><strong data-user-name>User</strong><small data-user-role>System Admin</small></div></div>
-        <nav class="sidebar-nav"><div class="nav-label">Main navigation</div><a class="app-nav-link" href="system-admin-dashboard.html"><span class="nav-icon">D</span><span>Dashboard</span></a><a class="app-nav-link" href="registration-requests.html"><span class="nav-icon">A</span><span>Registrations</span></a><a class="app-nav-link" href="user-management.html"><span class="nav-icon">U</span><span>Users</span></a><a class="app-nav-link" href="role-management.html"><span class="nav-icon">R</span><span>Roles</span></a><a class="app-nav-link" href="technician-skill-management.html"><span class="nav-icon">S</span><span>Technician Skills</span></a><a class="app-nav-link" href="issue-category-management.html"><span class="nav-icon">C</span><span>Issue Categories</span></a><a class="app-nav-link" href="building-management.html"><span class="nav-icon">B</span><span>Buildings</span></a><a class="app-nav-link" href="floor-area-management.html"><span class="nav-icon">F</span><span>Floors &amp; Areas</span></a><a class="app-nav-link" href="safety-rule-management.html"><span class="nav-icon">!</span><span>Safety Rules</span></a><a class="app-nav-link" href="system-settings.html"><span class="nav-icon">S</span><span>System Settings</span></a><a class="app-nav-link active" href="backup.html"><span class="nav-icon">B</span><span>Backup</span></a><a class="app-nav-link" href="audit-logs.html"><span class="nav-icon">L</span><span>Audit Logs</span></a><a class="app-nav-link" href="system-admin-notifications.html"><span class="nav-icon">N</span><span>Notifications</span></a><a class="app-nav-link" href="system-admin-profile.html"><span class="nav-icon">P</span><span>Profile</span></a></nav>
+        <nav class="sidebar-nav"><div class="nav-label">Main navigation</div><a class="app-nav-link" href="system-admin-dashboard.html"><span class="nav-icon">D</span><span>Dashboard</span></a><a class="app-nav-link" href="registration-requests.html"><span class="nav-icon">A</span><span>Registrations</span></a><a class="app-nav-link" href="user-management.html"><span class="nav-icon">U</span><span>Users</span></a><a class="app-nav-link" href="role-management.html"><span class="nav-icon">R</span><span>Roles</span></a><a class="app-nav-link" href="technician-skill-management.html"><span class="nav-icon">S</span><span>Technician Skills</span></a><a class="app-nav-link" href="issue-category-management.html"><span class="nav-icon">C</span><span>Issue Categories</span></a><a class="app-nav-link" href="building-management.html"><span class="nav-icon">B</span><span>Buildings</span></a><a class="app-nav-link" href="floor-area-management.html"><span class="nav-icon">F</span><span>Floors &amp; Areas</span></a><a class="app-nav-link" href="safety-rule-management.html"><span class="nav-icon">!</span><span>Safety Rules</span></a><a class="app-nav-link" href="system-settings.html"><span class="nav-icon">S</span><span>System Settings</span></a><a class="app-nav-link active" href="backup.html"><span class="nav-icon">E</span><span>Data Export</span></a><a class="app-nav-link" href="audit-logs.html"><span class="nav-icon">L</span><span>Audit Logs</span></a><a class="app-nav-link" href="system-admin-notifications.html"><span class="nav-icon">N</span><span>Notifications</span></a><a class="app-nav-link" href="system-admin-profile.html"><span class="nav-icon">P</span><span>Profile</span></a></nav>
         <div class="sidebar-bottom"><button class="app-nav-link" style="width:100%;border:0;background:transparent" onclick="logout()"><span class="nav-icon">X</span><span>Logout</span></button></div>
     </aside>
     <main class="app-main">
@@ -29,7 +29,7 @@
                 <div>
                     <div class="breadcrumb">HelaFixIt AI / System Admin / Data Export</div>
                     <h1>Data Export</h1>
-                    <p>Download a JSON export of the current system records stored in the database.</p>
+                    <p>Download a JSON snapshot of current configuration and operational records stored in the database.</p>
                 </div>
             </div>
 
@@ -38,16 +38,16 @@
                     <div class="card-header">
                         <div>
                             <h2>Database data export</h2>
-                            <p>The exported file contains current configuration and operational records.</p>
+                            <p>This project function creates a JSON data snapshot. It is not a full SQL server backup or automated restore service.</p>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="ai-result-grid" style="grid-template-columns:repeat(2,1fr)">
-                            <div class="ai-metric"><span>Backup records</span><strong id="backupRecords">0</strong></div>
-                            <div class="ai-metric"><span>Latest backup</span><strong id="backupLastTime" style="font-size:11px">Ready</strong></div>
+                            <div class="ai-metric"><span>Recorded exports</span><strong id="backupRecords">0</strong></div>
+                            <div class="ai-metric"><span>Latest export</span><strong id="backupLastTime" style="font-size:11px">Ready</strong></div>
                         </div>
                         <div class="notice" style="margin-top:14px">
-                            <div><strong>Database export</strong>Password hashes and authentication tokens are not included in the exported file.</div>
+                            <div><strong>Protected export</strong>Password hashes and authentication tokens are not included in the downloaded file.</div>
                         </div>
                         <div class="form-actions"><button id="downloadBackup" class="btn-app">Download JSON export</button></div>
                     </div>
@@ -55,7 +55,7 @@
 
                 <section class="card" style="margin-top:16px">
                     <div class="card-header">
-                        <div><h3>Backup history</h3><p>Database export records created from the System Admin portal.</p></div>
+                        <div><h3>Export history</h3><p>JSON export records created from the System Admin portal.</p></div>
                     </div>
                     <div class="card-body table-wrap">
                         <table class="data-table">

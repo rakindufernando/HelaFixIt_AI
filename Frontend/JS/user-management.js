@@ -47,7 +47,7 @@
         const opts=state.options||{};
         ['editResidentBuilding','editAdminBuilding','editTechBuilding'].forEach(id=>fillSelect(id,opts.buildings||[],'Select building',b=>(b.code||'')+' - '+(b.name||'')));
         fillSelect('editUserSkill',opts.skills||[],'Select skill',s=>s.name||'');
-        const password=String(opts.defaultStaffPassword||'helafixit@321');
+        const password=String(opts.defaultStaffPassword||'');
         if(el('defaultStaffPassword'))el('defaultStaffPassword').textContent=password;
     }
 
@@ -171,11 +171,14 @@
             const current=currentUser()||{};
             body.innerHTML=users.map(u=>{
                 let actions='<button type="button" class="btn-app btn-secondary btn-sm" data-action="edit" data-id="'+u.id+'">Edit</button>';
-                if(u.deleted){actions+=' <button type="button" class="btn-app btn-success btn-sm" data-action="restore" data-id="'+u.id+'">Restore</button>';}
-                else{
-                    if(Number(current.dbId)!==Number(u.id))actions+=' <button type="button" class="btn-app btn-secondary btn-sm" data-action="password" data-id="'+u.id+'" data-name="'+escapeHTML(u.name)+'">Password</button>';
+                if(u.deleted){
+                    actions+=' <button type="button" class="btn-app btn-success btn-sm" data-action="restore" data-id="'+u.id+'">Restore</button>';
+                }else{
+                    const isSelf=Number(current.dbId)===Number(u.id);
+                    const passwordLabel=(!isSelf&&u.passwordResetRequested)?'Password Reset':'Password';
+                    actions+=' <button type="button" class="btn-app btn-secondary btn-sm" data-action="password" data-id="'+u.id+'" data-name="'+escapeHTML(u.name)+'">'+passwordLabel+'</button>';
                     if(u.status==='Locked'||u.lockedUntil)actions+=' <button type="button" class="btn-app btn-secondary btn-sm" data-action="unlock" data-id="'+u.id+'">Unlock</button>';
-                    if(Number(current.dbId)!==Number(u.id))actions+=' <button type="button" class="btn-app btn-danger btn-sm" data-action="delete" data-id="'+u.id+'" data-name="'+escapeHTML(u.name)+'">Delete</button>';
+                    if(!isSelf)actions+=' <button type="button" class="btn-app btn-danger btn-sm" data-action="delete" data-id="'+u.id+'" data-name="'+escapeHTML(u.name)+'">Delete</button>';
                 }
                 return '<tr><td><span class="table-primary">'+escapeHTML(u.name)+'</span><span class="table-secondary">'+escapeHTML(u.displayId)+(u.mustChangePassword?' · Password change required':'')+'</span></td><td><span class="table-primary">'+escapeHTML(u.email)+'</span><span class="table-secondary">'+escapeHTML(u.phone||'-')+'</span></td><td>'+escapeHTML(u.roleName)+'</td><td>'+escapeHTML(u.block||'-')+'</td><td>'+makeBadge(u.status)+(u.emailVerified?' <span class="table-secondary">Email verified</span>':'')+'</td><td>'+formatDate(u.lastLogin)+'</td><td class="user-action-cell">'+actions+'</td></tr>';
             }).join('')||emptyRow(7,'No users found','No accounts match the selected filters.');
@@ -206,7 +209,7 @@
             const id=el('editUserId').value,payload=buildPayload();
             if(id==='NEW'){
                 const result=await apiRequest('/system-admin/users',{method:'POST',body:payload});
-                const password=(result.data&&result.data.temporaryPassword)||(state.options&&state.options.defaultStaffPassword)||'helafixit@321';
+                const password=(result.data&&result.data.temporaryPassword)||(state.options&&state.options.defaultStaffPassword)||'';
                 closeModal('userModal');showMessage('Staff account created. Initial password: '+password,'success');
             }else{
                 await apiRequest('/system-admin/users/'+id,{method:'PUT',body:payload});closeModal('userModal');showMessage('User account updated.','success');
@@ -219,14 +222,14 @@
 
     function openPasswordReset(id,name){
         el('resetUserId').value=String(id);el('adminResetPasswordForm').reset();el('resetPasswordUserLabel').textContent=name||('User '+id);
-        const defaultPassword=(state.options&&state.options.defaultStaffPassword)||'helafixit@321';el('adminTemporaryPassword').value=defaultPassword;el('adminTemporaryPasswordConfirm').value=defaultPassword;openModal('passwordResetModal');
+        el('adminTemporaryPassword').value='';el('adminTemporaryPasswordConfirm').value='';openModal('passwordResetModal');
     }
 
     async function resetPassword(event){
         event.preventDefault();const form=event.currentTarget;if(!validateRequired(form))return;
         const a=el('adminTemporaryPassword').value,b=el('adminTemporaryPasswordConfirm').value;if(a!==b){showMessage('Temporary passwords do not match.','error');return;}
         const button=el('resetPasswordButton');setButtonBusy(button,true,'Resetting...');
-        try{await apiRequest('/system-admin/users/'+el('resetUserId').value+'/reset-password',{method:'POST',body:{temporary_password:a}});closeModal('passwordResetModal');showMessage('Temporary password updated. The user must change it at next sign in.','success');await loadUsers();}
+        try{await apiRequest('/system-admin/users/'+el('resetUserId').value+'/reset-password',{method:'POST',body:{temporary_password:a}});closeModal('passwordResetModal');showMessage('Temporary password issued. The user must create a new personal password after signing in.','success');await loadUsers();}
         catch(error){showMessage(error.message,'error');}
         finally{setButtonBusy(button,false);}
     }
@@ -237,7 +240,11 @@
         if(!id)return;
         try{
             if(action==='edit')return openEdit(id);
-            if(action==='password')return openPasswordReset(id,name);
+            if(action==='password'){
+                const current=currentUser()||{};
+                if(Number(current.dbId)===Number(id)){window.location.href='../Public pages/change-password.html';return;}
+                return openPasswordReset(id,name);
+            }
             if(action==='unlock'){setButtonBusy(button,true,'Unlocking...');await apiRequest('/system-admin/users/'+id+'/unlock',{method:'POST'});showMessage('Account unlocked.','success');}
             if(action==='delete'){
                 if(!confirm('Delete the account for '+name+'? The account will lose access while maintenance history is retained.'))return;
@@ -262,7 +269,7 @@
             el('userEditForm').addEventListener('submit',saveUser);
             el('adminResetPasswordForm').addEventListener('submit',resetPassword);
             el('userRows').addEventListener('click',handleTableAction);
-            const copy=el('copyDefaultPassword');if(copy)copy.addEventListener('click',async()=>{const password=(state.options&&state.options.defaultStaffPassword)||'helafixit@321';try{await navigator.clipboard.writeText(password);showMessage('Initial password copied.','success');}catch(_){showMessage('Initial password: '+password,'info');}});
+            const copy=el('copyDefaultPassword');if(copy)copy.addEventListener('click',async()=>{const password=(state.options&&state.options.defaultStaffPassword)||'';if(!password){showMessage('Initial staff password is not configured.','error');return;}try{await navigator.clipboard.writeText(password);showMessage('Initial password copied.','success');}catch(_){showMessage('Copy the initial password shown above.','info');}});
             ['userRoleFilter','userStatusFilter','userDeletedFilter'].forEach(id=>el(id).addEventListener('change',loadUsers));
             let timer=null;el('userSearch').addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(loadUsers,250);});
             await loadUsers();

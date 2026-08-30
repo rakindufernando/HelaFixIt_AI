@@ -438,16 +438,4 @@ WHERE u.email LIKE '%@helafixit.lk'
 GROUP BY r.role_name
 ORDER BY r.role_name;
 
--- Reporting and administration indexes
--- Helpful indexes for reporting and administration. Duplicate index names are avoided through information_schema checks.
-SET @sql = IF((SELECT COUNT(*) FROM information_schema.statistics WHERE table_schema='helafixit_ai' AND table_name='maintenance_tickets' AND index_name='idx_stage5_ticket_reporting')=0,
-'CREATE INDEX idx_stage5_ticket_reporting ON maintenance_tickets(building_id,current_status,current_priority,submitted_at)','SELECT 1');
-PREPARE stmt FROM @sql; EXECUTE stmt; DEALLOCATE PREPARE stmt;
-
-SET @sql = IF((SELECT COUNT(*) FROM information_schema.statistics WHERE table_schema='helafixit_ai' AND table_name='ticket_assignments' AND index_name='idx_stage5_assignment_reporting')=0,
-'CREATE INDEX idx_stage5_assignment_reporting ON ticket_assignments(technician_id,assignment_method,assignment_status,assigned_at)','SELECT 1');
-PREPARE stmt FROM @sql; EXECUTE stmt; DEALLOCATE PREPARE stmt;
-
-SET @sql = IF((SELECT COUNT(*) FROM information_schema.statistics WHERE table_schema='helafixit_ai' AND table_name='audit_logs' AND index_name='idx_stage5_audit_filter')=0,
-'CREATE INDEX idx_stage5_audit_filter ON audit_logs(action_type,entity_type,created_at)','SELECT 1');
-PREPARE stmt FROM @sql; EXECUTE stmt; DEALLOCATE PREPARE stmt;
+-- Reporting and administration indexes are defined in 02_schema.sql.

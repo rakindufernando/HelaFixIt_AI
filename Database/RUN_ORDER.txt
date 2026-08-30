@@ -4,7 +4,10 @@ Recommended clean installation
 1. Run helafixit_ai_complete_setup.sql
 2. Run 08_validation_queries_XAMPP.sql
 
-Modular source order
+The complete setup already contains the temporary_passwords table.
+Do not run 09_temporary_passwords.sql after a clean installation.
+
+Modular clean installation
 1. 01_create_database.sql
 2. 02_schema.sql
 3. 03_triggers.sql
@@ -13,3 +16,7 @@ Modular source order
 6. 06_seed_reference_data.sql
 7. 07_seed_locations_users_and_indexes.sql
 8. 08_validation_queries_XAMPP.sql
+
+Existing database upgrade only
+1. Import 09_temporary_passwords.sql once. It is safe to rerun because it uses CREATE TABLE IF NOT EXISTS.
+2. Run 08_validation_queries_XAMPP.sql.

@@ -186,6 +186,21 @@ CREATE TABLE password_reset_tokens (
     KEY idx_password_reset_expiry (user_id, expires_at, used_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+CREATE TABLE temporary_passwords (
+    temporary_password_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT UNSIGNED NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    expires_at DATETIME NOT NULL,
+    created_by BIGINT UNSIGNED NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    used_at DATETIME NULL,
+    CONSTRAINT fk_temp_password_user FOREIGN KEY (user_id) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT fk_temp_password_created_by FOREIGN KEY (created_by) REFERENCES users(user_id) ON UPDATE CASCADE ON DELETE SET NULL,
+    UNIQUE KEY uq_temp_password_user (user_id),
+    KEY idx_temp_password_active (user_id, used_at, expires_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
 CREATE TABLE revoked_tokens (
     revoked_token_id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     user_id BIGINT UNSIGNED NOT NULL,
@@ -448,6 +463,7 @@ CREATE TABLE maintenance_tickets (
     KEY idx_ticket_category (current_category_id),
     KEY idx_ticket_location (building_id, floor_id, area_id),
     KEY idx_ticket_created (created_at),
+    KEY idx_stage5_ticket_reporting (building_id, current_status, current_priority, submitted_at),
     FULLTEXT KEY ft_ticket_text (subject, description)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -617,7 +633,8 @@ CREATE TABLE ticket_assignments (
     CONSTRAINT chk_assignment_score CHECK (assignment_score IS NULL OR assignment_score BETWEEN 0 AND 100),
     KEY idx_assignment_ticket_current (ticket_id, is_current, assigned_at),
     KEY idx_assignment_technician_status (technician_id, assignment_status, is_current),
-    KEY idx_assignment_method (assignment_method, assigned_at)
+    KEY idx_assignment_method (assignment_method, assigned_at),
+    KEY idx_stage5_assignment_reporting (technician_id, assignment_method, assignment_status, assigned_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE ticket_feedback (
@@ -715,7 +732,8 @@ CREATE TABLE audit_logs (
     KEY idx_audit_entity (entity_type, entity_id, created_at),
     KEY idx_audit_user (user_id, created_at),
     KEY idx_audit_action (action_type, created_at),
-    KEY idx_audit_created (created_at)
+    KEY idx_audit_created (created_at),
+    KEY idx_stage5_audit_filter (action_type, entity_type, created_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE backup_records (

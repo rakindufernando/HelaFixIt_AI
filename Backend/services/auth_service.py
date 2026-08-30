@@ -1,6 +1,5 @@
 import hashlib
 import secrets
-from datetime import datetime, timedelta
 
 from flask import current_app
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -270,111 +269,74 @@ def register_resident(payload, ip_address=None, user_agent=None):
     return None, 'Resident registration requires administrator approval.', 403
 
 def create_password_reset(email, ip_address=None):
+    """Create a durable Forgot Password request for System Admin review.
+
+    The generated token is never exposed to the browser. The token row is used
+    only as a pending reset-request record until a System Admin issues a
+    temporary password. This keeps the request visible even if notifications
+    are read or dismissed.
+    """
     email = normalize_email(email)
+    generic_message = 'If the email exists, a password reset request has been sent to the System Admin.'
     if not validate_email(email):
-        return {'message': 'If the email exists, a reset request has been created.'}
+        return {'message': generic_message}
 
-    user = query_one('SELECT user_id FROM users WHERE LOWER(email) = %s AND account_status = \'Active\' LIMIT 1', (email,))
+    user = query_one(
+        "SELECT user_id FROM users WHERE LOWER(email)=%s AND account_status='Active' AND is_deleted=FALSE LIMIT 1",
+        (email,),
+    )
     if not user:
-        return {'message': 'If the email exists, a reset request has been created.'}
+        return {'message': generic_message}
 
-    raw_token = secrets.token_urlsafe(32)
-    token_hash = hashlib.sha256(raw_token.encode('utf-8')).hexdigest()
-    expires_at = datetime.now() + timedelta(minutes=30)
+    user_id = int(user['user_id'])
+    raw_marker = secrets.token_urlsafe(32)
+    token_hash = hashlib.sha256(raw_marker.encode('utf-8')).hexdigest()
 
     connection = get_connection()
     try:
         with connection.cursor() as cursor:
-            cursor.execute('UPDATE password_reset_tokens SET used_at = NOW() WHERE user_id = %s AND used_at IS NULL', (user['user_id'],))
+            # Only one pending request is needed for each user. Older unused
+            # requests are closed before the new request is recorded.
+            cursor.execute(
+                'UPDATE password_reset_tokens SET used_at=NOW() WHERE user_id=%s AND used_at IS NULL',
+                (user_id,),
+            )
             cursor.execute(
                 """
-                INSERT INTO password_reset_tokens(user_id, token_hash, expires_at, requested_ip)
-                VALUES (%s, %s, %s, %s)
+                INSERT INTO password_reset_tokens(user_id,token_hash,expires_at,requested_ip)
+                VALUES(%s,%s,DATE_ADD(NOW(),INTERVAL 24 HOUR),%s)
                 """,
-                (user['user_id'], token_hash, expires_at, ip_address),
+                (user_id, token_hash, ip_address),
             )
-        connection.commit()
-    finally:
-        connection.close()
-
-    # Do not expose reset tokens through the browser. A System Admin can complete
-    # a verified reset from User Management when no email provider is configured.
-    connection = get_connection()
-    try:
-        with connection.cursor() as cursor:
             cursor.execute(
                 """
                 INSERT INTO notifications(user_id,event_type,channel,title,message,delivery_status)
                 SELECT u.user_id,'Password Reset Request','In App','Password reset request',
-                       CONCAT('A password reset was requested for ',%s,'. Verify the user before resetting the password.'),'Delivered'
-                FROM users u INNER JOIN roles r ON r.role_id=u.role_id
-                WHERE u.account_status='Active' AND r.role_code='system_admin'
+                       CONCAT('Password reset requested for ',%s,'. Verify the account and issue a temporary password from User Management.'),
+                       'Delivered'
+                FROM users u
+                INNER JOIN roles r ON r.role_id=u.role_id
+                WHERE u.account_status='Active'
+                  AND u.is_deleted=FALSE
+                  AND r.role_code='system_admin'
                 """,
                 (email,),
             )
-        connection.commit()
-    finally:
-        connection.close()
-    return {'message': 'If the email exists, a reset request has been created.'}
-
-
-def reset_password(token, new_password, ip_address=None, user_agent=None):
-    valid_password, password_message = validate_password(new_password)
-    if not valid_password:
-        return False, password_message
-    if not token:
-        return False, 'Reset token is missing.'
-
-    token_hash = hashlib.sha256(token.encode('utf-8')).hexdigest()
-    connection = get_connection()
-    try:
-        with connection.cursor() as cursor:
             cursor.execute(
                 """
-                SELECT reset_token_id, user_id
-                FROM password_reset_tokens
-                WHERE token_hash = %s
-                  AND used_at IS NULL
-                  AND expires_at > NOW()
-                LIMIT 1
-                FOR UPDATE
+                INSERT INTO audit_logs(user_id,action_type,entity_type,entity_id,reason,ip_address)
+                VALUES(%s,'PASSWORD_RESET_REQUESTED','User',%s,'Forgot Password request submitted',%s)
                 """,
-                (token_hash,),
-            )
-            reset_row = cursor.fetchone()
-            if not reset_row:
-                return False, 'This reset link is invalid or has expired.'
-
-            password_hash = generate_password_hash(new_password, method='pbkdf2:sha256:600000')
-            cursor.execute(
-                """
-                UPDATE users
-                SET password_hash = %s,
-                    failed_login_count = 0,
-                    locked_until = NULL,
-                    last_password_change_at = NOW(),
-                    must_change_password = FALSE,
-                    auth_version = auth_version + 1
-                WHERE user_id = %s
-                """,
-                (password_hash, reset_row['user_id']),
-            )
-            cursor.execute('UPDATE password_reset_tokens SET used_at = NOW() WHERE reset_token_id = %s', (reset_row['reset_token_id'],))
-            cursor.execute(
-                """
-                INSERT INTO audit_logs
-                    (user_id, action_type, entity_type, entity_id, reason, ip_address, user_agent)
-                VALUES (%s, 'PASSWORD_RESET', 'User', %s, 'Password reset completed', %s, %s)
-                """,
-                (reset_row['user_id'], str(reset_row['user_id']), ip_address, (user_agent or '')[:500]),
+                (user_id, str(user_id), ip_address),
             )
         connection.commit()
-        return True, 'Password updated successfully.'
     except Exception:
         connection.rollback()
         raise
     finally:
         connection.close()
+
+    return {'message': generic_message}
 
 
 def update_basic_profile(user_id, full_name, phone):
@@ -425,7 +387,6 @@ def change_password(user_id, current_password, new_password, ip_address=None, us
                 "UPDATE users SET password_hash=%s,must_change_password=FALSE,failed_login_count=0,locked_until=NULL,last_password_change_at=NOW(),auth_version=auth_version+1 WHERE user_id=%s",
                 (password_hash, user_id),
             )
-            cursor.execute('UPDATE password_reset_tokens SET used_at=NOW() WHERE user_id=%s AND used_at IS NULL', (user_id,))
             cursor.execute(
                 "INSERT INTO audit_logs(user_id,action_type,entity_type,entity_id,reason,ip_address,user_agent) VALUES(%s,'PASSWORD_CHANGED','User',%s,'User changed password',%s,%s)",
                 (user_id, str(user_id), ip_address, (user_agent or '')[:500]),

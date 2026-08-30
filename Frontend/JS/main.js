@@ -15,7 +15,10 @@
         return date.toLocaleDateString('en-LK', withTime === false ? {year:'numeric',month:'short',day:'numeric'} : {year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
     };
     window.currentUser = function () {
-        try { return JSON.parse(localStorage.getItem('helafixitCurrentUser')) || null; } catch (e) { return null; }
+        try {
+            const raw = localStorage.getItem('helafixitCurrentUser') || sessionStorage.getItem('helafixitCurrentUser');
+            return raw ? JSON.parse(raw) : null;
+        } catch (e) { return null; }
     };
     window.showMessage = function (message, type) {
         let container = document.querySelector('.toast-container');

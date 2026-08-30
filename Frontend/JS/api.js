@@ -23,9 +23,19 @@
 
     const API_BASE = resolveBase();
 
-
     function isMaintenancePage() {
         return decodeURIComponent(window.location.pathname || '').toLowerCase().endsWith('/pages/public pages/maintenance.html');
+    }
+
+    function clearStore(store) {
+        store.removeItem('helafixitAccessToken');
+        store.removeItem('helafixitCurrentUser');
+    }
+
+    function sessionStoreForExistingToken() {
+        if (localStorage.getItem('helafixitAccessToken')) return localStorage;
+        if (sessionStorage.getItem('helafixitAccessToken')) return sessionStorage;
+        return localStorage;
     }
 
     window.redirectToMaintenancePage = function () {
@@ -34,17 +44,25 @@
     };
 
     window.getAuthToken = function () {
-        return localStorage.getItem('helafixitAccessToken') || '';
+        return localStorage.getItem('helafixitAccessToken') || sessionStorage.getItem('helafixitAccessToken') || '';
     };
 
-    window.setAuthSession = function (token, user) {
-        if (token) localStorage.setItem('helafixitAccessToken', token);
-        if (user) localStorage.setItem('helafixitCurrentUser', JSON.stringify(user));
+    window.setAuthSession = function (token, user, rememberDevice) {
+        let store;
+        if (rememberDevice === true || rememberDevice === false) {
+            clearStore(localStorage);
+            clearStore(sessionStorage);
+            store = rememberDevice ? localStorage : sessionStorage;
+        } else {
+            store = sessionStoreForExistingToken();
+        }
+        if (token) store.setItem('helafixitAccessToken', token);
+        if (user) store.setItem('helafixitCurrentUser', JSON.stringify(user));
     };
 
     window.clearAuthSession = function () {
-        localStorage.removeItem('helafixitAccessToken');
-        localStorage.removeItem('helafixitCurrentUser');
+        clearStore(localStorage);
+        clearStore(sessionStorage);
     };
 
     window.apiRequest = async function (path, options) {

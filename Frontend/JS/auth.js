@@ -47,18 +47,27 @@
                 return;
             }
             applyUserToPage(user);
-            if (user.mustChangePassword) { location.href = '../Public pages/change-password.html'; return; }
+            if (user.mustChangePassword) {
+                const mode = user.temporaryPasswordActive ? 'temporary' : 'required';
+                location.href = '../Public pages/change-password.html?mode=' + mode;
+                return;
+            }
         } catch (error) { if (error && error.maintenanceMode) return; redirectToLogin(); }
     }
 
-    async function performLogin(email, password, role, button) {
+    async function performLogin(email, password, role, button, rememberDevice) {
         if (button) button.disabled = true;
         try {
             const response = await apiRequest('/auth/login', {method:'POST', body:{email:email,password:password,role:role}});
-            setAuthSession(response.data.access_token, response.data.user);
-            if (response.data.must_change_password || response.data.user.mustChangePassword) {
-                showMessage('Change the temporary password to continue.', 'info');
-                setTimeout(function(){ location.href = 'change-password.html'; }, 250);
+            const loginUser = response.data.user || {};
+            loginUser.temporaryPasswordActive = !!response.data.temporary_password_login;
+            setAuthSession(response.data.access_token, loginUser, rememberDevice);
+            if (response.data.temporary_password_login) {
+                showMessage('Temporary password accepted. Create your new personal password to continue.', 'info');
+                setTimeout(function(){ location.href = 'change-password.html?mode=temporary'; }, 250);
+            } else if (response.data.must_change_password || loginUser.mustChangePassword) {
+                showMessage('Create a new password to continue.', 'info');
+                setTimeout(function(){ location.href = 'change-password.html?mode=required'; }, 250);
             } else {
                 showMessage('Login successful.', 'success');
                 setTimeout(function(){ location.href = routes[response.data.user.role]; }, 300);
@@ -79,7 +88,14 @@
         form.addEventListener('submit', function(e){
             e.preventDefault();
             if (!validateRequired(form)) return;
-            performLogin(getElement('loginEmail').value.trim(), getElement('loginPassword').value, getElement('loginRole').value, form.querySelector('button[type="submit"]'));
+            const remember = getElement('rememberDevice');
+            performLogin(
+                getElement('loginEmail').value.trim(),
+                getElement('loginPassword').value,
+                getElement('loginRole').value,
+                form.querySelector('button[type="submit"]'),
+                remember ? remember.checked : true
+            );
         });
     }
 
@@ -186,7 +202,7 @@
             if (!validateRequired(form)) return;
             const button = form.querySelector('button[type="submit"]'); button.disabled = true;
             try {
-                const response = await apiRequest('/auth/forgot-password', {method:'POST',body:{email:getElement('forgotEmail').value.trim()}});
+                await apiRequest('/auth/forgot-password', {method:'POST',body:{email:getElement('forgotEmail').value.trim()}});
                 const result = getElement('forgotResult');
                 if (result) {
                     result.style.display = 'block';
@@ -214,18 +230,54 @@
         });
     }
 
-
-
     function initChangePassword() {
         const form=getElement('changePasswordForm'); if(!form)return;
         if(!getAuthToken() || !currentUser()){ location.href='login.html'; return; }
+
+        const params=new URLSearchParams(location.search);
+        const requestedMode=params.get('mode')||'';
+        const user=currentUser()||{};
+        const temporaryMode=requestedMode==='temporary'||!!user.temporaryPasswordActive;
+        const requiredMode=!temporaryMode && (requestedMode==='required'||!!user.mustChangePassword);
+
+        const eyebrow=getElement('changePasswordEyebrow');
+        const heading=getElement('changePasswordHeading');
+        const intro=getElement('changePasswordIntro');
+        const currentLabel=getElement('currentPasswordLabel');
+        const submit=form.querySelector('button[type="submit"]');
+
+        if(temporaryMode){
+            if(eyebrow)eyebrow.textContent='Password recovery';
+            if(heading)heading.textContent='Create your new password.';
+            if(intro)intro.textContent='Enter the temporary password issued by the System Admin, then create your new personal password.';
+            if(currentLabel)currentLabel.innerHTML='Temporary password <span class="required">*</span>';
+            if(submit)submit.textContent='Create new password';
+        }else if(requiredMode){
+            if(eyebrow)eyebrow.textContent='First sign in';
+            if(heading)heading.textContent='Create your personal password.';
+            if(intro)intro.textContent='Enter your current initial password, then create a new personal password before continuing.';
+            if(currentLabel)currentLabel.innerHTML='Current initial password <span class="required">*</span>';
+            if(submit)submit.textContent='Create new password';
+        }else{
+            if(eyebrow)eyebrow.textContent='Account security';
+            if(heading)heading.textContent='Change your password.';
+            if(intro)intro.textContent='Enter your current password and choose a new password for your account.';
+            if(currentLabel)currentLabel.innerHTML='Current password <span class="required">*</span>';
+            if(submit)submit.textContent='Change password';
+        }
+
         form.addEventListener('submit',async function(e){
             e.preventDefault(); if(!validateRequired(form))return;
             const current=getElement('currentPassword').value,newPassword=getElement('newPassword').value,confirm=getElement('newPasswordConfirm').value;
             if(!isValidPassword(newPassword)){showMessage('New password must use 8 to 64 characters with at least one letter and one number.','error');return;}
             if(newPassword!==confirm){showMessage('New passwords do not match.','error');return;}
             const button=form.querySelector('button[type="submit"]');button.disabled=true;
-            try{await apiRequest('/auth/change-password',{method:'POST',body:{current_password:current,new_password:newPassword}});clearAuthSession();showMessage('Password changed. Sign in again.','success');setTimeout(()=>location.href='login.html',600);}
+            try{
+                const response=await apiRequest('/auth/change-password',{method:'POST',body:{current_password:current,new_password:newPassword}});
+                clearAuthSession();
+                showMessage(response.message||'Password changed successfully. Sign in again.','success');
+                setTimeout(()=>location.href='login.html',700);
+            }
             catch(error){showMessage(error.message,'error');}
             finally{button.disabled=false;}
         });

@@ -3,7 +3,8 @@ from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, j
 
 from database import get_connection, query_one
 from services.settings_service import get_bool_setting, get_int_setting, get_string_setting
-from services.auth_service import authenticate, change_password, create_password_reset, get_user_profile, reset_password, update_basic_profile
+from services.auth_service import create_password_reset, get_user_profile, update_basic_profile
+from services.temporary_password_service import authenticate, change_password, has_active_temporary_password
 from services.registration_service import get_registration_status, registration_options, submit_registration_request
 from utils.responses import error, success
 
@@ -18,7 +19,10 @@ def client_ip():
 @auth_bp.post('/login')
 def login():
     payload = request.get_json(silent=True) or {}
-    result, message, status = authenticate(payload.get('email'), payload.get('password'), payload.get('role'), client_ip(), request.headers.get('User-Agent', ''))
+    result, message, status = authenticate(
+        payload.get('email'), payload.get('password'), payload.get('role'),
+        client_ip(), request.headers.get('User-Agent', '')
+    )
     if not result:
         return error(message, status)
     if result.get('role_code') != 'system_admin' and get_bool_setting('maintenance_mode', False):
@@ -28,9 +32,17 @@ def login():
             {'maintenanceMode': True},
         )
     token = create_access_token(identity=str(result['user_id']), additional_claims={
-        'role': result['role_code'], 'frontend_role': result['user']['role'], 'email': result['user']['email'], 'auth_version': int(result.get('auth_version') or 1)
+        'role': result['role_code'],
+        'frontend_role': result['user']['role'],
+        'email': result['user']['email'],
+        'auth_version': int(result.get('auth_version') or 1),
     })
-    return success({'access_token': token, 'user': result['user'], 'must_change_password': bool(result.get('must_change_password'))}, 'Login successful.')
+    return success({
+        'access_token': token,
+        'user': result['user'],
+        'must_change_password': bool(result.get('must_change_password')),
+        'temporary_password_login': bool(result.get('temporary_password_login')),
+    }, 'Login successful.')
 
 
 @auth_bp.post('/register')
@@ -42,7 +54,9 @@ def register():
             {'maintenanceMode': True},
         )
     payload = request.get_json(silent=True) or {}
-    result, message, status = submit_registration_request(payload, client_ip(), request.headers.get('User-Agent', ''))
+    result, message, status = submit_registration_request(
+        payload, client_ip(), request.headers.get('User-Agent', '')
+    )
     if not result:
         return error(message, status)
     return success({'registration': result}, message or 'Registration request submitted for approval.', status)
@@ -95,9 +109,8 @@ def me():
             503,
             {'maintenanceMode': True},
         )
+    user['temporaryPasswordActive'] = has_active_temporary_password(int(get_jwt_identity()))
     return success({'user': user}, 'Authenticated user loaded.')
-
-
 
 
 @auth_bp.get('/notification-summary')
@@ -108,7 +121,11 @@ def notification_summary():
     connection = get_connection()
     try:
         with connection.cursor() as cursor:
-            cursor.execute(f"DELETE FROM notifications WHERE user_id=%s AND read_at IS NOT NULL AND created_at < DATE_SUB(NOW(), INTERVAL {retention} DAY)", (user_id,))
+            cursor.execute(
+                f"DELETE FROM notifications WHERE user_id=%s AND read_at IS NOT NULL "
+                f"AND created_at < DATE_SUB(NOW(), INTERVAL {retention} DAY)",
+                (user_id,),
+            )
         connection.commit()
     finally:
         connection.close()
@@ -130,7 +147,9 @@ def notification_summary():
 @jwt_required()
 def update_profile():
     payload = request.get_json(silent=True) or {}
-    result, message, status = update_basic_profile(int(get_jwt_identity()), payload.get('name'), payload.get('phone'))
+    result, message, status = update_basic_profile(
+        int(get_jwt_identity()), payload.get('name'), payload.get('phone')
+    )
     if not result:
         return error(message, status)
     return success({'user': result}, 'Profile updated.')
@@ -145,7 +164,8 @@ def logout():
     try:
         with connection.cursor() as cursor:
             cursor.execute(
-                "INSERT IGNORE INTO revoked_tokens(user_id,token_jti,token_type,expires_at,reason) VALUES(%s,%s,'Access',FROM_UNIXTIME(%s),'User logout')",
+                "INSERT IGNORE INTO revoked_tokens(user_id,token_jti,token_type,expires_at,reason) "
+                "VALUES(%s,%s,'Access',FROM_UNIXTIME(%s),'User logout')",
                 (user_id, claims.get('jti'), claims.get('exp')),
             )
         connection.commit()
@@ -163,8 +183,22 @@ def forgot_password():
 
 @auth_bp.post('/reset-password')
 def complete_reset_password():
+    # Compatibility endpoint only. The final local workflow uses a System Admin
+    # issued temporary password and then /change-password. Import lazily so an
+    # older auth_service without token-reset support cannot stop Flask startup.
+    try:
+        from services.auth_service import reset_password as legacy_reset_password
+    except ImportError:
+        return error(
+            'Password reset links are not used in this system. Ask the System Admin to issue a temporary password, then sign in and create a new password.',
+            410,
+        )
+
     payload = request.get_json(silent=True) or {}
-    ok, message = reset_password(payload.get('token'), payload.get('password'), client_ip(), request.headers.get('User-Agent', ''))
+    ok, message = legacy_reset_password(
+        payload.get('token'), payload.get('password'),
+        client_ip(), request.headers.get('User-Agent', '')
+    )
     if not ok:
         return error(message, 400)
     return success(message=message)
@@ -173,7 +207,11 @@ def complete_reset_password():
 @auth_bp.post('/change-password')
 @jwt_required()
 def change_own_password():
-    payload=request.get_json(silent=True) or {}
-    ok,message=change_password(int(get_jwt_identity()),payload.get('current_password'),payload.get('new_password'),client_ip(),request.headers.get('User-Agent',''))
-    if not ok:return error(message,400)
+    payload = request.get_json(silent=True) or {}
+    ok, message = change_password(
+        int(get_jwt_identity()), payload.get('current_password'), payload.get('new_password'),
+        client_ip(), request.headers.get('User-Agent', '')
+    )
+    if not ok:
+        return error(message, 400)
     return success(message=message)

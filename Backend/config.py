@@ -19,9 +19,9 @@ class Config:
     DB_PASSWORD = os.getenv('DB_PASSWORD', '')
     DB_NAME = os.getenv('DB_NAME', 'helafixit_ai')
 
-    DEFAULT_STAFF_PASSWORD = os.getenv('DEFAULT_STAFF_PASSWORD', 'helafixit@321')
+    DEFAULT_STAFF_PASSWORD = (os.getenv('DEFAULT_STAFF_PASSWORD') or '').strip()
 
-    JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY', 'helafixit-student-development-key-change-before-deployment')
+    JWT_SECRET_KEY = (os.getenv('JWT_SECRET_KEY') or '').strip()
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=int(os.getenv('JWT_ACCESS_HOURS', '8')))
     JWT_REFRESH_TOKEN_EXPIRES = timedelta(days=int(os.getenv('JWT_REFRESH_DAYS', '7')))
 

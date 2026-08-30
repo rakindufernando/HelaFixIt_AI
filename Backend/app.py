@@ -21,6 +21,16 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
+    missing_settings = [
+        name for name in ('JWT_SECRET_KEY', 'DEFAULT_STAFF_PASSWORD')
+        if not str(app.config.get(name) or '').strip()
+    ]
+    if missing_settings:
+        raise RuntimeError(
+            'Set the required values in Backend/.env before starting the application: ' +
+            ', '.join(missing_settings)
+        )
+
     jwt.init_app(app)
     CORS(
         app,

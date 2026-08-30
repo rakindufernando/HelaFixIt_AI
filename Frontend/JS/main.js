@@ -77,6 +77,55 @@
         document.body.appendChild(script);
     }
 
+    function loadLifecycleEnhancements() {
+        const path = decodeURIComponent(window.location.pathname || '').toLowerCase();
+        if (!path.endsWith('/ticket-details.html') && !path.endsWith('/technician-job-details.html')) return;
+        if (document.querySelector('script[data-lifecycle-enhancements]')) return;
+        const script = document.createElement('script');
+        script.src = '/JS/lifecycle-enhancements.js?v=20260829-final';
+        script.setAttribute('data-lifecycle-enhancements', 'true');
+        document.body.appendChild(script);
+    }
+
+    async function fetchProtectedFile(path) {
+        if (!window.HELAFIX_API_BASE || typeof window.getAuthToken !== 'function') return null;
+        const token = getAuthToken();
+        if (!token) return null;
+        const response = await fetch(window.HELAFIX_API_BASE + path, {
+            method: 'GET',
+            headers: { Authorization: 'Bearer ' + token }
+        });
+        if (response.status === 404) return null;
+        if (!response.ok) throw new Error('The uploaded issue image could not be loaded.');
+        return response.blob();
+    }
+
+    window.loadProtectedImage = async function (endpoint, target) {
+        if (endpoint && endpoint.nodeType === 1 && typeof target === 'string') {
+            const swap = endpoint;
+            endpoint = target;
+            target = swap;
+        }
+        if (!endpoint) return null;
+        try {
+            const blob = await fetchProtectedFile(String(endpoint));
+            if (!blob) return null;
+            const objectUrl = URL.createObjectURL(blob);
+            let element = target;
+            if (typeof target === 'string') element = document.getElementById(target) || document.querySelector(target);
+            if (element && element.tagName === 'IMG') {
+                const previous = element.dataset.protectedObjectUrl;
+                if (previous) URL.revokeObjectURL(previous);
+                element.src = objectUrl;
+                element.dataset.protectedObjectUrl = objectUrl;
+            }
+            return objectUrl;
+        } catch (error) {
+            console.warn(error.message || error);
+            return null;
+        }
+    };
+
     async function applyPublicSystemSettings() {
         if (typeof window.apiRequest !== 'function') return;
         try {
@@ -170,6 +219,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         initModals();
         loadSystemAdminManagementEnhancements();
+        loadLifecycleEnhancements();
         applyPublicSystemSettings();
         ensureNotificationButton();
         window.setTimeout(refreshNotificationButton, 0);

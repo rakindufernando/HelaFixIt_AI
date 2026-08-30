@@ -1,4 +1,6 @@
-from flask import Blueprint, request
+from pathlib import Path
+
+from flask import Blueprint, current_app, request, send_file
 from flask_jwt_extended import get_jwt_identity
 
 from database import get_connection, query_one
@@ -24,7 +26,7 @@ def client_ip():
 def admin_scope(user_id):
     return query_one(
         """
-        SELECT ap.primary_building_id,b.block_code,b.name AS building_name
+        SELECT ap.primary_building_id,ap.can_review_emergencies,b.block_code,b.name AS building_name
         FROM apartment_admin_profiles ap
         LEFT JOIN buildings b ON b.building_id=ap.primary_building_id
         WHERE ap.user_id=%s AND ap.active=TRUE
@@ -65,6 +67,18 @@ def technician_in_admin_scope(user_id, technician_id):
         (technician_id, int(scope['primary_building_id'])),
     )
     return bool(row)
+
+
+def emergency_review_denied(user_id, ticket_number=None):
+    """Return a 403 response when an admin without emergency permission tries to review an emergency ticket."""
+    scope = admin_scope(user_id)
+    if not scope or bool(scope.get('can_review_emergencies')):
+        return None
+    if ticket_number:
+        ticket = get_ticket(ticket_number)
+        if not ticket or not ticket.get('emergency'):
+            return None
+    return error('Your Apartment Admin profile is not permitted to review or assign emergency tickets.', 403)
 
 
 @admin_bp.get('/dashboard')
@@ -122,12 +136,46 @@ def ticket_details(ticket_number):
     return success({'ticket': ticket, 'categories': categories()}, 'Ticket review details loaded.')
 
 
+@admin_bp.get('/tickets/<ticket_number>/issue-photo')
+@roles_required('apartment_admin')
+def issue_photo(ticket_number):
+    user_id = int(get_jwt_identity())
+    if not ticket_in_admin_scope(user_id, ticket_number):
+        return error('Ticket not found in your assigned building.', 404)
+    row = query_one(
+        """
+        SELECT a.storage_path,a.mime_type,a.original_file_name
+        FROM ticket_attachments a
+        INNER JOIN maintenance_tickets mt ON mt.ticket_id=a.ticket_id
+        WHERE mt.ticket_number=%s
+          AND a.attachment_type='Issue Photo'
+          AND a.deleted_at IS NULL
+        ORDER BY a.uploaded_at DESC,a.attachment_id DESC
+        LIMIT 1
+        """,
+        (ticket_number,),
+    )
+    if not row:
+        return error('No resident issue image was uploaded for this ticket.', 404)
+    root = Path(current_app.config['UPLOAD_FOLDER']).resolve()
+    target = (root / str(row['storage_path'])).resolve()
+    try:
+        target.relative_to(root)
+    except ValueError:
+        return error('The stored issue image path is invalid.', 404)
+    if not target.is_file():
+        return error('The uploaded issue image file could not be found.', 404)
+    return send_file(target, mimetype=row.get('mime_type') or None, as_attachment=False, conditional=True)
+
+
 @admin_bp.post('/tickets/<ticket_number>/review')
 @roles_required('apartment_admin')
 def review(ticket_number):
     user_id = int(get_jwt_identity())
     if not ticket_in_admin_scope(user_id, ticket_number):
         return error('Ticket not found in your assigned building.', 404)
+    denied = emergency_review_denied(user_id, ticket_number)
+    if denied: return denied
     payload = request.get_json(silent=True) or {}
     result, message, status = review_ticket(
         user_id, ticket_number, payload.get('category'), payload.get('priority'),
@@ -144,6 +192,8 @@ def assignment_options(ticket_number):
     user_id = int(get_jwt_identity())
     if not ticket_in_admin_scope(user_id, ticket_number):
         return error('Ticket not found in your assigned building.', 404)
+    denied = emergency_review_denied(user_id, ticket_number)
+    if denied: return denied
     scope, denied = scoped_building_or_error(user_id)
     if denied: return denied
     data = technician_candidates(ticket_number)
@@ -159,6 +209,8 @@ def assign(ticket_number):
     user_id = int(get_jwt_identity())
     if not ticket_in_admin_scope(user_id, ticket_number):
         return error('Ticket not found in your assigned building.', 404)
+    denied = emergency_review_denied(user_id, ticket_number)
+    if denied: return denied
     payload = request.get_json(silent=True) or {}
     try:
         technician_id = int(payload.get('technician_id'))
@@ -180,6 +232,8 @@ def assign(ticket_number):
 def emergencies():
     user_id = int(get_jwt_identity())
     scope, denied = scoped_building_or_error(user_id)
+    if denied: return denied
+    denied = emergency_review_denied(user_id)
     if denied: return denied
     building_id = int(scope['primary_building_id'])
     rows = [t for t in admin_tickets() if int(t.get('buildingId') or 0) == building_id and t['emergency']]

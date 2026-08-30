@@ -84,6 +84,12 @@
             getElement('reviewPriorityBadge').innerHTML = makeBadge(t.priority);
             getElement('reviewStatusBadge').innerHTML = makeBadge(t.status);
 
+            const issuePhotoSection = getElement('reviewIssuePhotoSection');
+            if (issuePhotoSection && t.issuePhoto) {
+                const loaded = await loadProtectedImage('/admin/tickets/' + encodeURIComponent(t.id) + '/issue-photo', getElement('reviewIssuePhoto'));
+                issuePhotoSection.hidden = !loaded;
+            }
+
             const categorySelect = getElement('reviewCategoryEdit');
             categorySelect.innerHTML = '<option value="">Keep current category</option>' + response.data.categories.map(function (c) { return '<option>' + escapeHTML(c.name) + '</option>'; }).join('');
             const assignmentLink = document.querySelector('#adminAIReview .grid-2 a.btn-app');

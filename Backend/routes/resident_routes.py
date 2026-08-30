@@ -2,6 +2,7 @@ from flask import Blueprint, current_app, request
 from flask_jwt_extended import get_jwt_identity
 
 from database import get_connection, query_one
+from services.lifecycle_service import resident_cancel_ticket, resident_close_ticket, resident_reopen_ticket
 from services.ticket_service import (
     create_ticket, get_ticket, list_notifications, mark_notifications_read,
     resident_dashboard, resident_ticket_options, resident_tickets,
@@ -75,6 +76,36 @@ def ticket_analysis(ticket_number):
     return success({'ticket': ticket}, 'Ticket analysis state loaded.')
 
 
+@resident_bp.post('/tickets/<ticket_number>/cancel')
+@roles_required('resident')
+def cancel_ticket(ticket_number):
+    payload = request.get_json(silent=True) or {}
+    result, message, status = resident_cancel_ticket(int(get_jwt_identity()), ticket_number, payload.get('reason',''))
+    if not result:
+        return error(message, status)
+    return success(result, 'Maintenance ticket cancelled.')
+
+
+@resident_bp.post('/tickets/<ticket_number>/close')
+@roles_required('resident')
+def close_ticket(ticket_number):
+    payload = request.get_json(silent=True) or {}
+    result, message, status = resident_close_ticket(int(get_jwt_identity()), ticket_number, payload.get('note',''))
+    if not result:
+        return error(message, status)
+    return success(result, 'Resolved ticket closed.')
+
+
+@resident_bp.post('/tickets/<ticket_number>/reopen')
+@roles_required('resident')
+def reopen_ticket(ticket_number):
+    payload = request.get_json(silent=True) or {}
+    result, message, status = resident_reopen_ticket(int(get_jwt_identity()), ticket_number, payload.get('reason',''))
+    if not result:
+        return error(message, status)
+    return success(result, 'Maintenance ticket reopened for review.')
+
+
 @resident_bp.get('/profile')
 @roles_required('resident')
 def resident_profile():
@@ -137,7 +168,7 @@ def update_resident_profile():
     try:
         with connection.cursor() as cursor:
             cursor.execute(
-                "UPDATE users SET full_name=%s, phone=%s, updated_at=NOW() WHERE user_id=%s AND is_deleted=FALSE",
+                'UPDATE users SET full_name=%s, phone=%s, updated_at=NOW() WHERE user_id=%s AND is_deleted=FALSE',
                 (name, phone, user_id),
             )
             if cursor.rowcount == 0:

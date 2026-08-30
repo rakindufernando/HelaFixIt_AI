@@ -134,6 +134,15 @@ def _ticket_base_sql(extra_where=''):
             ) AS latest_repair_note,
             (
                 SELECT original_file_name
+                FROM ticket_attachments ia
+                WHERE ia.ticket_id = mt.ticket_id
+                  AND ia.attachment_type = 'Issue Photo'
+                  AND ia.deleted_at IS NULL
+                ORDER BY ia.uploaded_at DESC, ia.attachment_id DESC
+                LIMIT 1
+            ) AS issue_photo_name,
+            (
+                SELECT original_file_name
                 FROM ticket_attachments ca
                 WHERE ca.ticket_id = mt.ticket_id
                   AND ca.attachment_type = 'Completion Proof'
@@ -213,6 +222,7 @@ def serialize_ticket(row):
         'created': row.get('submitted_at').isoformat() if row.get('submitted_at') else None,
         'updated': row.get('updated_at').isoformat() if row.get('updated_at') else None,
         'repairNote': row.get('latest_repair_note') or '',
+        'issuePhoto': row.get('issue_photo_name') or '',
         'proof': row.get('completion_proof_name') or '',
         'emergency': is_emergency,
         'predictionAvailable': bool(row.get('prediction_id')),
@@ -555,6 +565,23 @@ def save_ticket_attachment(ticket_id, user_id, upload_file, attachment_type, upl
         raise
     finally:
         connection.close()
+
+
+
+def get_issue_photo(ticket_number):
+    return query_one(
+        """
+        SELECT ta.original_file_name, ta.storage_path, ta.mime_type
+        FROM ticket_attachments ta
+        INNER JOIN maintenance_tickets mt ON mt.ticket_id=ta.ticket_id
+        WHERE mt.ticket_number=%s
+          AND ta.attachment_type='Issue Photo'
+          AND ta.deleted_at IS NULL
+        ORDER BY ta.uploaded_at DESC, ta.attachment_id DESC
+        LIMIT 1
+        """,
+        (ticket_number,),
+    )
 
 
 def resident_tickets(user_id, search='', status='', priority=''):

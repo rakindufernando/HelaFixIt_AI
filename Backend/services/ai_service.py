@@ -784,7 +784,7 @@ def analyse_ticket(ticket_id, initiated_by=None, ip_address=None, user_agent=Non
             cursor.execute(
                 """
                 INSERT INTO ticket_updates(ticket_id,updated_by,update_type,status_from,status_to,note,resident_visible)
-                VALUES(%s,%s,'AI Analysis',%s,%s,%s,TRUE)
+                VALUES(%s,%s,'System Event',%s,%s,%s,TRUE)
                 """,
                 (ticket_id, initiated_by, old_status, new_status, note[:2000]),
             )

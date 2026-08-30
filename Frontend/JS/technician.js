@@ -54,6 +54,11 @@
             setText('jobDetailLocation', t.block + ' · ' + t.floor + ' · ' + t.area); setText('jobDetailCategory', t.category);
             setText('jobDetailRisk', t.risk === null ? 'Pending analysis' : t.risk + '/100 · ' + t.riskLevel); setText('jobDetailSafety', t.safety);
             setText('jobDetailRepair', t.repairNote || 'No repair note yet.'); getElement('jobDetailPriority').innerHTML = makeBadge(t.priority); getElement('jobDetailStatus').innerHTML = makeBadge(t.status);
+            const issuePhotoSection = getElement('jobIssuePhotoSection');
+            if (issuePhotoSection && t.issuePhoto) {
+                const loaded = await loadProtectedImage('/technician/jobs/' + encodeURIComponent(t.id) + '/issue-photo', getElement('jobIssuePhoto'));
+                issuePhotoSection.hidden = !loaded;
+            }
             const updateLink = getElement('updateStatusLink');
             const notesLink = getElement('repairNotesLink');
             const completionLink = getElement('completionLink');

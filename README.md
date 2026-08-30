@@ -1,178 +1,147 @@
-﻿# HelaFixIt AI
+# HelaFixIt AI
 
-## AI-Based Multilingual Apartment Maintenance Ticket Prioritization, Risk Scoring, and Technician Recommendation System
+**AI-Based Multilingual Apartment Maintenance Ticket Prioritization, Risk Scoring, and Technician Recommendation System**
 
-HelaFixIt AI is a web-based apartment maintenance management system developed to improve how apartment maintenance requests are reported, analysed, prioritised, assigned and completed.
+HelaFixIt AI is a web-based apartment maintenance ticket management and AI decision support system. It allows residents to report maintenance issues and supports apartment administrators and technicians throughout the maintenance workflow. The system uses locally trained Python machine learning models together with rule-based logic to analyse multilingual maintenance tickets.
 
-The system combines a normal maintenance ticket management workflow with a locally trained machine learning component. Maintenance requests can be submitted in English, Sinhala, Singlish and mixed-language text. The system analyses each request and provides decision-support information such as issue category, priority, risk level, safety information and technician recommendations.
+## Project Background
 
-The application contains four main user roles
+Apartment maintenance requests include issues such as plumbing leaks, electrical faults, lift problems, air conditioning faults, drainage blockages, cleaning issues, pest problems, damaged fittings, security problems and other building maintenance concerns.
+
+In many apartment environments, maintenance complaints are handled through phone calls, messages, emails, paper forms or basic online forms. This can make the process slow and inconsistent when many requests are received. Urgent safety problems may not be recognised early, duplicate complaints may create repeated work, and selecting a suitable technician can take additional time.
+
+This problem is more challenging in Sri Lanka because residents may describe maintenance issues using English, Sinhala, Singlish or mixed-language wording. HelaFixIt AI was developed to provide a structured ticket workflow together with multilingual AI-assisted decision support.
+
+## Project Aim
+
+The aim of this project is to develop an AI-based online maintenance ticket system that can understand multilingual apartment maintenance complaints, calculate risk, prioritise tickets and recommend suitable technicians using locally trained Python machine learning models.
+
+## Main Objectives
+
+- Develop a web-based platform that enables residents to submit apartment maintenance tickets through a simple form.
+- Prepare a labelled maintenance ticket dataset using English, Sinhala, Singlish and mixed-language examples.
+- Train local machine learning models to classify maintenance tickets into suitable issue categories and priority levels.
+- Develop a context-aware risk scoring method using priority, safety terms, issue category, location, duplicate reports and ticket history.
+- Recommend a suitable technician based on the predicted issue, risk level, technician skills, availability and workload.
+- Evaluate the AI module and system using classification metrics, confusion matrices, scenario testing and system testing.
+
+# Main System Features
+
+HelaFixIt AI contains four main user roles and a complete maintenance ticket workflow.
 
 - Resident
 - Apartment Administrator
 - Technician
 - System Administrator
 
-The core AI functionality is executed locally using Python and scikit-learn models. An external AI prediction API is not required for the main maintenance ticket analysis.
-
----
-
-## Project Background
-
-Apartment maintenance requests can include problems such as electrical faults, plumbing leaks, lift failures, water supply issues, fire and safety risks, appliance faults and other building-related issues.
-
-When maintenance requests are processed manually, several problems can occur
-
-- urgent requests may not be identified quickly
-- tickets can be assigned to the wrong maintenance category
-- safety-related issues may not receive sufficient attention
-- duplicate maintenance requests can increase workload
-- selecting a suitable technician can take additional time
-- maintenance staff may have difficulty managing large numbers of tickets
-- residents may have limited visibility of maintenance progress
-- multilingual maintenance descriptions can be difficult to process consistently
-
-HelaFixIt AI was developed to provide a structured maintenance workflow together with AI-assisted decision support.
-
----
-
-## Project Aim
-
-The main aim of HelaFixIt AI is to develop an apartment maintenance management system that can understand multilingual maintenance requests and assist apartment management staff with ticket prioritisation, risk identification and technician selection.
-
----
-
-## Main Objectives
-
-The system was developed to
-
-1. provide an online maintenance ticket submission process for apartment residents
-2. support English, Sinhala, Singlish and mixed-language maintenance descriptions
-3. automatically predict the maintenance issue category
-4. automatically predict ticket priority
-5. calculate maintenance risk information
-6. detect possible safety-related maintenance issues
-7. identify possible duplicate maintenance requests
-8. recommend suitable technicians
-9. support emergency maintenance assignment
-10. provide role-based workflows for residents, apartment administrators, technicians and system administrators
-11. store ticket, user, AI and workflow information in a relational database
-12. provide notifications, reports, audit information and system administration functions
-13. keep the main AI prediction process locally within the project
-
----
-
-# Main System Features
+The system includes multilingual ticket submission, category and priority prediction, risk scoring, safety detection, duplicate detection, technician recommendation, emergency assignment support, notifications, reporting and audit records.
 
 ## Resident Functions
 
-Residents can use the system to
+Residents can
 
-- request registration for an apartment account
-- sign in after account approval
-- submit new maintenance tickets
-- provide maintenance issue descriptions
-- provide location and issue information
-- upload supporting ticket files where applicable
+- request a resident account and wait for administrator approval
+- sign in to the resident portal
+- submit maintenance tickets using a simple web form
+- enter the issue title, description, building, floor, area and asset information
+- upload an optional maintenance issue image
 - receive AI-assisted ticket analysis
-- view predicted category and priority information
-- view ticket details
-- track maintenance ticket progress
-- view notifications
+- view predicted category, priority, risk and safety information
+- view possible duplicate information
+- track submitted maintenance tickets and their current status
+- view assigned technician information when available
+- receive notifications
 - manage profile information
-
----
+- request password reset assistance
 
 ## Apartment Administrator Functions
 
-Apartment administrators can
+Apartment Administrators can
 
-- view maintenance tickets belonging to their apartment environment
-- review newly submitted maintenance requests
-- review AI-generated ticket information
-- check category, priority, risk and safety information
-- review tickets requiring administrative attention
-- assign technicians
-- manage active maintenance jobs
-- review emergency maintenance requests
-- track maintenance progress
+- manage maintenance requests for their assigned building
+- review newly submitted tickets
+- review AI-generated category, priority, risk, safety and duplicate results
+- view resident issue images
+- review tickets that require manual attention
+- assign suitable technicians
+- review technician recommendations
+- monitor emergency and urgent maintenance tickets
+- manage active jobs and ticket progress
 - review completed maintenance work
-- manage resident registration requests
-- access maintenance reports
-- receive system notifications
-
----
+- review and approve or reject resident registration requests for their building
+- view notifications and maintenance reports
 
 ## Technician Functions
 
 Technicians can
 
-- view assigned maintenance jobs
-- view emergency jobs
-- view maintenance ticket details
-- review issue and location information
-- update maintenance job status
-- record repair notes
-- manage work in progress
-- submit completion information
+- view jobs assigned to them
+- view maintenance ticket and location details
+- view resident issue images for assigned jobs
+- accept and manage assigned maintenance work
+- update job status
+- add repair and progress notes
+- manage jobs that are in progress or on hold
+- add completion information
 - view notifications
 - manage technician profile information
 
----
-
 ## System Administrator Functions
 
-System administrators are responsible for higher-level system management.
+System Administrators can
 
-Available administration functions include
-
-- user management
-- apartment and building management
-- floor and maintenance area management
-- role management
-- issue category management
-- technician skill management
-- safety rule management
-- resident registration management
-- system settings
-- maintenance mode
-- audit log review
-- system notifications
-- account management
-- reporting and administrative monitoring
-
----
+- manage users and user accounts
+- manage resident registration requests
+- manage apartment complexes, buildings, floors, areas and units
+- manage issue categories and technician skills
+- manage safety rules and system reference information
+- reset user passwords using temporary passwords
+- manage system settings
+- enable or disable maintenance mode
+- review audit logs
+- monitor notifications and system activity
+- access administrative reports and system information
 
 # AI Decision Support Module
 
-The AI module is one of the main components of HelaFixIt AI.
+The AI Decision Support Module analyses maintenance tickets before they continue through the normal maintenance workflow.
 
-It processes maintenance descriptions submitted through the system and provides information that can assist apartment management staff when handling a ticket.
+For each analysed ticket, the system can provide
+
+- predicted maintenance category
+- predicted priority
+- category and priority confidence
+- risk score from 0 to 100
+- risk level
+- safety warning
+- possible duplicate result
+- recommended technician or technician skill
+- emergency assignment decision where applicable
+
+The AI output supports maintenance decisions. Apartment Administrators can still review the ticket and manage the final maintenance workflow.
 
 ## Supported Languages
 
-The maintenance dataset and AI validation process support
+The system supports maintenance descriptions written in
 
 - English
 - Sinhala
 - Singlish
-- Mixed-language maintenance text
+- Mixed-language text
 
----
+Singlish refers to Sinhala wording written using Latin characters.
 
 ## Training Dataset
 
-The project contains a labelled multilingual apartment maintenance dataset.
-
-The main file is
+The main training dataset is
 
 ```text
 AI-model/Data/maintenance_tickets.csv
 ```
 
-The current dataset contains approximately 60,000 labelled maintenance ticket records.
+The current dataset contains **60,000 labelled maintenance ticket records** covering multilingual apartment maintenance scenarios.
 
-Additional validation and challenge datasets are also included
+The repository also contains additional validation and challenge data such as
 
 ```text
 AI-model/Data/challenge_test.csv
@@ -180,13 +149,21 @@ AI-model/Data/language_validation_cases.csv
 AI-model/Data/validation_cases.csv
 ```
 
-The datasets are included in the repository so the AI development process can be reviewed and reproduced.
-
----
+The dataset contains examples for maintenance categories, priority levels and multilingual ticket descriptions used to train and evaluate the local AI models.
 
 ## AI Models
 
-The system uses locally stored scikit-learn machine learning models.
+The implemented AI models use scikit-learn and TF-IDF text features.
+
+The current model bundle uses
+
+- word and character TF-IDF text features
+- SGDClassifier with logistic loss for category prediction
+- SGDClassifier with logistic loss for priority prediction
+- rule-based safety detection
+- rule-based and contextual risk scoring
+- text similarity for duplicate detection
+- skill, availability and workload based technician recommendation
 
 The main saved model files are
 
@@ -197,51 +174,54 @@ AI-model/Models/tfidf_vectorizer.joblib
 AI-model/Models/model_metadata.json
 ```
 
-TF-IDF based text features are used by the trained category and priority classifiers.
-
-The models are loaded by the Flask backend when AI ticket analysis is required.
-
----
+The current saved model metadata identifies the model bundle as version `6.0.0`.
 
 ## AI Decision Process
 
-A maintenance ticket normally passes through the following AI-assisted process
-
-1. the resident enters a maintenance description
-2. the system processes the maintenance text
-3. the language handling component analyses the submitted text
-4. the category prediction model predicts the maintenance category
-5. the priority model predicts the maintenance priority
-6. safety rules are checked
-7. a risk assessment is produced
-8. possible duplicate ticket information is checked
-9. technician suitability information is evaluated
-10. the AI result is returned to the maintenance workflow
-11. relevant prediction information is stored with the ticket
-12. apartment management staff can review the result before continuing the maintenance process
-
-The AI component is used as a decision-support mechanism rather than replacing the maintenance management workflow.
-
----
-
-## Rule Files
-
-Additional maintenance decision logic is stored separately from the trained models.
+The main AI decision process is
 
 ```text
-AI-model/Rules/issue_rules.json
-AI-model/Rules/risk_config.json
-AI-model/Rules/safety_rules.json
-AI-model/Rules/technician_rules.json
+Resident submits ticket
+        |
+        v
+Validate and process ticket text
+        |
+        v
+Detect language and prepare text
+        |
+        v
+TF-IDF feature extraction
+        |
+        +--> Category prediction
+        |
+        +--> Priority prediction
+        |
+        v
+Safety rule checking
+        |
+        v
+Duplicate ticket checking
+        |
+        v
+Risk score calculation
+        |
+        v
+Technician recommendation
+        |
+        v
+Store AI result
+        |
+        v
+Administrator review or emergency workflow
 ```
 
-These files support issue handling, risk calculation, safety checking and technician recommendation logic.
+Emergency or critical tickets can be automatically assigned to a suitable available technician when the system rules allow it. If a suitable technician is not available, the ticket remains available for urgent administrator attention.
 
----
+Possible duplicate tickets are kept in the system and linked through duplicate detection information. They are not automatically deleted.
 
 # AI Training and Evaluation
 
-The AI training source files are included in the repository.
+The repository contains the scripts used to prepare, train, test and evaluate the AI module.
 
 ```text
 AI-model/Training/generate_dataset.py
@@ -252,650 +232,259 @@ AI-model/Training/validate_ai_cases.py
 AI-model/Training/validate_language_recognition.py
 ```
 
-The project also contains evaluation evidence generated from the AI validation process.
-
-The `AI-model/Evaluation` folder includes items such as
-
-- category classification reports
-- priority classification reports
-- category confusion matrices
-- priority confusion matrices
-- language recognition results
-- language recognition confusion matrix
-- accuracy by language
-- model comparison results
-- validation results
-- misclassified examples
-- evaluation summaries
-- AI metrics
-
-This provides evidence of the model training, testing and validation process rather than including only the final model files.
-
----
-
-# Maintenance Ticket Workflow
-
-A normal maintenance request follows this general workflow
-
-```text
-Resident
-   |
-   v
-Submit Maintenance Ticket
-   |
-   v
-Multilingual AI Analysis
-   |
-   +--> Category Prediction
-   |
-   +--> Priority Prediction
-   |
-   +--> Risk Assessment
-   |
-   +--> Safety Checking
-   |
-   +--> Duplicate Checking
-   |
-   +--> Technician Recommendation
-   |
-   v
-Apartment Administrator Review
-   |
-   v
-Technician Assignment
-   |
-   v
-Assigned Job
-   |
-   v
-Work In Progress
-   |
-   v
-Repair and Status Updates
-   |
-   v
-Completed Maintenance Job
-   |
-   v
-Resident and Management Records Updated
-```
-
-Emergency maintenance requests can follow an accelerated assignment process depending on the maintenance condition and system rules.
-
----
-
-# System Architecture
-
-HelaFixIt AI uses a web-based multi-layer architecture.
-
-```text
-Web Browser
-    |
-    v
-HTML / CSS / JavaScript Frontend
-    |
-    v
-Flask REST API
-    |
-    +-----------------------+
-    |                       |
-    v                       v
-Application Services     Local AI Module
-    |                       |
-    |                       +--> TF-IDF Vectorizer
-    |                       +--> Category Model
-    |                       +--> Priority Model
-    |                       +--> Risk Rules
-    |                       +--> Safety Rules
-    |                       +--> Technician Rules
-    |
-    v
-MariaDB Database
-```
-
-The Flask application also serves the frontend pages when the system is started locally.
-
----
-
-# Technology Stack
-
-| Area | Technologies |
-| --- | --- |
-| Frontend | HTML5, CSS3, JavaScript |
-| Backend | Python, Flask |
-| API | Flask REST endpoints |
-| Authentication | Flask-JWT-Extended |
-| Database | MariaDB / MySQL |
-| Database connection | PyMySQL |
-| Local AI | scikit-learn |
-| Text processing | TF-IDF |
-| Data processing | pandas, NumPy |
-| Model storage | joblib |
-| AI evaluation | matplotlib and generated evaluation files |
-| Local development | XAMPP |
-| Version control | Git and GitHub |
-
----
-
-# Authentication and Security
-
-The application uses role-based authentication and authorization.
-
-JWT authentication is used by the Flask backend for protected application requests.
-
-The backend also checks account state when validating authenticated sessions.
-
-Security-related implementation includes
-
-- password hashing
-- role-based access control
-- protected backend routes
-- account status checking
-- token validation
-- revoked token checking
-- input validation
-- controlled runtime upload storage
-- environment-based configuration
-- separation of local secrets from repository source files
-
-The local `.env` file is intentionally excluded from Git.
-
-Production credentials should never be committed to the repository.
-
----
-
-# Database
-
-The database is implemented using MariaDB and is designed to store multilingual maintenance information using `utf8mb4`.
-
-It contains data required for areas such as
-
-- users
-- user roles
-- resident information
-- technician information
-- apartment complexes
-- buildings
-- floors
-- maintenance areas
-- issue categories
-- maintenance tickets
-- AI predictions
-- ticket assignments
-- ticket updates
-- notifications
-- registration requests
-- system settings
-- audit information
-- authentication information
-- maintenance workflow information
-
----
-
-## Database Source Files
-
-The modular database implementation is available through
-
-```text
-Database/01_create_database.sql
-Database/02_schema.sql
-Database/03_triggers.sql
-Database/04_views.sql
-Database/05_stored_procedures.sql
-Database/06_seed_reference_data.sql
-Database/07_seed_locations_users_and_indexes.sql
-Database/08_validation_queries_XAMPP.sql
-```
-
-The complete clean setup source is
-
-```text
-Database/helafixit_ai_complete_setup.sql
-```
-
-The latest complete XAMPP database export containing the current project records is stored in
-
-```text
-Database/Full_Export/helafixit_ai_full_export.sql
-```
-
-Additional database documentation includes
-
-```text
-Database/database_dictionary.csv
-Database/ERD.mmd
-Database/README_DATABASE.md
-Database/BACKUP_RESTORE_GUIDE.md
-Database/XAMPP_DATABASE_SETUP.txt
-Database/RUN_ORDER.txt
-```
-
----
-
-# Repository Structure
-
-```text
-HelaFixIt_AI
-|
-|-- AI-model
-|   |-- Data
-|   |-- Evaluation
-|   |-- Models
-|   |-- Rules
-|   |-- Training
-|   `-- README_AI.md
-|
-|-- Backend
-|   |-- routes
-|   |-- services
-|   |-- uploads
-|   |-- utils
-|   |-- app.py
-|   |-- config.py
-|   |-- create_admin.py
-|   |-- database.py
-|   |-- requirements.txt
-|   `-- .env.example
-|
-|-- Database
-|   |-- Full_Export
-|   |-- database source files
-|   |-- database documentation
-|   `-- database validation files
-|
-|
-|-- Frontend
-|   |-- Assets
-|   |-- CSS
-|   |-- JS
-|   |-- Pages
-|   `-- README_FRONTEND.txt
-|
-|-- .gitignore
-|-- .gitattributes
-`-- README.md
-```
-
----
-
-# How to Run HelaFixIt AI
-
-The following instructions are intended for Windows and PowerShell using XAMPP.
-
-## 1. Clone the Repository
-
-```powershell
-git clone https://github.com/rakindufernando/HelaFixIt_AI.git
-Set-Location HelaFixIt_AI
-```
-
-If the project is already downloaded, open the project folder directly in VS Code.
-
-```powershell
-code .
-```
-
----
-
-## 2. Start XAMPP
-
-Open XAMPP Control Panel.
-
-Start
-
-```text
-MySQL
-```
-
-Apache may also be started if phpMyAdmin is being used.
-
----
-
-## 3. Create the Database
-
-Open phpMyAdmin in the browser.
-
-For the current project database containing the complete project records, import
-
-```text
-Database/Full_Export/helafixit_ai_full_export.sql
-```
-
-For a clean database installation, use
-
-```text
-Database/helafixit_ai_complete_setup.sql
-```
-
-The clean setup file contains a password-hash placeholder for prepared accounts. Follow the instructions in
-
-```text
-Database/BACKUP_RESTORE_GUIDE.md
-```
-
-before importing the clean setup file.
-
-After database creation, the validation script can be used
-
-```text
-Database/08_validation_queries_XAMPP.sql
-```
-
----
-
-## 4. Create the Backend Environment File
-
-From the project root, copy the example environment file.
-
-```powershell
-Copy-Item "Backend\.env.example" "Backend\.env"
-```
-
-Open it in VS Code.
-
-```powershell
-code "Backend\.env"
-```
-
-Configure the local values as required.
-
-Example development configuration
-
-```text
-APP_ENV=development
-FLASK_DEBUG=1
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_USER=root
-DB_PASSWORD=
-DB_NAME=helafixit_ai
-JWT_SECRET_KEY=replace-with-a-long-random-development-key
-JWT_ACCESS_HOURS=8
-JWT_REFRESH_DAYS=7
-DEFAULT_STAFF_PASSWORD=replace-with-a-temporary-password
-```
-
-Do not commit the completed `.env` file.
-
----
-
-## 5. Create a Python Virtual Environment
-
-From the project root run
-
-```powershell
-py -m venv Backend\venv
-```
-
-Activate it
-
-```powershell
-.\Backend\venv\Scripts\Activate.ps1
-```
-
-Upgrade pip
-
-```powershell
-python -m pip install --upgrade pip
-```
-
----
-
-## 6. Install Python Requirements
-
-Run
-
-```powershell
-pip install -r Backend\requirements.txt
-```
-
-The backend requirements include Flask, JWT support, PyMySQL, scikit-learn, pandas, NumPy, joblib and the packages required by the AI evaluation process.
-
----
-
-## 7. Run the Application
-
-Move to the backend folder
-
-```powershell
-Set-Location Backend
-```
-
-Start Flask
-
-```powershell
-py app.py
-```
-
-The development server runs locally at
-
-```text
-http://127.0.0.1:5000
-```
-
-Open the address in a web browser.
-
-The Flask application automatically redirects the root address to the HelaFixIt AI public landing page.
-
----
-
-## 8. Check Backend, Database and AI Status
-
-While the application is running, open another PowerShell terminal and run
-
-```powershell
-Invoke-RestMethod http://127.0.0.1:5000/api/health
-```
-
-The health response can confirm
-
-- backend status
-- database connection
-- AI readiness
-- application status
-
----
-
-# Running the AI Files
-
-The repository already contains the trained models, so model retraining is not required simply to run the website.
-
-The following commands are provided for reproducing or reviewing the AI development process.
-
-From the project root, activate the Python environment first.
-
-```powershell
-.\Backend\venv\Scripts\Activate.ps1
-```
-
-## Train the Models
-
-```powershell
-py "AI-model\Training\train_models.py"
-```
-
-## Evaluate the Models
-
-```powershell
-py "AI-model\Training\evaluate_models.py"
-```
-
-## Run AI Validation Cases
-
-```powershell
-py "AI-model\Training\validate_ai_cases.py"
-```
-
-## Validate Language Recognition
-
-```powershell
-py "AI-model\Training\validate_language_recognition.py"
-```
-
-## Test Representative Model Examples
-
-```powershell
-py "AI-model\Training\test_model_examples.py"
-```
-
-## Regenerate the Dataset
-
-Only run the dataset generation script when the training dataset needs to be regenerated.
-
-```powershell
-py "AI-model\Training\generate_dataset.py"
-```
-
-The committed dataset and model files should be backed up before intentionally regenerating or retraining them if the existing assessment outputs need to be preserved.
-
----
-
-# Frontend
-
-The frontend is implemented using HTML, CSS and JavaScript.
-
-It contains separate interfaces for
-
-```text
-Public pages
-Resident pages
-Apartment Admin pages
-Technician pages
-System Admin pages
-```
-
-The Flask application serves the frontend directly, so a separate frontend server is not required for normal local execution.
-
-The frontend source is located in
-
-```text
-Frontend/
-```
-
-Additional frontend implementation information is available in
-
-```text
-Frontend/README_FRONTEND.txt
-```
-
----
-
-# Backend
-
-The Flask backend contains routes and services for the main system functions.
-
-Important route areas include
-
-```text
-Authentication
-Roles
-Residents
-Apartment administrators
-Technicians
-AI
-System administration
-```
-
-Important service areas include
-
-```text
-AI processing
-Language processing
-Authentication
-Resident registration
-Ticket management
-Reporting
-System settings
-System administration
-Maintenance workflow automation
-```
-
-The main application entry point is
-
-```text
-Backend/app.py
-```
-
----
-
-# Local AI and External Services
-
-HelaFixIt AI does not require an external generative AI service for its main maintenance ticket predictions.
-
-The category and priority models are stored locally and loaded by the Python backend.
-
-This allows the repository to contain evidence of
-
-- the dataset
-- training source
-- trained model files
-- decision rules
-- evaluation outputs
-- integration source
-
-instead of depending on an external AI API.
-
----
-
-# Project Data
-
-The repository contains the datasets and database records required to demonstrate the completed system.
-
-The full database export is included to preserve the current project state for testing and assessment.
-
-Runtime files such as local Python virtual environments, local environment configuration and normal uploaded ticket files are excluded from version control where appropriate.
-
----
-
-# System Testing Support
-
-The repository contains source and data that can be used to test
-
-- user authentication
-- role-based access
-- resident registration
-- maintenance ticket submission
-- multilingual ticket analysis
-- category prediction
-- priority prediction
-- risk assessment
-- safety checking
-- technician recommendation
-- ticket assignment
-- technician job updates
-- notifications
-- reports
-- system administration
-- database integration
-- AI validation
-
-AI-specific evaluation evidence is retained under
+The evaluation process includes
+
+- category classification evaluation
+- priority classification evaluation
+- accuracy, precision, recall and F1 score
+- confusion matrices
+- grouped holdout testing
+- challenge-case testing
+- multilingual language recognition validation
+- scenario-based AI validation
+- review of misclassified examples
+
+Generated evaluation evidence is stored in
 
 ```text
 AI-model/Evaluation
 ```
 
----
+The trained models are already included in the repository, so retraining is not required simply to run the HelaFixIt AI web application.
+
+# Maintenance Ticket Workflow
+
+The normal maintenance workflow is
+
+```text
+Resident registration and login
+        |
+        v
+Submit maintenance ticket
+        |
+        v
+AI ticket analysis
+        |
+        v
+Category, priority, risk and safety result
+        |
+        v
+Duplicate checking and technician recommendation
+        |
+        v
+Apartment Administrator review
+        |
+        v
+Technician assignment
+        |
+        v
+Technician accepts and updates job
+        |
+        v
+Work in progress
+        |
+        v
+Repair completed
+        |
+        v
+Ticket and workflow records updated
+```
+
+Emergency or critical tickets can use the emergency assignment workflow when a suitable technician is available. Notifications and ticket updates are recorded throughout the maintenance process.
+
+# System Architecture
+
+HelaFixIt AI uses a layered web application architecture.
+
+```text
+Resident / Apartment Administrator / Technician / System Administrator
+                              |
+                              v
+                         Web Browser
+                              |
+                              v
+                   HTML / CSS / JavaScript
+                              |
+                              v
+                     Python Flask Backend
+                              |
+             +----------------+----------------+
+             |                                 |
+             v                                 v
+     Application Services              Local AI Module
+             |                    TF-IDF and ML Models
+             |                    Safety and Risk Rules
+             |                    Duplicate Detection
+             |                    Technician Recommendation
+             |                                 |
+             +----------------+----------------+
+                              |
+                              v
+                    MariaDB / MySQL Database
+                              |
+                 +------------+------------+
+                 |                         |
+                 v                         v
+          AI Model Files           Runtime Upload Files
+```
+
+The core ticket prediction and risk analysis are performed locally by the Flask application and saved AI model files. The implemented core system does not require an external generative AI service.
+
+# Technology Stack
+
+| Area | Technology |
+| --- | --- |
+| Frontend | HTML5, CSS3, JavaScript |
+| Backend | Python, Flask |
+| Authentication | Flask-JWT-Extended |
+| Database | MariaDB / MySQL |
+| Database Connection | PyMySQL |
+| Machine Learning | scikit-learn |
+| Text Features | TF-IDF |
+| Data Processing | pandas, NumPy |
+| Model Storage | joblib |
+| Evaluation | matplotlib |
+| Local Development | XAMPP |
+| Version Control | Git and GitHub |
+
+# Authentication and Security
+
+HelaFixIt AI uses role-based authentication and access control.
+
+The implemented security features include
+
+- JWT-based authentication
+- password hashing
+- role-based protected backend routes
+- account-status checking
+- access checks based on user role
+- token validation and revoked-token handling
+- input validation
+- controlled image upload handling
+- environment-based configuration
+- local secret values stored outside the repository
+
+The local `Backend/.env` file is excluded from Git. Sensitive values such as the JWT secret and temporary staff password must be configured locally.
+
+Residents access their own maintenance information, Apartment Administrators manage their assigned building, and Technicians access jobs assigned to them.
+
+# Database
+
+HelaFixIt AI uses a MariaDB / MySQL relational database named
+
+```text
+helafixit_ai
+```
+
+The database uses `utf8mb4` to support multilingual maintenance text.
+
+The database stores information including
+
+- users, roles and role permissions
+- resident, apartment administrator and technician profiles
+- apartment complexes, buildings, floors, areas and units
+- resident registration requests
+- maintenance tickets
+- issue categories and technician skills
+- AI predictions
+- duplicate ticket matches
+- technician assignments
+- ticket status updates
+- notifications and notification preferences
+- system settings
+- login and authentication records
+- audit logs
+
+Database source, setup and export files are stored inside the `Database` folder.
+
+# How to Run HelaFixIt AI
+
+1. Download the repository as a ZIP from GitHub or clone it.
+
+```powershell
+git clone https://github.com/rakindufernando/HelaFixIt_AI.git
+cd HelaFixIt_AI
+```
+
+2. Open XAMPP and start **MySQL**. Start **Apache** as well if phpMyAdmin is required.
+
+3. Import the provided HelaFixIt AI database SQL file into phpMyAdmin using the database files in the `Database` folder.
+
+4. Create the local backend environment file.
+
+```powershell
+Copy-Item "Backend\.env.example" "Backend\.env"
+```
+
+Open `Backend/.env` and enter the local database settings, JWT secret and temporary staff password.
+
+5. Create a Python environment and install the required packages.
+
+```powershell
+py -m venv Backend\venv
+.\Backend\venv\Scripts\Activate.ps1
+pip install -r Backend\requirements.txt
+```
+
+6. Run the Flask application.
+
+```powershell
+cd Backend
+py app.py
+```
+
+7. Open the system in a web browser.
+
+```text
+http://127.0.0.1:5000
+```
+
+The trained AI models are already included in the repository.
+
+# Project Data
+
+The repository includes the main data and evidence required for the project.
+
+```text
+AI-model/Data
+AI-model/Models
+AI-model/Rules
+AI-model/Training
+AI-model/Evaluation
+Database
+Backend
+Frontend
+```
+
+The project data includes
+
+- 60,000 labelled multilingual maintenance ticket records
+- AI validation and challenge datasets
+- trained category and priority models
+- model metadata
+- risk, safety, issue and technician rule files
+- AI evaluation outputs
+- database schema and project database data
+- maintenance ticket and workflow records
+- user-role and apartment reference data
+- source code for the frontend and backend
+
+The database and AI dataset contain prepared project and testing data. They should not be treated as live operational apartment records.
 
 # Important Notes
 
-- Start the XAMPP MySQL service before starting the Flask application.
-- Confirm the database name is `helafixit_ai`.
-- Create `Backend/.env` from `.env.example`.
-- Replace example secrets and temporary passwords before using the application.
-- Do not commit the local `.env` file.
-- The trained AI models are already included.
-- The main website can be opened through the Flask server on port 5000.
-- The complete database export and clean setup source are both retained for different restoration requirements.
-- The local Python virtual environment is intentionally excluded from GitHub.
-- Core ticket prediction does not require an external AI API.
-
----
+- HelaFixIt AI is a web-based maintenance system with local AI decision support.
+- The core AI process does not require an external AI prediction API.
+- AI results support maintenance decisions and do not remove administrator review from the workflow.
+- The current scope supports one apartment complex containing multiple buildings or blocks, floors, areas and units.
+- Duplicate maintenance tickets are retained and linked when the system identifies a possible duplicate.
+- Ticket issue images are stored as runtime upload files under the backend upload folder and are not intended to be committed as normal repository source files.
+- The trained models are already included, so model retraining is optional when running the system.
+- AI accuracy depends on the prepared training data and the wording of real maintenance requests.
+- External services such as SMS, cloud storage, maps or other integrations are not required for the implemented core workflow.
 
 # Project Summary
 
-HelaFixIt AI demonstrates how a conventional apartment maintenance management system can be combined with locally trained machine learning to support maintenance decision-making.
+HelaFixIt AI combines apartment maintenance ticket management with multilingual machine learning and rule-based decision support. Residents can submit maintenance problems through a web interface, the system analyses each ticket, and Apartment Administrators can use the generated category, priority, risk, safety, duplicate and technician information when managing the maintenance process.
 
-The final system integrates multilingual maintenance ticket submission, machine learning prediction, risk and safety analysis, technician recommendation, role-based maintenance workflows, database management, reporting, notifications and system administration within a single web application.
-
-The repository contains the main implementation evidence required to understand and reproduce the project, including the frontend, backend, database source, complete database export, multilingual dataset, AI training scripts, saved models, rules and model evaluation outputs.
+The final system connects four user roles, a Flask backend, a MariaDB database and locally stored scikit-learn models. It provides a complete workflow from resident ticket submission to technician assignment, progress updates and maintenance completion while keeping AI decisions explainable and reviewable.

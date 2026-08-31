@@ -151,6 +151,16 @@ AI-model/Data/validation_cases.csv
 
 The dataset contains examples for maintenance categories, priority levels and multilingual ticket descriptions used to train and evaluate the local AI models.
 
+## Dataset Sources and References
+
+The HelaFixIt AI training dataset was created specifically for this final development project. The 60,000 labelled maintenance ticket records were generated using project-defined apartment maintenance scenarios and multilingual wording variations.
+
+Academic research papers were used to support the apartment maintenance domain, priority handling, Sinhala-English mixed text, and Singlish wording used when preparing the dataset. Official technical documentation was used to support the machine learning methods used to train and evaluate the AI models.
+
+The complete list of supporting academic and technical references is available here
+
+[Training Dataset References](AI-model/DATASET_REFERENCES.md)
+
 ## AI Models
 
 The implemented AI models use scikit-learn and TF-IDF text features.
